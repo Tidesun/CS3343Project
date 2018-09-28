@@ -14,13 +14,14 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	}
 	*/
 	
+	//==================== Change the origin HashMap to new HashMap ====================
 	public void generateForwardIndexMap(HashMap<String, String> origin_map){
 		for (String key : origin_map.keySet()) {
 			String get_url = key;
 			ArrayList<String> keywordList = getKeywordFromOriginHashMap(origin_map.get(key));
 			
 			for (String temp_str: keywordList) {
-				addKeywordsToURLHashMap(get_url, temp_str);
+				addKeywordsToTheHashMap(get_url, temp_str);
 			}
 		}
 	}
@@ -32,7 +33,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 		return kwarr;
 	}
 	
-	public static void addKeywordsToURLHashMap(String the_url, String keyword) {
+	public static void addKeywordsToTheHashMap(String the_url, String keyword) {
 		if(!forwardMap.containsKey(the_url)){
 			createArrayListOfURL(the_url);
 		}
@@ -48,6 +49,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 		forwardMap.put(the_url, arrlist);
 	}
 	
+	//==================== Get ForwardIndexMap ====================
 	public HashMap<String, ArrayList<String>> getForwardIndexMap(){
 		return forwardMap;
 	}
