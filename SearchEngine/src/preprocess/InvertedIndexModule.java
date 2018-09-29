@@ -24,7 +24,7 @@ public class InvertedIndexModule implements InvertedIndexModuleInterface{
 		this.forwardIndexModule.subscribe(this);	
 	}
 	//Generate the InvertedIndexMap
-	public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> forwardIndexMap) throws IOException, FileNotFoundException{
+	public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> forwardIndexMap) throws IOException{
 		InvertedIndexMap=new HashMap<String,ArrayList<String>>();
 		for (Iterator iterator = forwardIndexMap.entrySet().iterator(); iterator.hasNext();) {
 			Map.Entry forwardIndex = (Map.Entry) iterator.next();
@@ -46,7 +46,7 @@ public class InvertedIndexModule implements InvertedIndexModuleInterface{
 		}
 		this.writeToFile();
 	}
-	private void writeToFile() throws IOException, FileNotFoundException {		
+	private void writeToFile() throws IOException {		
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/res/InvertedIndexDataset"));					
 		oos.writeObject(this.getInvertedIndexMap());					
 		oos.close();

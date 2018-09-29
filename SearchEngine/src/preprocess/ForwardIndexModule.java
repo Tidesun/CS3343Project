@@ -6,11 +6,15 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class ForwardIndexModule implements ForwardIndexModuleInterface{
-	//private InvertedIndexModuleInterface observer;
+	private KeywordMapModuleInterface keywordMapModule;
 	private HashMap<String, ArrayList<String>> ForwardIndexMap;
 	private InvertedIndexModuleInterface observer;
-	ForwardIndexModule(){
+	
+	
+	ForwardIndexModule(KeywordMapModuleInterface keywordMapModule){
 		this.ForwardIndexMap= new HashMap<String, ArrayList<String>>();
+		this.keywordMapModule=keywordMapModule;
+		this.keywordMapModule.subscribe(this);
 		this.observer=null;
 	}
 	
@@ -19,7 +23,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	}
 	
 	//==================== Change the origin HashMap to new HashMap ====================
-	public void generateForwardIndexMap(HashMap<String, String> origin_map) throws IOException, FileNotFoundException{
+	public void generateForwardIndexMap(HashMap<String, String> origin_map) throws IOException{
 		for (String key : origin_map.keySet()) {
 			String get_url = key;
 			ArrayList<String> keywordList = getKeywordFromOriginHashMap(origin_map.get(key));
@@ -31,9 +35,8 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 		this.observer.generateInvertedIndexMap(ForwardIndexMap);
 	}
 	
-	public ArrayList<String> getKeywordFromOriginHashMap(String kwstr){
-		System.out.println("The Str: "+kwstr);  
-		ArrayList<String> kwarr = new ArrayList<String>(Arrays.asList(kwstr.split("\\s*,\\s*")));
+	public ArrayList<String> getKeywordFromOriginHashMap(String kwstr){ 
+		ArrayList<String> kwarr = new ArrayList<String>(Arrays.asList(kwstr.split("\\s* \\s*")));
 		
 		return kwarr;
 	}
