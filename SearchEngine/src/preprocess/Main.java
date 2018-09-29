@@ -1,10 +1,9 @@
 package preprocess;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-
+import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) throws IOException, FileNotFoundException {
 		ForwardIndexModuleInterface mockForward=new ForwardIndexModule();
@@ -13,5 +12,11 @@ public class Main {
 		HashMap<String,String> testmap=new HashMap<String, String>();
 		testmap.put("www.w3c.com",headstr);
 		mockForward.generateForwardIndexMap(testmap);
+		System.out.print("I want search:");
+		Scanner scanner = new Scanner(System.in);
+		String query = scanner.next();
+		System.out.println("Search result for "+query+":");
+		System.out.println(mockInvert.getInvertedIndexMap().get(query));
+		
 	}
 }
