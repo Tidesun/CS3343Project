@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.regex.*;
-public class HeaderModule implements KeywordExtractModuleInterface {
+public class KeyWordExtractHeaderModule implements KeywordExtractModuleInterface {
 	
 	private String getContent(File filename) throws FileNotFoundException {
 		Scanner sc =new Scanner(filename);
@@ -17,11 +17,13 @@ public class HeaderModule implements KeywordExtractModuleInterface {
 	}
 	public String WebPageExtraction(File filename) throws FileNotFoundException {
 		String content=this.getContent(filename);
-		String regex="(?<=<title>).*?(?=</title>)";
+		//extract content from the description
+		String regex="(?<=<meta name=\\\"description\\\" content=\\\").*?(?=\")";
 		Pattern pattern=Pattern.compile(regex,Pattern.CASE_INSENSITIVE);
 		Matcher matcher = pattern.matcher(content);
 		if (matcher.find()) {
-			return matcher.group(0).toLowerCase();
+			// replace the punctuation
+			return matcher.group(0).toLowerCase().replaceAll("[\\pP\\p{Punct}]","");
 		}
 		else 
 			return null;

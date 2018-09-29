@@ -9,7 +9,7 @@ public class KeywordMapModule implements KeywordMapModuleInterface{
 	private ForwardIndexModuleInterface observer;
 	
 	KeywordMapModule(){
-		this.extractor=new HeaderModule();
+		this.extractor=new KeyWordExtractHeaderModule();
 		this.observer=null;
 	}
 	
