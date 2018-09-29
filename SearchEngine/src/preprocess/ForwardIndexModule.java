@@ -1,4 +1,6 @@
 package preprocess;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -17,7 +19,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	}
 	
 	//==================== Change the origin HashMap to new HashMap ====================
-	public void generateForwardIndexMap(HashMap<String, String> origin_map){
+	public void generateForwardIndexMap(HashMap<String, String> origin_map) throws IOException, FileNotFoundException{
 		for (String key : origin_map.keySet()) {
 			String get_url = key;
 			ArrayList<String> keywordList = getKeywordFromOriginHashMap(origin_map.get(key));

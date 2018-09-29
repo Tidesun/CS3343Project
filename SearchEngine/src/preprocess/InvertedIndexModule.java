@@ -3,6 +3,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Iterator;
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 public class InvertedIndexModule implements InvertedIndexModuleInterface{
 	
 	//Reference the ForwardIndexModule via interface
@@ -17,7 +24,7 @@ public class InvertedIndexModule implements InvertedIndexModuleInterface{
 		this.forwardIndexModule.subscribe(this);	
 	}
 	//Generate the InvertedIndexMap
-	public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> forwardIndexMap) {
+	public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> forwardIndexMap) throws IOException, FileNotFoundException{
 		InvertedIndexMap=new HashMap<String,ArrayList<String>>();
 		for (Iterator iterator = forwardIndexMap.entrySet().iterator(); iterator.hasNext();) {
 			Map.Entry forwardIndex = (Map.Entry) iterator.next();
@@ -37,8 +44,13 @@ public class InvertedIndexModule implements InvertedIndexModuleInterface{
 				}
 			}
 		}
+		this.writeToFile();
 	}
-	
+	private void writeToFile() throws IOException, FileNotFoundException {		
+		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/res/InvertedIndexDataset"));					
+		oos.writeObject(this.getInvertedIndexMap());					
+		oos.close();
+	}
 	//Get the InvertedIndexMap
 	public HashMap<String,ArrayList<String>> getInvertedIndexMap(){
 		return InvertedIndexMap;

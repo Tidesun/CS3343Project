@@ -1,9 +1,11 @@
 package preprocess;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public interface ForwardIndexModuleInterface {
-	public abstract void generateForwardIndexMap(HashMap<String, String> origin_map);
+	public abstract void generateForwardIndexMap(HashMap<String, String> origin_map) throws IOException, FileNotFoundException;
 	public abstract void subscribe(InvertedIndexModuleInterface observer);
 	public abstract HashMap<String,ArrayList<String>> getForwardIndexMap();
 }
