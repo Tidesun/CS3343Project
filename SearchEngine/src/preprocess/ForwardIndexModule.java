@@ -1,6 +1,7 @@
 package preprocess;
-import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -32,6 +33,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 				addKeywordsToTheHashMap(get_url, temp_str);
 			}
 		}
+		this.writeToFile();
 		this.observer.generateInvertedIndexMap(ForwardIndexMap);
 	}
 	
@@ -60,6 +62,11 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	//==================== Get ForwardIndexMap ====================
 	public HashMap<String,ArrayList<String>> getForwardIndexMap(){
 		return ForwardIndexMap;
+	}
+	private void writeToFile() throws IOException {		
+		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/res/ForwardIndexDataset"));					
+		oos.writeObject(this.getForwardIndexMap());					
+		oos.close();
 	}
 
 }

@@ -1,7 +1,5 @@
 package preprocess;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) throws IOException {
@@ -10,10 +8,10 @@ public class Main {
 		InvertedIndexModuleInterface mockInvert=new InvertedIndexModule(mockForward);
 		mockKeyword.generateKeywordStrMap("src/res/html");
 		System.out.print("I want search:");
-		Scanner scanner = new Scanner(System.in);
-		String query = scanner.next();
+		Scanner sc = new Scanner(System.in);
+		String query = sc.next();
 		System.out.println("Search result for "+query+":");
 		System.out.println(mockInvert.getInvertedIndexMap().get(query.toLowerCase()));
-		
+		sc.close();
 	}
 }

@@ -12,6 +12,7 @@ public class HeaderModule implements KeywordExtractModuleInterface {
 		while(sc.hasNext()){
 			content +=sc.nextLine()+"\n";
 		}
+		sc.close();
 		return content;
 	}
 	public String WebPageExtraction(File filename) throws FileNotFoundException {
