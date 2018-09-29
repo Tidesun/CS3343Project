@@ -6,15 +6,15 @@ import java.util.Iterator;
 public class InvertedIndexModule implements InvertedIndexModuleInterface{
 	
 	//Reference the ForwardIndexModule via interface
-	private ForwardIndexModule forwardIndexModule;
+	private ForwardIndexModuleInterface forwardIndexModule;
 	
 	//Store the HashMap mapping from keyword to URL lists
 	private HashMap<String,ArrayList<String>> InvertedIndexMap;
 	
 	//Constructor
-	InvertedIndexModule() {
-		forwardIndexModule=new ForwardIndexModule();
-		forwardIndexModule.subscribe(this);	
+	InvertedIndexModule(ForwardIndexModuleInterface forwardIndexModule) {
+		this.forwardIndexModule=forwardIndexModule;
+		this.forwardIndexModule.subscribe(this);	
 	}
 	//Generate the InvertedIndexMap
 	public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> forwardIndexMap) {

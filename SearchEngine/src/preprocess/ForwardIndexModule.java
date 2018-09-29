@@ -1,18 +1,20 @@
-package SearchTest;
+package preprocess;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
 public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	//private InvertedIndexModuleInterface observer;
-	private static HashMap<String, ArrayList<String>> forwardMap  = new HashMap<String, ArrayList<String>>();
-		
-	/*
+	private HashMap<String, ArrayList<String>> ForwardIndexMap;
+	private InvertedIndexModuleInterface observer;
+	ForwardIndexModule(){
+		this.ForwardIndexMap= new HashMap<String, ArrayList<String>>();
+		this.observer=null;
+	}
+	
 	public void subscribe(InvertedIndexModuleInterface observer) {
 		this.observer=observer;
-		this.generateForwardIndexMap();
 	}
-	*/
 	
 	//==================== Change the origin HashMap to new HashMap ====================
 	public void generateForwardIndexMap(HashMap<String, String> origin_map){
@@ -24,34 +26,35 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 				addKeywordsToTheHashMap(get_url, temp_str);
 			}
 		}
+		this.observer.generateInvertedIndexMap(ForwardIndexMap);
 	}
 	
-	public static ArrayList<String> getKeywordFromOriginHashMap(String kwstr){
+	public ArrayList<String> getKeywordFromOriginHashMap(String kwstr){
 		System.out.println("The Str: "+kwstr);  
 		ArrayList<String> kwarr = new ArrayList<String>(Arrays.asList(kwstr.split("\\s*,\\s*")));
 		
 		return kwarr;
 	}
 	
-	public static void addKeywordsToTheHashMap(String the_url, String keyword) {
-		if(!forwardMap.containsKey(the_url)){
+	public void addKeywordsToTheHashMap(String the_url, String keyword) {
+		if(!ForwardIndexMap.containsKey(the_url)){
 			createArrayListOfURL(the_url);
 		}
 		
-		ArrayList<String> arrayList = forwardMap.get(the_url);
+		ArrayList<String> arrayList = ForwardIndexMap.get(the_url);
 		ArrayList<String> get_arr = arrayList;
 		get_arr.add(keyword);
-		forwardMap.put(the_url, get_arr);
+		ForwardIndexMap.put(the_url, get_arr);
 	}
 	
-	public static void createArrayListOfURL(String the_url){
+	public void createArrayListOfURL(String the_url){
 		ArrayList<String> arrlist = new ArrayList<String>();
-		forwardMap.put(the_url, arrlist);
+		ForwardIndexMap.put(the_url, arrlist);
 	}
 	
 	//==================== Get ForwardIndexMap ====================
-	public HashMap<String, ArrayList<String>> getForwardIndexMap(){
-		return forwardMap;
+	public HashMap<String,ArrayList<String>> getForwardIndexMap(){
+		return ForwardIndexMap;
 	}
 
 }
