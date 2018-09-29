@@ -4,12 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class KeywordMapModule implements KeywordMapModuleInterface{
-	private KeywordExtractModuleInterface extractor;
+public class StringMapModule implements StringMapModuleInterface{
+	private ExtractModuleInterface extractor;
 	private ForwardIndexModuleInterface observer;
 	
-	KeywordMapModule(){
-		this.extractor=new KeyWordExtractHeaderModule();
+	StringMapModule(){
+		this.extractor=new ExtractBodyModule();
 		this.observer=null;
 	}
 	

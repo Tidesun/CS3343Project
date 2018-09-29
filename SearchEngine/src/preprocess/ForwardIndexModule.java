@@ -7,12 +7,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class ForwardIndexModule implements ForwardIndexModuleInterface{
-	private KeywordMapModuleInterface keywordMapModule;
+	private StringMapModuleInterface keywordMapModule;
 	private HashMap<String, ArrayList<String>> ForwardIndexMap;
 	private InvertedIndexModuleInterface observer;
 	
 	
-	ForwardIndexModule(KeywordMapModuleInterface keywordMapModule){
+	ForwardIndexModule(StringMapModuleInterface keywordMapModule){
 		this.ForwardIndexMap= new HashMap<String, ArrayList<String>>();
 		this.keywordMapModule=keywordMapModule;
 		this.keywordMapModule.subscribe(this);
@@ -38,7 +38,13 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	}
 	
 	public ArrayList<String> getKeywordFromOriginHashMap(String kwstr){ 
-		ArrayList<String> kwarr = new ArrayList<String>(Arrays.asList(kwstr.split(" ")));
+		String[] kwlist = kwstr.split("\\s");
+		ArrayList<String> kwarr=new ArrayList<String>();
+		for (int i=0;i<kwlist.length;i++) {
+			if (kwlist[i].length()!=0) {
+				kwarr.add(kwlist[i].toLowerCase());
+			}
+		}
 		return kwarr;
 	}
 	

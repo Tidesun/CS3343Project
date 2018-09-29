@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) throws IOException {
-		KeywordMapModule mockKeyword=new KeywordMapModule();
+		StringMapModule mockKeyword=new StringMapModule();
 		ForwardIndexModuleInterface mockForward=new ForwardIndexModule(mockKeyword);
 		InvertedIndexModuleInterface mockInvert=new InvertedIndexModule(mockForward);
 		mockKeyword.generateKeywordStrMap("src/res/html");
