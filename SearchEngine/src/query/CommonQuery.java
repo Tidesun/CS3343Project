@@ -87,7 +87,7 @@ public class CommonQuery implements QueryInterface{
 	 * @return all the urls with the keyword
 	 */
 	private ArrayList<String> querySingleKeyword (String keyword) {
-		return this.invertedIndex.get(keyword);
+		return this.invertedIndex.get(keyword.toLowerCase());
 	}
 	
 }
