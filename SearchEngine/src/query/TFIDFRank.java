@@ -43,6 +43,16 @@ public class TFIDFRank implements RankInterface {
 			}
 			
 			public int compare(String a, String b) {
+				// hashmap cannot get the URL
+				if (weightMap.get(a) == null) {
+					System.out.printf("ERROR: cannot find weight of url %s", a);
+					System.exit(1);
+				}
+				if (weightMap.get(b) == null) {
+					System.out.printf("ERROR: cannot find weight of url %s", b);
+					System.exit(1);
+				}
+				
 				if (weightMap.get(a) > weightMap.get(b)) {
 					return 1;
 				} else if (weightMap.get(a) < weightMap.get(b)) {;
@@ -71,6 +81,11 @@ public class TFIDFRank implements RankInterface {
 	public double weigh (String url, ArrayList<String> keywords) {
 		// make sure the keywords are in the url
 		ArrayList<String> keywordsInURL = forwardIndex.get(url);
+		if (keywordsInURL == null) {
+			System.out.printf("WARNING: URL %s is not in the forwarIndex hashmap", url);
+			System.exit(1);
+		}
+		
 		for (String keyword: keywords) {
 			if (!keywordsInURL.contains(keyword)) {
 				keywords.remove(keyword);
@@ -104,8 +119,15 @@ public class TFIDFRank implements RankInterface {
 				
 		HashMap<String, Double> idf = new HashMap<>();
 		for (String keyword: keywords) {
-			int numOfUrl = invertedIndex.get(keyword).size();   		// number of urls that keyword appears in
-			idf.put(keyword, Math.log(numOfUrl / totalNumURL));
+
+			try {
+				int numOfUrl = invertedIndex.get(keyword).size();   		// number of urls that keyword appears in
+				idf.put(keyword, Math.log(numOfUrl / totalNumURL));
+			} catch (NullPointerException e) {
+				System.out.printf("ERROR: cannot find keyword %s in the invertedIndex hashmap", keyword);
+				System.out.println(e);
+			}
+			
 		}
 		
 		return idf;
@@ -119,6 +141,10 @@ public class TFIDFRank implements RankInterface {
 	 */
 	private HashMap<String, Double> tfWeigh (String url, ArrayList<String> keywords) {
 		ArrayList<String> keywordsInURL = forwardIndex.get(url);
+		if (keywordsInURL == null) {
+			System.out.printf("ERROR: url %s is not in forwardIndex hashmap", url);
+			System.exit(1);
+		}
 		
 		// count number of occurrence of each keyword in the url
 		HashMap<String, Integer> numOccurrence = new HashMap<>();

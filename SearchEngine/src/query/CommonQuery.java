@@ -82,7 +82,7 @@ public class CommonQuery implements QueryInterface{
 	}
 	
 	/**
-	 * search for a single keyword among the urls
+	 * search for a single keyword among the urls (can return null)
 	 * @param  keyword
 	 * @return all the urls with the keyword
 	 */
