@@ -25,7 +25,7 @@ public class CommonQuery implements QueryInterface{
 	 * use the default path (src/res/) as the dataset path to init the instance
 	 */
 	public CommonQuery() {
-		this("src/res/InvertedIndexDataset", "/src/res/ForwardIndexDataset");
+		this("src/res/InvertedIndexDataset", "src/res/ForwardIndexDataset");
 	}
 	
 	/**
