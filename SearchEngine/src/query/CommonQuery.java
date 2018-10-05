@@ -65,6 +65,11 @@ public class CommonQuery implements QueryInterface{
 	 * @return a list ranks urls 
 	 */
 	public ArrayList<String> search (ArrayList<String> keywords) {
+		// keyword to lower case
+		for (int i = 0; i < keywords.size(); i++) {
+			keywords.set(i, keywords.get(i).toLowerCase());
+		}
+		
 		ArrayList<String> urls = new ArrayList<>();
 		// find urls for each keyword
 		for (String keyword: keywords) {
@@ -87,7 +92,7 @@ public class CommonQuery implements QueryInterface{
 	 * @return all the urls with the keyword
 	 */
 	private ArrayList<String> querySingleKeyword (String keyword) {
-		return this.invertedIndex.get(keyword.toLowerCase());
+		return this.invertedIndex.get(keyword);
 	}
 	
 }
