@@ -1,16 +1,23 @@
 package preprocess;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Scanner;
+
 
 public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	private StringMapModuleInterface keywordMapModule;
 	private HashMap<String, ArrayList<String>> ForwardIndexMap;
 	private InvertedIndexModuleInterface observer;
 	
+	private static File swlFile = new File("src/res/stopwords.txt");
+	private ArrayList<String> stopwords_list = new ArrayList<String>();
+	private Scanner sc;
 	
 	ForwardIndexModule(StringMapModuleInterface keywordMapModule){
 		this.ForwardIndexMap= new HashMap<String, ArrayList<String>>();
@@ -23,8 +30,25 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 		this.observer=observer;
 	}
 	
+	//==================== Remove The Stopwords Function ====================
+	
+	public void createTheStopwordsList() {
+		try {
+			sc = new Scanner(swlFile);
+			while(sc.hasNextLine()) {
+				String theword = sc.nextLine();
+				stopwords_list.add(theword);
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	//==================== Change the origin HashMap to new HashMap ====================
 	public void generateForwardIndexMap(HashMap<String, String> origin_map) throws IOException{
+		createTheStopwordsList();
+		
 		for (String key : origin_map.keySet()) {
 			String get_url = key;
 			ArrayList<String> keywordList = getKeywordFromOriginHashMap(origin_map.get(key));
@@ -42,7 +66,9 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 		ArrayList<String> kwarr=new ArrayList<String>();
 		for (int i=0;i<kwlist.length;i++) {
 			if (kwlist[i].length()!=0) {
-				kwarr.add(kwlist[i].toLowerCase());
+				if(!stopwords_list.contains(kwlist[i])){
+					kwarr.add(kwlist[i].toLowerCase());
+				}
 			}
 		}
 		return kwarr;
