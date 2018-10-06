@@ -8,12 +8,13 @@ import preprocess.Preprocess;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Do you add new webpages?");
-		if (sc.nextLine()=="Y") {
+		System.out.println("Do you add new webpages?");
+		if (sc.nextLine().equals("Y")) {
 			Preprocess.generatePreprocess();
-		}	
+			System.out.println("New webpages added.");
+		}
 		System.out.print("I want search:");
-		String query = sc.nextLine().toLowerCase();
+		String query = sc.nextLine();
 		ArrayList<String> queryList=new ArrayList<String>(Arrays.asList(query.split(" ")));
 		System.out.println("Search result for "+query+":");
 		QueryInterface cq=new CommonQuery();
