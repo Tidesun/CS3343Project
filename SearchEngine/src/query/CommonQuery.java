@@ -9,6 +9,7 @@
 package query;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.io.File;
@@ -84,6 +85,10 @@ public class CommonQuery implements QueryInterface{
 		ArrayList<String> rankedUrls = ranker.rank(urls, keywords);
 		
 		return rankedUrls; 
+	}
+	
+	public ArrayList<String> search (String keywords) {
+		return this.search(new ArrayList<String>(Arrays.asList(keywords.split(" "))));
 	}
 	
 	/**
