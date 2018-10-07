@@ -14,7 +14,7 @@ public class InvertedIndexModule implements InvertedIndexModuleInterface{
 	private HashMap<String,ArrayList<String>> InvertedIndexMap;
 	
 	//Constructor
-	InvertedIndexModule(ForwardIndexModuleInterface forwardIndexModule) {
+	public InvertedIndexModule(ForwardIndexModuleInterface forwardIndexModule) {
 		this.forwardIndexModule=forwardIndexModule;
 		this.forwardIndexModule.subscribe(this);	
 	}

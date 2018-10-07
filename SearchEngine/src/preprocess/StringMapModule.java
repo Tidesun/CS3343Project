@@ -8,7 +8,7 @@ public class StringMapModule implements StringMapModuleInterface{
 	private ExtractModuleInterface extractor;
 	private ForwardIndexModuleInterface observer;
 	
-	StringMapModule(){
+	public StringMapModule(){
 		this.extractor=new ExtractBodyModule();
 		this.observer=null;
 	}

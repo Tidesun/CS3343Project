@@ -19,7 +19,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	private ArrayList<String> stopwords_list = new ArrayList<String>();
 	private Scanner sc;
 	
-	ForwardIndexModule(StringMapModuleInterface keywordMapModule){
+	public ForwardIndexModule(StringMapModuleInterface keywordMapModule){
 		this.ForwardIndexMap= new HashMap<String, ArrayList<String>>();
 		this.keywordMapModule=keywordMapModule;
 		this.keywordMapModule.subscribe(this);
