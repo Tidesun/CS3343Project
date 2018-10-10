@@ -2,6 +2,8 @@ package testPreprocess;
 
 import java.lang.reflect.Field;
 import static org.junit.Assert.*;
+
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import java.lang.reflect.Field;
@@ -25,6 +27,9 @@ public class testForwardIndexModule {
 		forward = new ForwardIndexModule(keywordMap);
 		observer = new InvertedIndexModule(forward); 
 	}
+	
+	@After
+	public void tearDown() throws Exception { }
 	
 	@Test
 	public void testSecribe() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
