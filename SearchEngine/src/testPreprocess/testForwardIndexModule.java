@@ -2,6 +2,7 @@ package testPreprocess;
 
 import java.lang.reflect.Field;
 import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 import java.lang.reflect.Field;
 import preprocess.*;
@@ -14,14 +15,19 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class testForwardIndexModule {
+	StringMapModuleInterface keywordMap;
+	ForwardIndexModule forward;
+	InvertedIndexModuleInterface observer;
+	
+	@Before
+	public void setUp() { 
+		keywordMap = new StringMapModule();
+		forward = new ForwardIndexModule(keywordMap);
+		observer = new InvertedIndexModule(forward); 
+	}
 	
 	@Test
 	public void testSecribe() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		
-		//initialization
-		StringMapModuleInterface keywordMap = new StringMapModule();
-		ForwardIndexModule forward = new ForwardIndexModule(keywordMap);
-		InvertedIndexModuleInterface observer = new InvertedIndexModule(forward);
 		
 		//get private variable observer
 		Class<?> class1 = forward.getClass();
@@ -35,10 +41,6 @@ public class testForwardIndexModule {
 	
 	@Test
 	public void testCreateTheStopwordsList() throws Exception{
-		
-		//initialization
-		StringMapModuleInterface keywordMap = new StringMapModule();
-		ForwardIndexModule forward = new ForwardIndexModule(keywordMap);
 		
 		//get control variable
 		File sFile = new File("src/res/stopwords.txt");
@@ -62,11 +64,6 @@ public class testForwardIndexModule {
 	
 	@Test
 	public void testGenerateForwardIndexMap() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, IOException {
-		
-		//initialization
-		StringMapModuleInterface keywordMap = new StringMapModule();
-		ForwardIndexModule forward = new ForwardIndexModule(keywordMap);
-		InvertedIndexModuleInterface observer = new InvertedIndexModule(forward);
 		
 		//build environment
 		String url1=new String();
@@ -101,11 +98,6 @@ public class testForwardIndexModule {
 	@Test
 	public void testGetKeywordFromOriginHashMap() {
 	
-		//initialization
-		StringMapModuleInterface keywordMap = new StringMapModule();
-		ForwardIndexModule forward = new ForwardIndexModule(keywordMap);
-		InvertedIndexModuleInterface observer = new InvertedIndexModule(forward);
-		
 		//build environment
 		String url1=new String();
 		url1 = "github.com";
@@ -129,10 +121,6 @@ public class testForwardIndexModule {
 
 	@Test
 	public void testAddKeywordsToTheHashMap1() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		
-		//initialization
-		StringMapModuleInterface keywordMap = new StringMapModule();
-		ForwardIndexModule forward = new ForwardIndexModule(keywordMap);
 				
 		//get private variable ForwardIndexMap
 		Class<?> class5 = forward.getClass();
@@ -160,10 +148,6 @@ public class testForwardIndexModule {
 	
 	@Test
 	public void testAddKeywordsToTheHashMap2() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		
-		//initialization
-		StringMapModuleInterface keywordMap = new StringMapModule();
-		ForwardIndexModule forward = new ForwardIndexModule(keywordMap);
 				
 		//get private variable ForwardIndexMap
 		Class<?> class5 = forward.getClass();
@@ -191,10 +175,6 @@ public class testForwardIndexModule {
 	@Test
 	public void testCreateArrayListOfURL() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
 	
-		//initialization
-		StringMapModuleInterface keywordMap = new StringMapModule();
-		ForwardIndexModule forward = new ForwardIndexModule(keywordMap);
-		
 		//get private variable ForwardIndexMap
 		Class<?> class6 = forward.getClass();
 		Field field = class6.getDeclaredField("ForwardIndexMap");
