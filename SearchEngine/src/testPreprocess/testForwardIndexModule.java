@@ -11,6 +11,7 @@ import preprocess.*;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -70,6 +71,14 @@ public class testForwardIndexModule {
 	@Test
 	public void testGenerateForwardIndexMap() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, IOException {
 		
+		class stubInvertedIndexModuleInterface implements InvertedIndexModuleInterface{
+			public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> ForwardIndexMap) throws IOException, FileNotFoundException{
+			}
+			public HashMap<String,ArrayList<String>> getInvertedIndexMap(){
+				return null;
+			}
+		}
+		observer = new stubInvertedIndexModuleInterface();
 		//build environment
 		String url1=new String();
 		url1 = "github.com";
