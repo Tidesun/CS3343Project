@@ -18,86 +18,99 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
-public class CommonQuery implements QueryInterface{
+public class CommonQuery implements QueryInterface {
 	private HashMap<String, ArrayList<String>> forwardIndex;
 	private HashMap<String, ArrayList<String>> invertedIndex;
-	
+
 	/**
 	 * use the default path (src/res/) as the dataset path to init the instance
+	 * @throws IOException 
+	 * @throws ClassNotFoundException 
 	 */
-	public CommonQuery() {
+	public CommonQuery() throws ClassNotFoundException, IOException {
 		this("src/res/InvertedIndexDataset", "src/res/ForwardIndexDataset");
 	}
-	
+
 	/**
 	 * read forwardIndex and invertedIndex from dataset under resPath directory
+	 * 
 	 * @param resPath
+	 * @throws ClassNotFoundException 
+	 * @throws IOException 
 	 */
-	public CommonQuery(String invertPath, String forwardPath) {
+	public CommonQuery(String invertPath, String forwardPath) throws ClassNotFoundException, IOException {
 		try {
 			// read inverted index
 			FileInputStream in = new FileInputStream(new File(invertPath));
 			ObjectInputStream input = new ObjectInputStream(in);
-			this.invertedIndex = (HashMap<String, ArrayList<String>>)input.readObject();
+			this.invertedIndex = (HashMap<String, ArrayList<String>>) input.readObject();
 			input.close();
 			in.close();
-			
+
 			// read forward index
 			in = new FileInputStream(new File(forwardPath));
 			input = new ObjectInputStream(in);
-			this.forwardIndex = (HashMap<String, ArrayList<String>>)input.readObject();
+			this.forwardIndex = (HashMap<String, ArrayList<String>>) input.readObject();
 			input.close();
 			in.close();
-			
+
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+			throw e;
 		} catch (IOException e) {
 			e.printStackTrace();
+			throw e;
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
+			throw e;
 		} catch (ClassCastException e) {
 			e.printStackTrace();
+			throw e;
 		}
 	}
-	
+
 	/**
 	 * search for a list of keywords and rank the results
-	 * @param  keywords
-	 * @return a list ranks urls 
+	 * 
+	 * @param keywords
+	 * @return a list ranks urls
 	 */
-	public ArrayList<String> search (ArrayList<String> keywords) {
+	public ArrayList<String> search(ArrayList<String> keywords) 
+			throws URLNotFoundException, URLNotinComparatorException{
+		
 		// keyword to lower case
 		for (int i = 0; i < keywords.size(); i++) {
 			keywords.set(i, keywords.get(i).toLowerCase());
 		}
-		
+
 		ArrayList<String> urls = new ArrayList<>();
 		// find urls for each keyword
-		for (String keyword: keywords) {
+		for (String keyword : keywords) {
 			urls.addAll(this.querySingleKeyword(keyword));
 		}
-		
+
 		// remove all the duplicates from the urls list
 		urls = new ArrayList<String>(new HashSet<>(urls));
-		
+
 		// use rank interface to rank the urls
 		RankInterface ranker = new TFIDFRank(this.invertedIndex, this.forwardIndex);
 		ArrayList<String> rankedUrls = ranker.rank(urls, keywords);
-		
-		return rankedUrls; 
+
+		return rankedUrls;
 	}
-	
-	public ArrayList<String> search (String keywords) {
+
+	public ArrayList<String> search(String keywords) {
 		return this.search(new ArrayList<String>(Arrays.asList(keywords.split(" "))));
 	}
-	
+
 	/**
 	 * search for a single keyword among the urls (can return null)
-	 * @param  keyword
+	 * 
+	 * @param keyword
 	 * @return all the urls with the keyword
 	 */
-	private ArrayList<String> querySingleKeyword (String keyword) {
+	private ArrayList<String> querySingleKeyword(String keyword) {
 		return this.invertedIndex.get(keyword);
 	}
-	
+
 }

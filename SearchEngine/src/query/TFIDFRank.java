@@ -31,8 +31,10 @@ public class TFIDFRank implements RankInterface {
 	 * rank the given urls list with TFIDF method
 	 * @param  urls
 	 * @param  keywords
+	 * @throws URLNotinComparatorException
 	 */
-	public ArrayList<String> rank (ArrayList<String> urls, ArrayList<String> keywords) {
+	public ArrayList<String> rank (ArrayList<String> urls, ArrayList<String> keywords) 
+			throws URLNotinComparatorException, URLNotFoundException {
 		
 		// define SortByWeight class for sort the urls later
 		class SortByWeight implements Comparator<String> {
@@ -45,12 +47,10 @@ public class TFIDFRank implements RankInterface {
 			public int compare(String a, String b) {
 				// hashmap cannot get the URL
 				if (weightMap.get(a) == null) {
-					System.out.printf("ERROR: cannot find weight of url %s", a);
-					System.exit(1);
+					throw new URLNotinComparatorException(String.format("ERROR: cannot find weight of url %s", a));
 				}
 				if (weightMap.get(b) == null) {
-					System.out.printf("ERROR: cannot find weight of url %s", b);
-					System.exit(1);
+					throw new URLNotinComparatorException(String.format("ERROR: cannot find weight of url %s", b));
 				}
 				
 				if (weightMap.get(a) > weightMap.get(b)) {
@@ -78,12 +78,11 @@ public class TFIDFRank implements RankInterface {
 	 * @param url        
 	 * @param keywords   a list of keywords that will be used to measure the weight
 	 */
-	public double weigh (String url, ArrayList<String> keywords) {
+	public double weigh (String url, ArrayList<String> keywords) throws URLNotFoundException {
 		// make sure the keywords are in the url
 		ArrayList<String> keywordsInURL = forwardIndex.get(url);
 		if (keywordsInURL == null) {
-			System.out.printf("WARNING: URL %s is not in the forwarIndex hashmap", url);
-			System.exit(1);
+			throw new URLNotFoundException(String.format("WARNING: URL %s is not in the forwarIndex hashmap", url));
 		}
 		
 		for (String keyword: keywords) {
@@ -139,11 +138,10 @@ public class TFIDFRank implements RankInterface {
 	 * @param  keywords
 	 * @return map the keyword to its tf weight in the url  
 	 */
-	private HashMap<String, Double> tfWeigh (String url, ArrayList<String> keywords) {
+	private HashMap<String, Double> tfWeigh (String url, ArrayList<String> keywords) throws URLNotFoundException {
 		ArrayList<String> keywordsInURL = forwardIndex.get(url);
 		if (keywordsInURL == null) {
-			System.out.printf("ERROR: url %s is not in forwardIndex hashmap", url);
-			System.exit(1);
+			throw new URLNotFoundException(String.format("ERROR: url %s is not in forwardIndex hashmap", url));
 		}
 		
 		// count number of occurrence of each keyword in the url

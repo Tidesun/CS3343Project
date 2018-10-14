@@ -17,11 +17,17 @@ public class Main {
 		String query = sc.nextLine();
 		ArrayList<String> queryList=new ArrayList<String>(Arrays.asList(query.split(" ")));
 		System.out.println("Search result for "+query+":");
-		QueryInterface cq=new CommonQuery();
-		ArrayList<String> results=cq.search(queryList);
-		for (String item:results) {
-			System.out.println(item);
+		QueryInterface cq;
+		try {
+			cq=new CommonQuery();
+			ArrayList<String> results=cq.search(queryList);
+			for (String item:results) {
+				System.out.println(item);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+		
 		sc.close();
 	}
 }
