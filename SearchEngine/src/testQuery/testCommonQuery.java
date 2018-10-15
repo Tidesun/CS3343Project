@@ -56,7 +56,7 @@ public class testCommonQuery {
 		expectedURLs.add("www.instragram.com");
 		
 		//3.test execution
-		ArrayList<String> realURLs = commonQuery.search(keywords);
+		ArrayList<String> realURLs = commonQuery.search("airbnb ins");
 		
 		//4.test result
 		assertEquals(expectedURLs, realURLs);
@@ -65,7 +65,7 @@ public class testCommonQuery {
 	public void testSearch_03() throws IOException {
 	
 		ArrayList<String> keywords = new ArrayList<String>();
-		//keywords.add("airbnb");
+		keywords.add("airbnb");
 		keywords.add("ins");
 		keywords.add("apple");
 		
@@ -90,12 +90,10 @@ public class testCommonQuery {
 	}
 	@Test
 	public void testquerySingleKeyword_02() {
-		String singlekeyword = "accomdation";
+		String singlekeyword = "airbnb";
 		
 		ArrayList<String> expectedURLs = new ArrayList<>();
-		expectedURLs.add("www.airbnb.com");
-		expectedURLs.add("www.airbnb.com");
-		
+		expectedURLs.add("src\\res\\html\\www.airbnb.com.html");
 		ArrayList<String> realURLs = commonQuery.search(singlekeyword);
 		
 		assertEquals(expectedURLs, realURLs);
@@ -106,8 +104,15 @@ public class testCommonQuery {
 		String singlekeyword = "sign";
 		
 		ArrayList<String> expectedURLs = new ArrayList<>();
-		expectedURLs.add("www.facebook.com");
-		expectedURLs.add("www.twitter.com");
+		expectedURLs.add("src\\res\\html\\www.imdb.com.html");
+		expectedURLs.add("src\\res\\html\\www.microsoft.com.html");
+		expectedURLs.add("src\\res\\html\\www.stackoverflow.com.html");
+		expectedURLs.add("src\\res\\html\\GitHub.html");
+		expectedURLs.add("src\\res\\html\\www.pexels.com.html");
+		expectedURLs.add("src\\res\\html\\www.twitter.com.html");
+		expectedURLs.add("src\\res\\html\\www.facebook.com.html");
+		expectedURLs.add("src\\res\\html\\www.canva.com.html");
+		expectedURLs.add("src\\res\\html\\www.amazon.com.html");
 		
 		ArrayList<String> realURLs = commonQuery.search(singlekeyword);
 		
