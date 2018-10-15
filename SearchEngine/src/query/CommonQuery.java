@@ -104,13 +104,18 @@ public class CommonQuery implements QueryInterface {
 	}
 
 	/**
-	 * search for a single keyword among the urls (can return null)
+	 * search for a single keyword among the urls
 	 * 
 	 * @param keyword
 	 * @return all the urls with the keyword
 	 */
 	private ArrayList<String> querySingleKeyword(String keyword) {
-		return this.invertedIndex.get(keyword);
+		ArrayList<String> result = this.invertedIndex.get(keyword);
+		
+		if (result == null) {
+			return new ArrayList<String>();
+		}
+		return result;
 	}
 
 }
