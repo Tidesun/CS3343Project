@@ -16,8 +16,9 @@ public class StringMapModule implements StringMapModuleInterface{
 	public void subscribe(ForwardIndexModuleInterface observer) {
 		this.observer=observer;
 	}
-	public void generateKeywordStrMap(String path) throws IOException{
-		
+	public void generateKeywordStrMap(String path) throws IOException,NullPointerException{
+		if (this.observer==null)
+			throw new NullPointerException ("ERROR: no observer subscribe to this.");
 		File[] fileList = new File(path).listFiles();	
 		
 		HashMap<String,String> map = new HashMap<String,String>();

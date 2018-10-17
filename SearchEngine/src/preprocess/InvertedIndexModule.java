@@ -20,6 +20,7 @@ public class InvertedIndexModule implements InvertedIndexModuleInterface{
 	}
 	//Generate the InvertedIndexMap
 	public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> forwardIndexMap) throws IOException{
+		
 		InvertedIndexMap=new HashMap<String,ArrayList<String>>();
 		//for each url in forwardIndexMap
 		for (Map.Entry<String, ArrayList<String>> entry : forwardIndexMap.entrySet()){

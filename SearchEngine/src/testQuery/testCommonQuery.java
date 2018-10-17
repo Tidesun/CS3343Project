@@ -52,12 +52,11 @@ public class testCommonQuery {
 		
 		//2.expected result
 		ArrayList<String> expectedURLs = new ArrayList<>();
-		expectedURLs.add("www.airbnb.com");
-		expectedURLs.add("www.instragram.com");
+		expectedURLs.add("src\\res\\html\\www.airbnb.com");
+		expectedURLs.add("src\\res\\html\\www.instragram.com");
 		
 		//3.test execution
 		ArrayList<String> realURLs = commonQuery.search("airbnb ins");
-		
 		//4.test result
 		assertEquals(expectedURLs, realURLs);
 	}
@@ -71,9 +70,9 @@ public class testCommonQuery {
 		
 		
 		ArrayList<String> expectedURLs = new ArrayList<>();
-		expectedURLs.add("www.airbnb.com");
-		expectedURLs.add("www.instragram.com");
-		expectedURLs.add("www.apple.com");
+		expectedURLs.add("src\\res\\html\\www.airbnb.com");
+		expectedURLs.add("src\\res\\html\\www.instragram.com");
+		expectedURLs.add("src\\res\\html\\www.apple.com");
 		
 		
 		ArrayList<String> realURLs =commonQuery.search(keywords);

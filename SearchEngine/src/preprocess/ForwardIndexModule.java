@@ -46,7 +46,9 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	}
 	
 	//==================== Change the origin HashMap to new HashMap ====================
-	public void generateForwardIndexMap(HashMap<String, String> origin_map) throws IOException{
+	public void generateForwardIndexMap(HashMap<String, String> origin_map) throws IOException,NullPointerException{
+		if (this.observer==null)
+			throw new NullPointerException ("ERROR: no observer subscribe to this.");
 		createTheStopwordsList();
 		
 		for (String key : origin_map.keySet()) {

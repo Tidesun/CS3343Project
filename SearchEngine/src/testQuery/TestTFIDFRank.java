@@ -8,6 +8,7 @@ import java.util.HashMap;
 import org.junit.Test;
 
 import query.TFIDFRank;
+import query.URLNotFoundException;
 
 public class TestTFIDFRank {
 	@Test
@@ -39,7 +40,7 @@ public class TestTFIDFRank {
 		mockTestKeywords=mockKeywords;
 		
 		double res=mock.weigh("map.google.com", mockTestKeywords);
-		assertEquals(0.0,res);
+		assertEquals(0.0,res,0);
 	}
 	
 	@Test
@@ -73,7 +74,7 @@ public class TestTFIDFRank {
 		assertEquals("google.com",res.get(0));
 	}
 	
-	@Test
+	@Test(expected= NullPointerException.class) 
 	/* If keyword not exist*/
 	public void testWeigh3() {
 		HashMap<String, ArrayList<String>> invertedIndex=new HashMap<String, ArrayList<String>>();
@@ -101,11 +102,10 @@ public class TestTFIDFRank {
 		ArrayList<String> mockTestKeywords=new ArrayList<String>();
 		mockTestKeywords=mockKeywords;
 		mockTestKeywords.add("github");
-		
-		assertNull(mock.weigh("google.com", mockTestKeywords));
+		mock.weigh("google.com", mockTestKeywords);
 	}
 	
-	@Test
+	@Test(expected= URLNotFoundException.class) 
 	/* If url not exist*/
 	public void testWeigh4() {
 		HashMap<String, ArrayList<String>> invertedIndex=new HashMap<String, ArrayList<String>>();

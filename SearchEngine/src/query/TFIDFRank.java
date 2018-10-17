@@ -84,10 +84,9 @@ public class TFIDFRank implements RankInterface {
 		if (keywordsInURL == null) {
 			throw new URLNotFoundException(String.format("WARNING: URL %s is not in the forwarIndex hashmap", url));
 		}
-		
-		for (String keyword: keywords) {
-			if (!keywordsInURL.contains(keyword)) {
-				keywords.remove(keyword);
+		for (int i=0;i<keywords.size();i++) {
+			if (!keywordsInURL.contains(keywords.get(i))&&(keywords.contains(keywords.get(i)))) {
+				keywords.remove(keywords.get(i));
 			}
 		}
 		
@@ -117,13 +116,13 @@ public class TFIDFRank implements RankInterface {
 		int totalNumURL = this.forwardIndex.keySet().size();
 				
 		HashMap<String, Double> idf = new HashMap<>();
-		for (String keyword: keywords) {
+		for (int i=0;i<keywords.size();i++) {
 
 			try {
-				int numOfUrl = invertedIndex.get(keyword).size();   		// number of urls that keyword appears in
-				idf.put(keyword, Math.log(numOfUrl / totalNumURL));
+				int numOfUrl = invertedIndex.get(keywords.get(i)).size();   		// number of urls that keyword appears in
+				idf.put(keywords.get(i), Math.log(numOfUrl / totalNumURL));
 			} catch (NullPointerException e) {
-				System.out.printf("ERROR: cannot find keyword %s in the invertedIndex hashmap", keyword);
+				System.out.printf("ERROR: cannot find keyword %s in the invertedIndex hashmap", keywords.get(i));
 				System.out.println(e);
 			}
 			
@@ -146,10 +145,10 @@ public class TFIDFRank implements RankInterface {
 		
 		// count number of occurrence of each keyword in the url
 		HashMap<String, Integer> numOccurrence = new HashMap<>();
-		for (String keyword: keywords) {
-			if (! numOccurrence.keySet().contains(keyword)) {
-				int times = Collections.frequency(keywordsInURL, keyword);
-				numOccurrence.put(keyword, times);
+		for (int i=0;i<keywords.size();i++) {
+			if (! numOccurrence.keySet().contains(keywords.get(i))) {
+				int times = Collections.frequency(keywordsInURL, keywords.get(i));
+				numOccurrence.put(keywords.get(i), times);
 			}
 		}
 		
