@@ -336,7 +336,6 @@ public class CommonQueryTest {
 		assertEquals(expectedurl, realURLs);
 	}
 	
-	
 	//test ranked urls with single keyword
 	@Test
 	public void testSearch_07() throws IOException, ClassNotFoundException {
@@ -378,8 +377,9 @@ public class CommonQueryTest {
 			commonQuery = new CommonQuery(path2,path1);
 			
 			ArrayList<String> expectedURLs = new ArrayList<>();
-			expectedURLs.add("www.twitter.com");
+			
 			expectedURLs.add("www.google.com");
+			expectedURLs.add("www.twitter.com");
 			
 			//2.test execution
 			ArrayList<String> searchkeywords = new ArrayList<String>();
@@ -459,8 +459,9 @@ public class CommonQueryTest {
 				commonQuery = new CommonQuery(path2,path1);
 				
 				ArrayList<String> expectedURLs = new ArrayList<>();
-				expectedURLs.add("www.twitter.com");
+				
 				expectedURLs.add("www.google.com");
+				expectedURLs.add("www.twitter.com");
 				expectedURLs.add("www.airbnb.com");
 				
 				
