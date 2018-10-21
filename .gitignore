@@ -24,4 +24,4 @@ hs_err_pid*
 
 .vscode/*
 
-./SearchEngine/src/res/html
+SearchEngine/src/res/html/
