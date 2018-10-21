@@ -2,28 +2,9 @@ package testQuery;
 
 import static org.junit.Assert.*;
 import query.CommonQuery;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-
-package testQuery;
-import query.CommonQuery;
 import query.URLNotFoundException;
 import query.URLNotinComparatorException;
 
-import static org.junit.Assert.*;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -37,7 +18,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class CommonQueryTest {
+
+
+public class testCommonQuery {
 	private CommonQuery commonQuery;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

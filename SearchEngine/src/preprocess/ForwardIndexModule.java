@@ -10,6 +10,10 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 
+/** 
+* @ClassName: ForwardIndexModule 
+* @Description: TODO 
+*/
 public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	private StringMapModuleInterface keywordMapModule;
 	private HashMap<String, ArrayList<String>> ForwardIndexMap;

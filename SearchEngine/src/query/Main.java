@@ -21,8 +21,9 @@ public class Main {
 		try {
 			cq=new CommonQuery();
 			ArrayList<String> results=cq.search(queryList);
-			for (String item:results) {
-				System.out.println(item);
+			int resultShow=(results.size()>10)?10:results.size();
+			for (int i=0;i<resultShow;i++) {
+				System.out.println(results.get(i));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

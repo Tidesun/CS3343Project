@@ -5,6 +5,6 @@ public class Preprocess {
 		StringMapModule stringMapMod=new StringMapModule();
 		ForwardIndexModuleInterface forwardMod=new ForwardIndexModule(stringMapMod);
 		InvertedIndexModuleInterface invertedMod=new InvertedIndexModule(forwardMod);
-		stringMapMod.generateKeywordStrMap("src/res/html");
+		stringMapMod.generateKeywordStrMap("src/res/html/");
 	}
 }
