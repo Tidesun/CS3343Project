@@ -22,11 +22,12 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	private static File swlFile = new File("src/res/stopwords.txt");
 	private ArrayList<String> stopwords_list = new ArrayList<String>();
 	private Scanner sc;
-	
-	public ForwardIndexModule(StringMapModuleInterface keywordMapModule){
+	private String savePath;
+	public ForwardIndexModule(StringMapModuleInterface keywordMapModule,String savePath){
 		this.ForwardIndexMap= new HashMap<String, ArrayList<String>>();
 		this.keywordMapModule=keywordMapModule;
 		this.keywordMapModule.subscribe(this);
+		this.savePath=savePath;
 		this.observer=null;
 	}
 	
@@ -101,7 +102,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 		return ForwardIndexMap;
 	}
 	private void writeToFile() throws IOException {		
-		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/res/ForwardIndexDataset"));					
+		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(this.savePath));					
 		oos.writeObject(this.getForwardIndexMap());					
 		oos.close();
 	}

@@ -2,9 +2,16 @@ package preprocess;
 import java.io.IOException;
 public class Preprocess {
 	public static void generatePreprocess() throws IOException {
-		StringMapModule stringMapMod=new StringMapModule();
-		ForwardIndexModuleInterface forwardMod=new ForwardIndexModule(stringMapMod);
-		InvertedIndexModuleInterface invertedMod=new InvertedIndexModule(forwardMod);
-		stringMapMod.generateKeywordStrMap("src/res/html/");
+//		/* body element keywords extractor module*/
+//		StringMapModule bodyExtractor=new StringMapModule(new ExtractBodyModule());
+//		ForwardIndexModuleInterface forwardBodyMod=new ForwardIndexModule(bodyExtractor,"src/res/ForwardIndexDataset");
+//		InvertedIndexModuleInterface invertedBodyMod=new InvertedIndexModule(forwardBodyMod,"src/res/InvertedIndexDataset");
+//		bodyExtractor.generateKeywordStrMap("src/res/html/");
+		
+		/* url extractor module*/
+		StringMapModule urlExtractor=new StringMapModule(new ExtractLinkModule());
+		ForwardIndexModuleInterface forwardLinkMod=new ForwardIndexModule(urlExtractor,"src/res/linkForwardIndexDataset");
+		InvertedIndexModuleInterface invertedLinkMod=new InvertedIndexModule(forwardLinkMod,"src/res/linkInvertedIndexDataset");
+		urlExtractor.generateKeywordStrMap("src/res/html/");
 	}
 }

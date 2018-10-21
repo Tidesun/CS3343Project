@@ -13,10 +13,13 @@ public class InvertedIndexModule implements InvertedIndexModuleInterface{
 	//Store the HashMap mapping from keyword to URL lists
 	private HashMap<String,ArrayList<String>> InvertedIndexMap;
 	
+	//file path to save the map
+	private String savePath;
 	//Constructor
-	public InvertedIndexModule(ForwardIndexModuleInterface forwardIndexModule) {
+	public InvertedIndexModule(ForwardIndexModuleInterface forwardIndexModule,String savePath) {
 		this.forwardIndexModule=forwardIndexModule;
-		this.forwardIndexModule.subscribe(this);	
+		this.forwardIndexModule.subscribe(this);
+		this.savePath=savePath;
 	}
 	//Generate the InvertedIndexMap
 	public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> forwardIndexMap) throws IOException{
@@ -46,7 +49,7 @@ public class InvertedIndexModule implements InvertedIndexModuleInterface{
 		this.writeToFile();
 	}
 	private void writeToFile() throws IOException {		
-		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/res/InvertedIndexDataset"));					
+		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(this.savePath));					
 		oos.writeObject(this.getInvertedIndexMap());					
 		oos.close();
 	}

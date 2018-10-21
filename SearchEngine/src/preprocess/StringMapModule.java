@@ -12,8 +12,8 @@ public class StringMapModule implements StringMapModuleInterface{
 	private ExtractModuleInterface extractor;
 	private ForwardIndexModuleInterface observer;
 	
-	public StringMapModule(){
-		this.extractor=new ExtractBodyModule();
+	public StringMapModule(ExtractModuleInterface extractor){
+		this.extractor=extractor;
 		this.observer=null;
 	}
 	
@@ -29,7 +29,7 @@ public class StringMapModule implements StringMapModuleInterface{
 		for(Path path:pathList){	
 			String url= path.toString();
 			String header= this.extractor.WebPageExtraction(path.toFile());
-			map.put(url, header);
+			map.put(url.substring(dirPath.length()), header);
 		}
 		this.observer.generateForwardIndexMap(map);
 	}
