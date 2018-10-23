@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
 import java.lang.reflect.Field;
 import preprocess.*;
 import java.util.HashMap;
@@ -21,12 +22,17 @@ public class testForwardIndexModule {
 	StringMapModuleInterface keywordMap;
 	ForwardIndexModule forward;
 	InvertedIndexModuleInterface observer;
+	ExtractModuleInterface extractor;
+	String savePath;
+	TemporaryFolder temp;
 	
-	@Before
-	public void setUp() { 
-		keywordMap = new StringMapModule();
-		forward = new ForwardIndexModule(keywordMap);
-		observer = new InvertedIndexModule(forward); 
+	@Before 
+	public void setUp() throws IOException { 
+		temp = new TemporaryFolder();
+		savePath = "mytestfile";
+		keywordMap = new StringMapModule(extractor);
+		forward = new ForwardIndexModule(keywordMap,savePath);
+		observer = new InvertedIndexModule(forward,savePath); 
 	}
 	
 	@After
