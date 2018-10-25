@@ -3,6 +3,7 @@ package testPreprocess;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
+import org.junit.Before;
 
 import preprocess.*;
 import java.util.HashMap;
@@ -11,11 +12,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TestInvertedIndexModule {
+	HashMap<String, ArrayList<String>> forward;
+	InvertedIndexModuleInterface inverted;
+	
+	@Before
+	public void setUp() {
+		forward = new HashMap<>();
+		StringMapModule urlExtractor=new StringMapModule(new ExtractLinkModule());
+		ForwardIndexModuleInterface forwardLinkMod=new ForwardIndexModule(urlExtractor,"src/res/linkForwardIndexDataset");
+		inverted=new InvertedIndexModule(forwardLinkMod,"src/res/linkInvertedIndexDataset");
+	}
+	
 	// new empty hashmap
 	@Test
 	public void testGenerateInvertedIndexMap1() throws IOException {
-		HashMap<String, ArrayList<String>> forward = new HashMap<>();
-		InvertedIndexModule inverted = new InvertedIndexModule(new ForwardIndexModule(new StringMapModule()));
 		inverted.generateInvertedIndexMap(forward);
 		assertEquals(new HashMap<String, ArrayList<String>>(), inverted.getInvertedIndexMap());
 	}
@@ -24,12 +34,10 @@ public class TestInvertedIndexModule {
 	@Test
 	public void testGenerateInvertedIndexMap2() throws IOException {
 		// parameter
-		HashMap<String, ArrayList<String>> forward = new HashMap<>();
 		forward.put("github.html", new ArrayList<>(Arrays.asList("github")));
 		forward.put("github pages", new ArrayList<>(Arrays.asList("github")));
 		forward.put("airbnb.html", new ArrayList<>(Arrays.asList("airbnb")));
 		
-		InvertedIndexModule inverted = new InvertedIndexModule(new ForwardIndexModule(new StringMapModule()));
 		inverted.generateInvertedIndexMap(forward);
 
 		// result
@@ -44,11 +52,9 @@ public class TestInvertedIndexModule {
 	@Test
 	public void testGenerateInvertedIndexMap3() throws IOException {
 		// parameter
-		HashMap<String, ArrayList<String>> forward = new HashMap<>();
 		forward.put("github.html", new ArrayList<>(Arrays.asList("github", "git")));
 		forward.put("airbnb.html", new ArrayList<>(Arrays.asList("airbnb", "air")));
 		
-		InvertedIndexModule inverted = new InvertedIndexModule(new ForwardIndexModule(new StringMapModule()));
 		inverted.generateInvertedIndexMap(forward);
 
 		// result

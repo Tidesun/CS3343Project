@@ -73,30 +73,43 @@ public class CommonQuery implements QueryInterface {
 	 * search for a list of keywords and rank the results
 	 * 
 	 * @param keywords
+	 * @param rankMethod: tfidf or pagerank ranking method
 	 * @return a list ranks urls
 	 */
-	public ArrayList<String> search(ArrayList<String> keywords) 
-			throws URLNotFoundException, URLNotinComparatorException{
-		
-		// keyword to lower case
-		for (int i = 0; i < keywords.size(); i++) {
-			keywords.set(i, keywords.get(i).toLowerCase());
-		}
+	public ArrayList<String> search(ArrayList<String> keywords, String rankMethod) 
+			throws URLNotFoundException, URLNotinComparatorException, RankMethodNotFoundException{
+				// keyword to lower case
+				for (int i = 0; i < keywords.size(); i++) {
+					keywords.set(i, keywords.get(i).toLowerCase());
+				}
 
-		ArrayList<String> urls = new ArrayList<>();
-		// find urls for each keyword
-		for (String keyword : keywords) {
-			urls.addAll(this.querySingleKeyword(keyword));
-		}
+				ArrayList<String> urls = new ArrayList<>();
+				// find urls for each keyword
+				for (String keyword : keywords) {
+					urls.addAll(this.querySingleKeyword(keyword));
+				}
 
-		// remove all the duplicates from the urls list
-		urls = new ArrayList<String>(new HashSet<>(urls));
+				// remove all the duplicates from the urls list
+				urls = new ArrayList<String>(new HashSet<>(urls));
 
-		// use rank interface to rank the urls
-		RankInterface ranker = new TFIDFRank(this.invertedIndex, this.forwardIndex);
-		ArrayList<String> rankedUrls = ranker.rank(urls, keywords);
+				// use rank interface to rank the urls
+				ArrayList<String> rankedUrls;
+				if (rankMethod.toLowerCase() == "tfidf") {
+					RankInterface ranker = new TFIDFRank(this.invertedIndex, this.forwardIndex);
+					rankedUrls = ranker.rank(urls, keywords);
+				} else if (rankMethod.toLowerCase() == "pagerank") {
+					RankInterface ranker = new PageRank(this.invertedIndex, this.forwardIndex);
+					rankedUrls = ranker.rank(urls, keywords);
+				} else {
+					throw new RankMethodNotFoundException();
+				}
+				
 
-		return rankedUrls;
+				return rankedUrls;
+	}
+	
+	public ArrayList<String> search(ArrayList<String> keywords) {
+		return this.search(keywords, "pagerank");
 	}
 
 	public ArrayList<String> search(String keywords) {
