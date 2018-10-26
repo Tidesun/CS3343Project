@@ -14,9 +14,13 @@ public class ExtractLinkModule extends ExtractModuleAbstract implements ExtractM
 		
 		while (matcher.find()) {
 			String the_str = matcher.group(1);
-			if(the_str.contains("cityu") && !the_str.substring(0, 1).endsWith("#") && !the_str.contains("template.cityu")) {
+			String[] split_str = the_str.split("/");
+			String last_part = split_str[split_str.length-1];
+			
+			if(the_str.contains("cityu.edu.hk") && (last_part.contains(".htm") || !last_part.contains("."))) {
 				link_str += the_str + "\n";
 			}
+			System.out.println(link_str);
 		}
 		return link_str;
 	}
