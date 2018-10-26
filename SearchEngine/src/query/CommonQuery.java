@@ -21,6 +21,8 @@ import java.io.ObjectInputStream;
 public class CommonQuery implements QueryInterface {
 	private HashMap<String, ArrayList<String>> forwardIndex;
 	private HashMap<String, ArrayList<String>> invertedIndex;
+	private String iPath;
+	private String fPath;
 
 	/**
 	 * use the default path (src/res/) as the dataset path to init the instance
@@ -67,6 +69,9 @@ public class CommonQuery implements QueryInterface {
 			e.printStackTrace();
 			throw e;
 		}
+		
+		this.iPath = invertPath;
+		this.fPath = forwardPath;
 	}
 
 	/**
@@ -75,9 +80,12 @@ public class CommonQuery implements QueryInterface {
 	 * @param keywords
 	 * @param rankMethod: tfidf or pagerank ranking method
 	 * @return a list ranks urls
+	 * @throws IOException 
+	 * @throws ClassNotFoundException 
+	 * @throws FileNotFoundException 
 	 */
-	public ArrayList<String> search(ArrayList<String> keywords, String rankMethod) 
-			throws URLNotFoundException, URLNotinComparatorException, RankMethodNotFoundException{
+	public ArrayList<String> search(ArrayList<String> keywords, String rankMethod, String invertedPath, String forwardPath) 
+			throws URLNotFoundException, URLNotinComparatorException, RankMethodNotFoundException, ClassNotFoundException, IOException{
 				// keyword to lower case
 				for (int i = 0; i < keywords.size(); i++) {
 					keywords.set(i, keywords.get(i).toLowerCase());
@@ -95,10 +103,10 @@ public class CommonQuery implements QueryInterface {
 				// use rank interface to rank the urls
 				ArrayList<String> rankedUrls;
 				if (rankMethod.toLowerCase() == "tfidf") {
-					RankInterface ranker = new TFIDFRank(this.invertedIndex, this.forwardIndex);
+					RankInterface ranker = new TFIDFRank(invertedPath, forwardPath);
 					rankedUrls = ranker.rank(urls, keywords);
 				} else if (rankMethod.toLowerCase() == "pagerank") {
-					RankInterface ranker = new PageRank(this.invertedIndex, this.forwardIndex);
+					RankInterface ranker = new PageRank(invertedPath, forwardPath);
 					rankedUrls = ranker.rank(urls, keywords);
 				} else {
 					throw new RankMethodNotFoundException();
@@ -108,11 +116,24 @@ public class CommonQuery implements QueryInterface {
 				return rankedUrls;
 	}
 	
-	public ArrayList<String> search(ArrayList<String> keywords) {
+	public ArrayList<String> search(ArrayList<String> keywords, String rankMethod) 
+			throws ClassNotFoundException, IOException {
+		if (rankMethod == "tfidf") {
+			return this.search(keywords, rankMethod, this.iPath, this.fPath);
+		} else if (rankMethod == "pagerank") {
+			return this.search(keywords, rankMethod, "src/res/linkForwardIndexDataset", "src/res/linkInvertedIndexDataset");
+		}
+		
+		throw new RankMethodNotFoundException();
+	}
+	
+	public ArrayList<String> search(ArrayList<String> keywords) 
+			throws ClassNotFoundException, IOException {
 		return this.search(keywords, "pagerank");
 	}
 
-	public ArrayList<String> search(String keywords) {
+	public ArrayList<String> search(String keywords) 
+			throws ClassNotFoundException, IOException {
 		return this.search(new ArrayList<String>(Arrays.asList(keywords.split(" "))));
 	}
 

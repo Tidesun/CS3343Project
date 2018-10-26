@@ -1,5 +1,7 @@
 package query;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -10,8 +12,12 @@ import util.*;
 public class PageRank extends AbstractRank {
 	private HashMap<String, Double> weights = new HashMap<>();
 	
-	public PageRank(HashMap<String, ArrayList<String>> inverted, HashMap<String, ArrayList<String>> forward) {
-		super(inverted, forward);
+	public PageRank(String invertedPath, String forwardPath) throws FileNotFoundException, ClassNotFoundException, IOException {
+		super(invertedPath, forwardPath);
+	}
+	
+	public PageRank() throws FileNotFoundException, ClassNotFoundException, IOException {
+		super("src/res/linkInvertedIndexDataset", "src/res/linkForwardIndexDataset");
 	}
 	
 	public double weigh(String url, ArrayList<String> keywords) 

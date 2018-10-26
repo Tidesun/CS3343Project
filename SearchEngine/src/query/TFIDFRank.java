@@ -8,6 +8,8 @@
 
 package query;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Collections;
@@ -15,8 +17,12 @@ import java.util.Comparator;
 
 public class TFIDFRank extends AbstractRank {
 	
-	public TFIDFRank(HashMap<String, ArrayList<String>> invertedIndex, HashMap<String, ArrayList<String>> forwardIndex) {
-		super(invertedIndex, forwardIndex);
+	public TFIDFRank(String invertedPath, String forwardPath) throws FileNotFoundException, ClassNotFoundException, IOException {
+		super(invertedPath, forwardPath);
+	}
+	
+	public TFIDFRank() throws FileNotFoundException, ClassNotFoundException, IOException {
+		super("src/res/InvertedIndexDataset", "src/res/ForwardIndexDataset");
 	}
 	
 	/**

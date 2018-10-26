@@ -1,5 +1,10 @@
 package query;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -14,9 +19,36 @@ public abstract class AbstractRank implements RankInterface{
 	 * @param invertedIndex 
 	 * @param forwardIndex
 	 */
-	AbstractRank(HashMap<String, ArrayList<String>> invertedIndex, HashMap<String, ArrayList<String>> forwardIndex) {
-		this.invertedIndex = invertedIndex;
-		this.forwardIndex = forwardIndex;
+	AbstractRank(String invertedPath, String forwardPath) 
+			throws FileNotFoundException, IOException, ClassNotFoundException {
+		try {
+			// read inverted index
+			FileInputStream in = new FileInputStream(new File(invertedPath));
+			ObjectInputStream input = new ObjectInputStream(in);
+			this.invertedIndex = (HashMap<String, ArrayList<String>>) input.readObject();
+			input.close();
+			in.close();
+
+			// read forward index
+			in = new FileInputStream(new File(forwardPath));
+			input = new ObjectInputStream(in);
+			this.forwardIndex = (HashMap<String, ArrayList<String>>) input.readObject();
+			input.close();
+			in.close();
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			throw e;
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw e;
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			throw e;
+		} catch (ClassCastException e) {
+			e.printStackTrace();
+			throw e;
+		}
 	}
 	
 	/**
