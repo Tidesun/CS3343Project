@@ -17,10 +17,9 @@ public class ExtractLinkModule extends ExtractModuleAbstract implements ExtractM
 			String[] split_str = the_str.split("/");
 			String last_part = split_str[split_str.length-1];
 			
-			if(the_str.contains("cityu.edu.hk") && (last_part.contains(".htm") || !last_part.contains("."))) {
-				link_str += the_str + "\n";
+			if(the_str.contains("cityu.edu.hk") &&(the_str.contains("http")) && (last_part.contains(".htm") || !last_part.contains("."))) {
+				link_str += the_str + " ";
 			}
-			System.out.println(link_str);
 		}
 		return link_str;
 	}
