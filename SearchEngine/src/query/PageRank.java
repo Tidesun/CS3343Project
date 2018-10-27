@@ -57,6 +57,7 @@ public class PageRank extends AbstractRank {
 		// the outgoing link of each url pair
 		double[][] link = new double[numURL][numURL];
 		for (String key: forwardIndex.keySet()) {
+			System.out.println(key);
 			int index = url2index.get(key);
 			ArrayList<String> outUrls = forwardIndex.get(key);
 			int outNum = outUrls.size();
