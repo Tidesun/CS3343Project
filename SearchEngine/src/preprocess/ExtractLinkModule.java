@@ -13,12 +13,11 @@ public class ExtractLinkModule extends ExtractModuleAbstract implements ExtractM
 		String link_str = "";
 		
 		while (matcher.find()) {
-			String the_str = matcher.group(1);
-			String[] split_str = the_str.split("/");
-			String last_part = split_str[split_str.length-1];
-			
+			String the_str = matcher.group(1);			
+			String last_part = the_str.substring(the_str.lastIndexOf("/")+1);		
 			if(the_str.contains("cityu.edu.hk") &&(the_str.contains("http")) && (last_part.contains(".htm") || !last_part.contains("."))) {
-				link_str += the_str + " ";
+				
+				link_str += the_str.substring(the_str.indexOf("://")+3) + " ";
 			}
 		}
 		return link_str;

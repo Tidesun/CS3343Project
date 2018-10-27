@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 import util.*;
 
@@ -36,8 +38,10 @@ public class PageRank extends AbstractRank {
 	}
 	
 	private void generatePageRank(int maxIter, double tol,double dampingFactor) throws MatrixMultiplyException, MatrixSubException {
+		Set<String> webpageSet=new HashSet<String>(forwardIndex.keySet());
+		webpageSet.addAll(invertedIndex.keySet());
 		// init the pagerank of each url
-		int numURL = invertedIndex.keySet().size();
+		int numURL = webpageSet.size();
 		double[][] pageRankArr = new double[numURL][1];
 		for (double[] pageRankArrEle: pageRankArr) {
 			Arrays.fill(pageRankArrEle, (double)1/numURL);
@@ -48,16 +52,18 @@ public class PageRank extends AbstractRank {
 		// mapping between url and index in pageRnak matrix
 		HashMap<String, Integer> url2index = new HashMap<>();
 		HashMap<Integer, String> index2url = new HashMap<>();
+		
 		int i=0;
-		for (String key: invertedIndex.keySet()) {
+		for (String key: webpageSet) {
 			index2url.put(i, key);
 			url2index.put(key, i++);
 		}
 		
 		// the outgoing link of each url pair
 		double[][] link = new double[numURL][numURL];
+		for (double[] row: link)
+			Arrays.fill()
 		for (String key: forwardIndex.keySet()) {
-			System.out.println(key);
 			int index = url2index.get(key);
 			ArrayList<String> outUrls = forwardIndex.get(key);
 			int outNum = outUrls.size();
@@ -68,20 +74,20 @@ public class PageRank extends AbstractRank {
 			}
 		}
 		
-		// find dangling nodes (no outgoing link)
-		Iterator<HashMap.Entry<String, ArrayList<String>>> it = forwardIndex.entrySet().iterator();
-		while(it.hasNext()) {
-			HashMap.Entry<String, ArrayList<String>> pair = it.next();
-			if (pair.getValue().size() == 0) {
-				String danglingurl = pair.getKey();
-				int danglingindex = url2index.get(danglingurl);
-				
-				for (int j=0; j<numURL; j++) {
-					link[j][danglingindex] = (double) 1/numURL;
-				}
-			}
-			it.remove();
-		}
+//		// find dangling nodes (no outgoing link)
+//		Iterator<HashMap.Entry<String, ArrayList<String>>> it = forwardIndex.entrySet().iterator();
+//		while(it.hasNext()) {
+//			HashMap.Entry<String, ArrayList<String>> pair = it.next();
+//			if (pair.getValue().size() == 0) {
+//				String danglingurl = pair.getKey();
+//				int danglingindex = url2index.get(danglingurl);
+//				
+//				for (int j=0; j<numURL; j++) {
+//					link[j][danglingindex] = (double) 1/numURL;
+//				}
+//			}
+//			it.remove();
+//		}
 		
 		Matrix linkweight = new Matrix(link);
 

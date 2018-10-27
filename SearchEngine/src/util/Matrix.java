@@ -42,7 +42,8 @@ public class Matrix {
 		
 		
 		double[][] result = new double[this.shape()[0]][anotherMatrix.shape()[1]];
-		Arrays.fill(result, 0);
+		for (double[] row: result)
+		    Arrays.fill(row, 0.0);
 		
 		for (int i=0; i<this.shape()[0]; i++) {
 			for (int j=0; j<anotherMatrix.shape()[1]; j++) {

@@ -69,7 +69,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	}
 	
 	public ArrayList<String> getKeywordFromOriginHashMap(String kwstr){ 
-		String[] kwlist = kwstr.toLowerCase().split("\\s");
+		String[] kwlist = kwstr.toLowerCase().split(" ");
 		ArrayList<String> kwarr=new ArrayList<String>();
 		for (int i=0;i<kwlist.length;i++) {
 			if (kwlist[i].length()!=0) {
