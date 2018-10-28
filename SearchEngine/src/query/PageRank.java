@@ -23,12 +23,12 @@ public class PageRank extends AbstractRank {
 	}
 	
 	public double weigh(String url, ArrayList<String> keywords) 
-			throws MatrixMultiplyException, MatrixSubException, URLNotFoundException {
+			throws MatrixMultiplyException, MatrixSubException {
 		if (weights.keySet().size() <= 0) {
 			this.generatePageRank();
 		}
 		if (weights.get(url) == null) {
-			throw new URLNotFoundException();
+			return 0;
 		}
 		return weights.get(url);
 	}
@@ -62,7 +62,8 @@ public class PageRank extends AbstractRank {
 		// the outgoing link of each url pair
 		double[][] link = new double[numURL][numURL];
 		for (double[] row: link)
-			Arrays.fill()
+			Arrays.fill(row, 0.0);
+			
 		for (String key: forwardIndex.keySet()) {
 			int index = url2index.get(key);
 			ArrayList<String> outUrls = forwardIndex.get(key);
@@ -74,20 +75,20 @@ public class PageRank extends AbstractRank {
 			}
 		}
 		
-//		// find dangling nodes (no outgoing link)
-//		Iterator<HashMap.Entry<String, ArrayList<String>>> it = forwardIndex.entrySet().iterator();
-//		while(it.hasNext()) {
-//			HashMap.Entry<String, ArrayList<String>> pair = it.next();
-//			if (pair.getValue().size() == 0) {
-//				String danglingurl = pair.getKey();
-//				int danglingindex = url2index.get(danglingurl);
-//				
-//				for (int j=0; j<numURL; j++) {
-//					link[j][danglingindex] = (double) 1/numURL;
-//				}
-//			}
-//			it.remove();
-//		}
+		// find dangling nodes (no outgoing link)
+		Iterator<HashMap.Entry<String, ArrayList<String>>> it = forwardIndex.entrySet().iterator();
+		while(it.hasNext()) {
+			HashMap.Entry<String, ArrayList<String>> pair = it.next();
+			if (pair.getValue().size() == 0) {
+				String danglingurl = pair.getKey();
+				int danglingindex = url2index.get(danglingurl);
+				
+				for (int j=0; j<numURL; j++) {
+					link[j][danglingindex] = (double) 1/numURL;
+				}
+			}
+			it.remove();
+		}
 		
 		Matrix linkweight = new Matrix(link);
 
@@ -122,6 +123,6 @@ public class PageRank extends AbstractRank {
 	
 	private void generatePageRank() throws MatrixMultiplyException, MatrixSubException {
 		// TODO: modify the parameters according to testing result
-		generatePageRank(100, 1.0e-6, 0.85);
+		generatePageRank(10, 1.0e-6, 0.85);
 	}
 }

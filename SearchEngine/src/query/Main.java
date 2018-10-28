@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Do you add new webpages?");
-		if (sc.nextLine().equals("Y")) {
+		if (sc.nextLine().toLowerCase().equals("y")) {
 			Preprocess.generatePreprocess();
 			System.out.println("New webpages added.");
 		}
