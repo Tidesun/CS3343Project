@@ -15,8 +15,7 @@ public class ExtractLinkModule extends ExtractModuleAbstract implements ExtractM
 		while (matcher.find()) {
 			String the_str = matcher.group(1);			
 			String last_part = the_str.substring(the_str.lastIndexOf("/")+1);		
-			if(the_str.contains("cityu.edu.hk") &&(the_str.contains("http")) && (last_part.contains(".htm") || !last_part.contains("."))) {
-				
+			if(the_str.contains("cityu.edu.hk") && the_str.contains("http") && last_part.matches("[^#@<>']*$") && (last_part.contains(".htm") || !last_part.contains("."))) {
 				link_str += the_str.substring(the_str.indexOf("://")+3) + " ";
 			}
 		}
