@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 
-public abstract class AbstractRank implements RankInterface{
+public abstract class AbstractRank implements RankInterface {
 	protected HashMap<String, ArrayList<String>> invertedIndex;
 	protected HashMap<String, ArrayList<String>> forwardIndex;
 	
@@ -68,6 +68,7 @@ public abstract class AbstractRank implements RankInterface{
 				this.weightMap = weight;
 			}
 			
+			@Override
 			public int compare(String a, String b) {
 				// hashmap cannot get the URL
 				if (weightMap.get(a) == null) {
