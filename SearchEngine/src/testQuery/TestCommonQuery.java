@@ -92,18 +92,11 @@ public class TestCommonQuery {
 		searchkeywords.add("sign");
 		searchkeywords.add("login");
 		searchkeywords.add("people");
-		ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords);
-		
-		ArrayList<String> realURLs = commonQuery.search("sign login people");
+		ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords,"tfidf",path2,path1);
 		
 		//3.test result
-		
 		assertEquals(expectedurl, realURLsArrlst);
-		assertEquals(expectedurl, realURLs);
-		
-		
 	}
-	
 	
 	//Test capitalization for the first keyword
 	@Test
@@ -147,14 +140,11 @@ public class TestCommonQuery {
 		searchkeywords.add("sign");
 		searchkeywords.add("login");
 		searchkeywords.add("people");
-		ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords);
-		
-		ArrayList<String> realURLs = commonQuery.search("sign login people");
+		ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords,"tfidf",path2,path1);
 		
 		//3.test result
 		
 		assertEquals(expectedurl, realURLsArrlst);
-		assertEquals(expectedurl, realURLs);
 	}
 	
 	
@@ -200,14 +190,11 @@ public class TestCommonQuery {
 			searchkeywords.add("sign");
 			searchkeywords.add("login");
 			searchkeywords.add("people");
-			ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords);
-			
-			ArrayList<String> realURLs = commonQuery.search("sign login people");
+			ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords,"tfidf",path2,path1);
 			
 			//3.test result
 			
 			assertEquals(expectedurl, realURLsArrlst);
-			assertEquals(expectedurl, realURLs);
 		}
 		
 		
@@ -253,14 +240,11 @@ public class TestCommonQuery {
 			searchkeywords.add("sign");
 			searchkeywords.add("login");
 			searchkeywords.add("people");
-			ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords);
-			
-			ArrayList<String> realURLs = commonQuery.search("sign login people");
+			ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords,"tfidf",path2,path1);
 			
 			//3.test result
 			
 			assertEquals(expectedurl, realURLsArrlst);
-			assertEquals(expectedurl, realURLs);
 		}
 		
 		
@@ -309,14 +293,11 @@ public class TestCommonQuery {
 		searchkeywords.add("sign");
 		searchkeywords.add("login");
 		searchkeywords.add("people");
-		ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords);
-		
-		ArrayList<String> realURLs = commonQuery.search("sign login people");
+		ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords,"tfidf",path2,path1);
 		
 		//3.test result
 		
 		assertEquals(expectedurl, realURLsArrlst);
-		assertEquals(expectedurl, realURLs);
 	}
 	
 	//test ranked urls with single keyword
@@ -367,12 +348,10 @@ public class TestCommonQuery {
 			//2.test execution
 			ArrayList<String> searchkeywords = new ArrayList<String>();
 			searchkeywords.add("login");
-			ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords);
-			ArrayList<String> realURLs = commonQuery.search("login");
+			ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords,"tfidf",path2,path1);
 			
 			//3.test result
 			assertEquals(expectedURLs, realURLsArrlst);
-			assertEquals(expectedURLs, realURLs);	
 	}
 	
 	//test ranked urls with multiple keywords
@@ -452,14 +431,9 @@ public class TestCommonQuery {
 				ArrayList<String> searchkeywords = new ArrayList<String>();
 				searchkeywords.add("login");
 				searchkeywords.add("sign");
-				ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords);
-				ArrayList<String> realURLs = commonQuery.search("login sign");
+				ArrayList<String> realURLsArrlst = commonQuery.search(searchkeywords,"tfidf",path2,path1);
 				
 				//3.test result
 				assertEquals(expectedURLs, realURLsArrlst);
-				assertEquals(expectedURLs, realURLs);	
 		}
-
-		
-	
 }
