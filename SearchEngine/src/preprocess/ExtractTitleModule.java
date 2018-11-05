@@ -7,7 +7,7 @@ import java.util.regex.*;
 * @ClassName: ExtractHeaderModule 
 * @Description: TODO 
 */
-public class ExtractHeaderModule extends ExtractModuleAbstract implements ExtractModuleInterface  {
+public class ExtractTitleModule extends ExtractModuleAbstract implements ExtractModuleInterface  {
 	
 	/*
 	* Title: WebPageExtraction
@@ -20,12 +20,12 @@ public class ExtractHeaderModule extends ExtractModuleAbstract implements Extrac
 	public String WebPageExtraction(File filename) throws FileNotFoundException {
 		String content=this.getContent(filename);
 		//extract content from the description
-		String regex="(?<=<meta name=\\\"description\\\" content=\\\").*?(?=\")";
+		String regex="<title>(.*?)<\\/title>";
 		Pattern pattern=Pattern.compile(regex,Pattern.CASE_INSENSITIVE);
 		Matcher matcher = pattern.matcher(content);
 		if (matcher.find()) {
-			// replace the punctuation
-			return matcher.group(0).toLowerCase().replaceAll("[\\pP\\p{Punct}]","");
+			String the_str = matcher.group(1);
+			return the_str;
 		}
 		else 
 			return null;
