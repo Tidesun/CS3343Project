@@ -122,7 +122,7 @@ public class testExtractLinkModule {
 		File createdFile= temp.newFile("mytestfile.html");
 		
 		// construct temp(test) html file
-		String content = "<div class='slide-button'><a href=https://newscentre.cityu.edu.hk/media/news/2018/10/16/cityu-and-npm-explore-animal-world-using-new-media-their-3rd-collaboration'>READ MORE <i class='icon-angle-right'></i></a></div>\n" + 
+		String content = "<div class='slide-button'><a href='https://newscentre.cityu.edu.hk/media/news/2018/10/16/cityu-and-npm-explore-animal-world-using-new-media-their-3rd-collaboration'>READ MORE <i class='icon-angle-right'></i></a></div>\n" + 
 				"";
 		
 		PrintStream ps = new PrintStream(new FileOutputStream(createdFile));

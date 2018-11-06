@@ -13,5 +13,14 @@ public class Preprocess {
 		ForwardIndexModuleInterface forwardLinkMod=new ForwardIndexModule(urlExtractor,"src/res/linkForwardIndexDataset");
 		InvertedIndexModuleInterface invertedLinkMod=new InvertedIndexModule(forwardLinkMod,"src/res/linkInvertedIndexDataset");
 		urlExtractor.generateKeywordStrMap("src/res/html/");
+		
+		/* title extractor module*/
+		StringMapModule titleExtractor=new StringMapModule(new ExtractTitleModule());
+		ForwardIndexModuleInterface forwardTitleMod=new ForwardIndexModule(titleExtractor,"src/res/titleForwardIndexDataset");
+		try {
+			titleExtractor.generateKeywordStrMap("src/res/html/");
+		}
+		catch(Exception e) {
+		}
 	}
 }
