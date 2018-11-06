@@ -16,11 +16,7 @@ public class Preprocess {
 		
 		/* title extractor module*/
 		StringMapModule titleExtractor=new StringMapModule(new ExtractTitleModule());
-<<<<<<< HEAD
 		ForwardIndexModuleInterface forwardTitleMod=new ForwardIndexModule(titleExtractor,"src/res/dataset/titleForwardIndexDataset");
-=======
-		ForwardIndexModuleInterface forwardTitleMod=new ForwardIndexModule(titleExtractor,"src/res/titleForwardIndexDataset");
->>>>>>> df1abd08a265cdec934beaa896a13047ca606782
 		try {
 			titleExtractor.generateKeywordStrMap("src/res/html/");
 		}
