@@ -21,6 +21,7 @@ import java.io.ObjectInputStream;
 public class CommonQuery implements QueryInterface {
 	private HashMap<String, ArrayList<String>> forwardIndex;
 	private HashMap<String, ArrayList<String>> invertedIndex;
+	private RankInterface ranker;
 	private String iPath;
 	private String fPath;
 
@@ -42,6 +43,8 @@ public class CommonQuery implements QueryInterface {
 	 */
 	public CommonQuery(String invertPath, String forwardPath) throws ClassNotFoundException, IOException {
 		try {
+			this.ranker=null;
+			
 			// read inverted index
 			FileInputStream in = new FileInputStream(new File(invertPath));
 			ObjectInputStream input = new ObjectInputStream(in);
@@ -103,10 +106,10 @@ public class CommonQuery implements QueryInterface {
 				// use rank interface to rank the urls
 				ArrayList<String> rankedUrls;
 				if (rankMethod.toLowerCase() == "tfidf") {
-					RankInterface ranker = new TFIDFRank(invertedPath, forwardPath);
+					this.ranker = new TFIDFRank(invertedPath, forwardPath);
 					rankedUrls = ranker.rank(urls, keywords);
 				} else if (rankMethod.toLowerCase() == "pagerank") {
-					RankInterface ranker = new PageRank(invertedPath, forwardPath);
+					this.ranker = new PageRank(invertedPath, forwardPath);
 					rankedUrls = ranker.rank(urls, keywords);
 				} else {
 					throw new RankMethodNotFoundException();
