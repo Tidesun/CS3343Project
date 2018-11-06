@@ -22,7 +22,7 @@ public class TFIDFRank extends AbstractRank {
 	}
 	
 	public TFIDFRank() throws FileNotFoundException, ClassNotFoundException, IOException {
-		super("src/res/InvertedIndexDataset", "src/res/ForwardIndexDataset");
+		super("src/res/dataset/InvertedIndexDataset", "src/res/dataset/ForwardIndexDataset");
 	}
 	
 	/**

@@ -38,7 +38,7 @@ public class PageRank extends AbstractRank {
 	 * @throws IOException
 	 */
 	public PageRank() throws FileNotFoundException, ClassNotFoundException, IOException {
-		super("src/res/linkInvertedIndexDataset", "src/res/linkForwardIndexDataset");
+		super("src/res/dataset/linkInvertedIndexDataset", "src/res/dataset/linkForwardIndexDataset");
 	}
 	
 	/**

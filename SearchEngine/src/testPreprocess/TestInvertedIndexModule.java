@@ -19,8 +19,8 @@ public class TestInvertedIndexModule {
 	public void setUp() {
 		forward = new HashMap<>();
 		StringMapModule urlExtractor=new StringMapModule(new ExtractLinkModule());
-		ForwardIndexModuleInterface forwardLinkMod=new ForwardIndexModule(urlExtractor,"src/res/linkForwardIndexDataset");
-		inverted=new InvertedIndexModule(forwardLinkMod,"src/res/linkInvertedIndexDataset");
+		ForwardIndexModuleInterface forwardLinkMod=new ForwardIndexModule(urlExtractor,"src/res/dataset/linkForwardIndexDataset");
+		inverted=new InvertedIndexModule(forwardLinkMod,"src/res/dataset/linkInvertedIndexDataset");
 	}
 	
 	// new empty hashmap

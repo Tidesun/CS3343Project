@@ -52,8 +52,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	
 	//==================== Change the origin HashMap to new HashMap ====================
 	public void generateForwardIndexMap(HashMap<String, String> origin_map) throws IOException,NullPointerException{
-		if (this.observer==null)
-			throw new NullPointerException ("ERROR: no observer subscribe to this.");
+		
 		createTheStopwordsList();
 		
 		for (String key : origin_map.keySet()) {
@@ -65,7 +64,10 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 			}
 		}
 		this.writeToFile();
-		this.observer.generateInvertedIndexMap(ForwardIndexMap);
+		if (this.observer==null)
+			throw new NullPointerException ("ERROR: no observer subscribe to this.");
+		else
+			this.observer.generateInvertedIndexMap(ForwardIndexMap);
 	}
 	
 	public ArrayList<String> getKeywordFromOriginHashMap(String kwstr){ 

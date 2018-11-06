@@ -21,6 +21,7 @@ import java.io.ObjectInputStream;
 public class CommonQuery implements QueryInterface {
 	private HashMap<String, ArrayList<String>> forwardIndex;
 	private HashMap<String, ArrayList<String>> invertedIndex;
+	private RankInterface ranker;
 	private String iPath;
 	private String fPath;
 
@@ -30,7 +31,7 @@ public class CommonQuery implements QueryInterface {
 	 * @throws ClassNotFoundException 
 	 */
 	public CommonQuery() throws ClassNotFoundException, IOException {
-		this("src/res/InvertedIndexDataset", "src/res/ForwardIndexDataset");
+		this("src/res/dataset/InvertedIndexDataset", "src/res/dataset/ForwardIndexDataset");
 	}
 
 	/**
@@ -42,6 +43,8 @@ public class CommonQuery implements QueryInterface {
 	 */
 	public CommonQuery(String invertPath, String forwardPath) throws ClassNotFoundException, IOException {
 		try {
+			this.ranker=null;
+			
 			// read inverted index
 			FileInputStream in = new FileInputStream(new File(invertPath));
 			ObjectInputStream input = new ObjectInputStream(in);
@@ -103,10 +106,10 @@ public class CommonQuery implements QueryInterface {
 				// use rank interface to rank the urls
 				ArrayList<String> rankedUrls;
 				if (rankMethod.toLowerCase() == "tfidf") {
-					RankInterface ranker = new TFIDFRank(invertedPath, forwardPath);
+					this.ranker = new TFIDFRank(invertedPath, forwardPath);
 					rankedUrls = ranker.rank(urls, keywords);
 				} else if (rankMethod.toLowerCase() == "pagerank") {
-					RankInterface ranker = new PageRank(invertedPath, forwardPath);
+					this.ranker = new PageRank(invertedPath, forwardPath);
 					rankedUrls = ranker.rank(urls, keywords);
 				} else {
 					throw new RankMethodNotFoundException();
@@ -121,7 +124,7 @@ public class CommonQuery implements QueryInterface {
 		if (rankMethod == "tfidf") {
 			return this.search(keywords, rankMethod, this.iPath, this.fPath);
 		} else if (rankMethod == "pagerank") {
-			return this.search(keywords, rankMethod, "src/res/linkForwardIndexDataset", "src/res/linkInvertedIndexDataset");
+			return this.search(keywords, rankMethod, "src/res/dataset/linkForwardIndexDataset", "src/res/dataset/linkInvertedIndexDataset");
 		}
 		
 		throw new RankMethodNotFoundException();
