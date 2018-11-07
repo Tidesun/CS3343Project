@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<title>School of Energy and Environment - City University of Hong Kong</title>
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=Edge" />-->
+		<meta charset="utf-8" />
+
+		 <!-- Disable "Skype Click to Call" -->
+        <meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+		
+
+		<!-- Meta -->
+		<meta name="author" content="City University of Hong Kong" />
+		<meta name="description" content="Website descripion." />
+		<meta name="keywords" content="City University of Hong Kong, City University of HK, City University HK, CityU Hong Kong, CityU HK, CityUHK, City University, CityU" />
+
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+
+		<!-- /Meta -->
+
+		<!-- Icon -->
+		<link rel="shortcut icon" href="http://www.cityu.edu.hk/favicon.ico" />
+		<!-- /Icon -->
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="http://template.cityu.edu.hk/template/css/cityu.base.css" />
+		<link rel="stylesheet" type="text/css" href="http://template.cityu.edu.hk/template/css/jquery.ddsmoothmenu.css" />
+		<link rel="stylesheet" type="text/css" href="http://template.cityu.edu.hk/template/css/jquery.nivo.slider.css" />
+		<link rel="stylesheet" type="text/css" href="http://www6.cityu.edu.hk/see/css/cityu.base.custom.css" />
+		<!-- /CSS -->
+
+		<!-- JS -->
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="js/cityu.base.config.js"></script>
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/cityu.base.js"></script>
+		<!-- /JS -->
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/jquery/ddsmoothmenu/jquery.ddsmoothmenu.js">
+			// Smooth Navigational Menu - (c) Dynamic Drive DHTML code library (www.dynamicdrive.com).
+			// This notice MUST stay intact for legal use.
+			// Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code.
+		</script>
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/jquery/ddsmoothmenu/jquery.ddsmoothmenu.ready.js"></script>
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/jquery/nivo.slider/jquery.nivo.slider.js"></script>
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/jquery/nivo.slider/jquery.nivo.slider.ready.js"></script>
+        <script type="text/javascript" src="js/jquery.nivo.slider.ready_see.js"></script>
+		<!-- /jQuery Plugins -->
+
+		<!-- ADD YOUR JAVASCRIPTS HERE -->
+        <script type="text/javascript" src="js/cityu.see.index.js"></script>
+
+        
+        <script type="text/javascript">
+        function fisherYates( array ){
+ var count = array.length,
+     randomnumber,
+     temp;
+ while( count ){
+  randomnumber = Math.random() * count-- | 0;
+  temp = array[count];
+  array[count] = array[randomnumber];
+  array[randomnumber] = temp
+ }
+}
+</script>
+<script type="text/javascript">
+function random_index(  ){
+		var index=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21];
+		var url = [];
+		var img = [];
+		
+		img[1]=document.getElementById("i1").src;
+		url[1]=document.getElementById("h1").href;
+		img[2]=document.getElementById("i2").src;
+		url[2]=document.getElementById("h2").href;
+		img[3]=document.getElementById("i3").src;
+		url[3]=document.getElementById("h3").href;
+		img[4]=document.getElementById("i4").src;
+		url[4]=document.getElementById("h4").href;
+		img[5]=document.getElementById("i5").src;
+		url[5]=document.getElementById("h5").href;
+		img[6]=document.getElementById("i6").src;
+		url[6]=document.getElementById("h6").href;
+		img[7]=document.getElementById("i7").src;
+		url[7]=document.getElementById("h7").href;
+		img[8]=document.getElementById("i8").src;
+		url[8]=document.getElementById("h8").href;
+		img[9]=document.getElementById("i9").src;
+		url[9]=document.getElementById("h9").href;
+		img[10]=document.getElementById("i10").src;
+		url[10]=document.getElementById("h10").href;
+		img[11]=document.getElementById("i11").src;
+		url[11]=document.getElementById("h11").href;
+		img[12]=document.getElementById("i12").src;
+		url[12]=document.getElementById("h12").href;
+		img[13]=document.getElementById("i13").src;
+		url[13]=document.getElementById("h13").href;
+		img[14]=document.getElementById("i14").src;
+		url[14]=document.getElementById("h14").href;
+		img[15]=document.getElementById("i15").src;
+		url[15]=document.getElementById("h15").href;
+		img[16]=document.getElementById("i16").src;
+		url[16]=document.getElementById("h16").href;
+		img[17]=document.getElementById("i17").src;
+		url[17]=document.getElementById("h17").href;
+		img[18]=document.getElementById("i18").src;
+		url[18]=document.getElementById("h18").href;
+		img[19]=document.getElementById("i19").src;
+		url[19]=document.getElementById("h19").href;
+		img[20]=document.getElementById("i19").src;
+		url[20]=document.getElementById("h19").href;
+		img[21]=document.getElementById("i20").src;
+		url[21]=document.getElementById("h20").href;
+
+
+		
+		
+		fisherYates(index);
+		
+		 document.getElementById("i1").src = img[index[1-1]];
+		 document.getElementById("h1").setAttribute('href', url[index[1-1]]);
+ 		 document.getElementById("i2").src = img[index[2-1]];
+		 document.getElementById("h2").setAttribute('href', url[index[2-1]]);
+ 		 document.getElementById("i3").src = img[index[3-1]];
+		 document.getElementById("h3").setAttribute('href', url[index[3-1]]);
+		 document.getElementById("i4").src = img[index[4-1]];
+		 document.getElementById("h4").setAttribute('href', url[index[4-1]]);
+		 document.getElementById("i5").src = img[index[5-1]];
+		 document.getElementById("h5").setAttribute('href', url[index[5-1]]);
+		 document.getElementById("i6").src = img[index[6-1]];
+		 document.getElementById("h6").setAttribute('href', url[index[6-1]]);
+		 document.getElementById("i7").src = img[index[7-1]];
+		 document.getElementById("h7").setAttribute('href', url[index[7-1]]);
+		 document.getElementById("i8").src = img[index[8-1]];
+		 document.getElementById("h8").setAttribute('href', url[index[8-1]]);
+		 document.getElementById("i9").src = img[index[9-1]];
+		 document.getElementById("h9").setAttribute('href', url[index[9-1]]);
+		 document.getElementById("i10").src = img[index[10-1]];
+		 document.getElementById("h10").setAttribute('href', url[index[10-1]]);
+		 document.getElementById("i11").src = img[index[11-1]];
+		 document.getElementById("h11").setAttribute('href', url[index[11-1]]);
+		 document.getElementById("i12").src = img[index[12-1]];
+		 document.getElementById("h12").setAttribute('href', url[index[12-1]]);
+		 document.getElementById("i13").src = img[index[13-1]];
+		 document.getElementById("h13").setAttribute('href', url[index[13-1]]);
+		 document.getElementById("i14").src = img[index[14-1]];
+		 document.getElementById("h14").setAttribute('href', url[index[14-1]]);
+		 document.getElementById("i15").src = img[index[15-1]];
+		 document.getElementById("h15").setAttribute('href', url[index[15-1]]);
+		 document.getElementById("i16").src = img[index[16-1]];
+		 document.getElementById("h16").setAttribute('href', url[index[16-1]]);
+		 document.getElementById("i17").src = img[index[17-1]];
+		 document.getElementById("h17").setAttribute('href', url[index[17-1]]);
+		 document.getElementById("i18").src = img[index[18-1]];
+		 document.getElementById("h18").setAttribute('href', url[index[18-1]]);
+		 document.getElementById("i19").src = img[index[19-1]];
+		 document.getElementById("h19").setAttribute('href', url[index[19-1]]);
+		 document.getElementById("i20").src = img[index[20-1]];
+		 setAttribute('href', url[index[20-1]]);
+		 document.getElementById("i21").src = img[index[21-1]];
+		
+
+		 
+			
+}
+		</script>
+        <!--[if lt IE 9]>
+            <style type="text/css">
+              #cityu-media-news .cityu-media-item .cityu-media-label {position:absolute; top:0; left:0; display:block; width: 250px; height:17px; line-height: 17px; font-size: 11px; color:#FFF;  background-color:#999;  padding:0px 5px 0 5px;}
+              #cityu-media-news .cityu-media-item a:hover .cityu-media-label {color:#fff; background-color:#333; }
+            </style>                        
+        <![endif]-->
+        <!--<style type="text/css">
+		  .theme-default .nivo-caption {background:url(img/nivo.slider/btmbar.jpg) left bottom no-repeat; color:#fff; text-align:right; font-family: Helvetica, Arial, sans-serif; font-size:15px; line-height: 17px;}
+        </style> -->       
+	</head>
+
+
+	<body class="cityu-dept cityu-layout-home cityu-bgtheme-10 cityu-navtheme-10"  onload="random_index()">
+		<!-- Header -->
+		<div id="cityu-header" class="cityu-outer">
+			<div class="cityu-inner">
+
+				<!-- Global -->
+				<div id="cityu-header-global">
+
+					<!-- CityU Logo -->
+					<div id="cityu-header-cityulogo">
+						<a href="http://www.cityu.edu.hk/"><img src="http://template.cityu.edu.hk/template/img/logos/cityu_deptpage.png" alt="City University of Hong Kong" /></a>
+					</div>
+					<!-- /CityU Logo -->
+
+					<!-- Skip Links -->
+					<div class="cityu-skiplink">
+						<a href="#cityu-nav">Skip to navigation</a>
+					</div>
+					<div class="cityu-skiplink">
+						<a href="#cityu-content">Skip to content</a>
+					</div>
+					<!-- /Skip Links -->
+
+					<!-- Toolbar -->
+					<div id="cityu-header-toolbar">
+
+						<!-- Links -->
+						<div id="cityu-header-links">
+                        <a href="https://www6.cityu.edu.hk/see/stafflan/booking" target="_blank">Room Booking</a>&middot;
+							<a href="http://e2lx001.e2.cityu.edu.hk/" target="_blank">Intranet</a>
+					  </div>
+						<!-- /Links -->
+
+						<!-- Search -->
+						<div id="cityu-header-search">
+							<form method="get" action="https://www.cityu.edu.hk/cityusearch">
+								<fieldset>
+									<legend class="cityu-hidden">Search</legend>
+									<div class="cityu-search-text-wrapper">
+										<label class="cityu-hidden" for="cityu-search-text">Search Keywords</label>
+										<input name="site" value="SEE" type="hidden">
+										<input  id="cityu-search-text" name="q" placeholder="Search SEE" type="text">										
+										<input class="cityu-search-button" type="submit" value="" />
+									</div>
+								</fieldset>
+							</form>
+						</div>
+						<!-- /Search -->
+
+						<!-- Language -->
+						<!--div id="cityu-header-lang">
+							
+						</div -->
+						<!-- /Language -->
+
+					</div>
+					<!-- /Toolbar -->
+
+				</div>
+				<!-- /Global -->
+
+				<!-- Local -->
+				<div id="cityu-header-local">
+
+					<!-- Dept Names -->
+					<div id="cityu-header-deptnames">
+						
+						<div id="cityu-header-deptname"><a href="index.htm">School of Energy and Environment</a></div>
+					</div>
+					<!-- /Dept Names -->
+
+					<!-- Dept Logos -->
+
+					<!-- /Dept Logos -->
+
+					<!-- Icons -->
+					<div id="cityu-header-icons"></div>
+					<!-- /Icons -->
+
+				</div>
+				<!-- /Local -->
+
+			</div>
+		</div>
+		<!-- /Header -->
+
+
+
+		<!-- Nav -->
+		<div id="cityu-nav" class="cityu-outer">
+			<div class="cityu-inner">
+
+				<!-- Nav List -->
+				
+						<div id="cityu-nav-list" class="ddsmoothmenu">
+					<ul class="cityu-showindicator">
+                    <li class="cityu-icon-home"><a  href="index.htm"><div title="Home"></div></a></li>
+						<li><a href="#" class="see-nav">About Us</a>
+							<ul>
+								<li><a href="message.htm">Dean's Welcome Message</a></li>
+<li><a href="advisory.htm">Advisory Committee</a></li>
+<li><a href="vision.htm">Vision &amp; Mission</a> </li>
+
+
+                                
+<!--<li><a href="location.htm">Location</a></li>-->
+								
+							</ul>
+						</li>
+						<li><a href="#" class="see-nav">People</a>
+							<ul>
+								<li><a href="people.htm#Admin" onclick="window.location.href = 'people.htm?r='+(+new Date())+'#Admin';
+">School Administrators</a></li>
+<li><a href="people.htm#Faculty" onclick="window.location.href = 'people.htm?r='+(+new Date())+'#Faculty';
+">Faculty</a></li>
+<!--<li><a href="people.htm#VisitingFaculty" onclick="window.location.href = 'people.htm?r='+(+new Date())+'#VisitingFaculty';
+">Visiting Faculty</a></li>-->
+<li><a href="people.htm#Other" onclick="window.location.href = 'people.htm?r='+(+new Date())+'#Other';">Administrative and Technical Staff</a></li>
+								<li><a href="rs_list.htm">Research Students List</a></li>
+							
+							</ul>
+						</li>
+						<li><a href="acad_prog.htm" class="see-nav">Programmes</a>
+						  
+						</li>
+						<li><a href="research.htm" class="see-nav">Research</a>
+                  
+						  
+</li>
+					  <li><a href="#" class="see-nav">Outreach</a>
+							<ul>
+								<li><a href="exchange.htm" >Student Exchange Programme</a> </li>
+<li><a href="#">Community Engagement</a><ul>
+<li><a href="talks.htm">Expert Talks for Secondary School</a> </li></ul></li>
+								
+<li><a href="news/e-newsletter/SEE Newsletter_Sep 2017.pdf">E-Newsletter</a><ul>
+<li><a href="news/e-newsletter/SEE Newsletter_Sep 2018 Issue.pdf">September 2018 Issue</a> </li>
+<li><a href="news/e-newsletter/SEE Newsletter_April 2018 Issue.pdf">April 2018 Issue</a></li>
+<li><a href="news/e-newsletter/SEE Newsletter_Sep 2017.pdf">September 2017 Issue</a> </li>
+<li><a href="news/e-newsletter/6th issue (August 2016).pdf">August 2016 Issue</a> </li></ul></li>
+                              
+							</ul>
+						</li>
+						<li><a href="#" class="see-nav">Student Life</a>
+						
+							<ul>
+
+
+                            <li><a href="internship&amp;career.htm" >Internships & Careers</a></li>
+<li><a href="scholarships_index.htm" > Scholarships</a></li>
+
+        <li><a href="UG_Attributes.htm">Seven Attributes of SEE Graduates</a> </li>                 	
+<li><a href="study_tours.htm">Study Tours</a> </li>
+								
+								<li><a href="#">Student Competitions</a><ul>
+		    <li><a href="news/news_windenergy.htm">Wind Turbine Competition</a></li>
+		    <li><a href="news/Morgen.htm">Solar Car Competition</a></li>
+		    <li><a href="news/news_solar.htm">Solar Tracking Project</a></li>
+		    </ul>
+								</li>
+								<li><a href="InnoActivities.htm">Student Innovative Activities/Competitions Fund</a></li>
+							</ul>
+</li>
+                        
+  <li class="see-nav"><a href="contact.htm" >Contact Us</a> </li>
+                        </li>
+<li class="see-nav"><a href="jobs.htm">Job Openings</a></li>
+
+  </ul>
+				</div>
+					
+				<!-- /Nav List -->
+
+			</div>
+		</div>
+		<!-- /Nav -->
+
+		<!-- Media -->
+		<div id="cityu-media" class="cityu-outer">
+			<div class="cityu-inner">
+
+				<!-- Slider-->
+				<div id="cityu-media-slider-wrapper" class="theme-default">
+					<div id="cityu-media-slider" class="nivoSlider">
+                    <a href="InnoActivities.htm"><img src="img/photos/inno_ebanner.jpg" alt="" title="Student Innovative Activities/Competitions Fund"/></a> 
+                    
+                    <a href="#"><img src="img/photos/SEE School Banner_v3.jpg" alt="" title=""/></a> 
+                                        <a href="news/news_trilogy.htm"><img src="img/photos/Be an Energy Engineer Solve Climate Change.jpg" alt="" title="Be an Energy Engineer, Solve Climate Change"/></a> 
+                                         <a href="news/news_ESSW.htm"><img src="img/photos/Engineering a Smart and Sustainable World.jpg" alt="" title="Engineering a Smart and Sustainable World"/></a> 
+                                         <a href="news/news_trilogy3.htm"><img src="img/photos/3 Our Environmental Engineers think Big_revised_20180504s.jpg" alt="" title="Our Environmental Engineers Think Big"/></a> 
+                                        <a href="https://newscentre.cityu.edu.hk/media/news/2018/04/19/novel-bioprocess-recycling-textile-waste-wins-gold-geneva "><img src="img/photos/ebanner_Carol_20180801.JPG" alt="" title="Novel bioprocess for recycling textile waste wins gold in Geneva"/></a> 
+                                      
+
+                    
+                                      
+                   
+                    
+                    <a href="major_ese.htm"><img src="img/photos/BESE.jpg" alt="Bachelor of Engineering in Energy Science and Engineering" title="Bachelor of Engineering in Energy Science and Engineering"/></a>
+                    <a href="major_eve.htm"><img src="img/photos/BEnvSE.jpg" alt="Bachelor of Engineering in Environmental Science and Engineering" title="Bachelor of Engineering in Environmental Science and Engineering"/></a>
+                    
+                
+           
+                    
+                                                  
+                   
+                   
+                   
+                    
+                    
+                              
+                        
+					</div>
+				</div>
+				<!-- /Slider -->
+
+				<!-- News -->
+				<div id="cityu-media-news" class="cityu-padding-none cityu-imagerow-4">
+ 
+        			<!-- Images -->
+        			
+        			<div class="cityu-media-item">
+           			  <a href="ug_admission.htm">
+                      <!--<div class="cityu-media-label"><span style="color:#000">Undergraduate Admission</span></div>-->
+                      <img src="img/medianews/spotlights-Admissions-to-UG-Major1.jpg" alt="Undergraduate Admission" >
+           			  </a>
+                      </div>
+                    
+        		
+					<div class="cityu-media-item">
+           			  <a href="master_ee.htm">
+                      <!--<div class="cityu-media-label"><span style="color:#000">Master Admission</span></div> -->
+                      <img src="img/medianews/spotlights-Admissions-to-MSc1.jpg" alt="Master Admission" >
+           			  </a>
+              </div>
+                      
+                  <div class="cityu-media-item">
+		      <a href="employstat.htm">
+                      <!--<div class="cityu-media-label"><span style="color:#000">e-Newsletter</span></div>-->
+                      <img src="img/medianews/banner-ges1.jpg" alt="Graduate Employment Statistics" >
+           			  </a>
+                      </div>
+                      
+                      <div class="cityu-media-item">
+           			  <a href="research.htm">
+           			  
+               			  <img src="img/medianews/research1.jpg" alt="Research and Development">
+           			  </a>
+       			  </div>
+       
+            <!-- <div class="cityu-media-item">
+           			  <a href="talks.htm">
+                      <div class="cityu-media-label">Expert Talks for Secondary Schools</div>
+                      <img src="img/medianews/expert_talk.jpg" alt="Expert Talks available to Secondary School Students in Hong Kong">
+           			  </a>
+        </div> -->
+        			<!-- /Images -->
+ 
+    			</div>
+				<!-- /News -->
+
+			</div>
+		</div>
+		<!-- /Media -->
+        
+		<!-- Main --><!-- /Main -->
+
+    <div id="cityu-main" class="cityu-outer">
+	      <div class="cityu-inner">
+	        <!-- Sidebar 2 -->
+	        <div id="cityu-sidebar-2">
+	          <!-- Box -->
+	          <!--<div class="cityu-box">
+                    <div class="cityu-media-item" >
+						
+                     <a href="news/congregation16.htm"><img src="img/medianews/SEE-Congregation-2016.jpg"  alt="Opinion Column on Current Events">
+                      </a>		 
+                     
+                     </div> 
+                                           
+                      
+					</div> -->
+	         <div class="cityu-box">
+             
+	            <div class="cityu-media-item" > <a href="http://www.cityu.edu.hk/aac2019/"><img src="img/medianews/AAC2019.jpg"  alt="AAC2019"> </a> </div>
+              
+	            <div class="cityu-media-item" > <a href="opinion.htm"><img src="img/medianews/opinion.jpg"  alt="Opinion Column on Current Events"> </a> </div>
+              </div>
+	          <!-- /Box -->
+	          <!-- Slider -->
+	          <div class="cityu-box cityu-sub-slider">
+	            <div class="cityu-box-header"> Faculty Profiles </div>
+	            <div id="cityu-sub-slider-wrapper" class="theme-sub">
+	              <div id="cityu-see-sub-slider" class="nivoSlider"> <a id="h0" href="http://www.cityu.edu.hk/see/personal/WeiWU.htm"><img id="i0" src="img/news/spotlights-Wei.jpg"  /></a>
+                  <a id="h20" href="http://www.cityu.edu.hk/see/personal/Shauhrat_Chopra.htm"><img id="i20" src="img/news/spotlights-Shauhrat.jpg"  /></a>
+                   <a id="h6" href="http://www.cityu.edu.hk/see/personal/LinZhang.htm"><img id="i6" src="img/news/spotlights-lin.jpg"  /></a> <a id="h19" href="http://www.cityu.edu.hk/see/personal/JinShang.htm"><img id="i19" src="img/news/spotlights-jin.jpg"  /></a> <a id="h1" href="http://www.cityu.edu.hk/see/personal/Peter_BRIMBLECOMBE.htm"><img id="i1" src="img/news/spotlights-Peter.jpg" /></a> <a id="h2" href="http://www.cityu.edu.hk/see/personal/Michael_Leung.htm"><img id="i2" src="img/news/spotlights-Michael.jpg" /></a> <a id="h3" href="http://www.cityu.edu.hk/see/personal/Johnny_Chan.htm"><img id="i3" src="img/news/spotlights-Johnny.jpg"/></a> <a id="h4" href="http://www.cityu.edu.hk/see/personal/Walid_Daoud.htm"><img id="i4" src="img/news/spotlights-walid.jpg" /></a> <a id="h5" href="http://www.cityu.edu.hk/see/personal/Theodora_NAH.htm"><img id="i5" src="img/news/spotlights-Nah.jpg"  /></a> <a id="h7" href="http://www.cityu.edu.hk/see/personal/Chunhua_LIU.htm"><img id="i7" src="img/news/spotlights-Chunhua.jpg"  /></a> <a id="h8" href="http://www.cityu.edu.hk/see/personal/Wen_Zhou.htm"><img  id="i8" src="img/news/spotlights-Wen.jpg" /></a> <a id="h9" href="http://www.cityu.edu.hk/see/personal/Alicia_An.htm"><img  id="i9" src="img/news/spotlights-Alicia.jpg" /></a> <a id="h10" href="http://www.cityu.edu.hk/see/personal/Nicky_Lam.htm"><img id="i10" src="img/news/spotlights-Nicky.jpg"  /></a> <a id="h11" href="http://www.cityu.edu.hk/see/personal/Patrick_Lee.htm"><img id="i11" src="img/news/spotlights-Patrick.jpg" /></a> <a id="h12" href="http://www.cityu.edu.hk/see/personal/Carol_Lin.htm"><img id="i12" src="img/news/spotlights-Carol.jpg" /></a> <a id="h13" href="http://www.cityu.edu.hk/see/personal/ChakK_Chan.htm"><img id="i13" src="img/news/spotlights-Chak.jpg" /></a> <a id="h14" href="http://www.cityu.edu.hk/see/personal/Keith_Ngan.htm"><img id="i14" src="img/news/spotlights-Keith.jpg"  /></a> <a id="h15" href="http://www.cityu.edu.hk/see/personal/YunHau_Ng.htm"><img id="i15" src="img/news/spotlights-YunHau.jpg"  /></a> <a id="h16" href="http://www.cityu.edu.hk/see/personal/Sam_HSU.htm"><img id="i16" src="img/news/spotlights-Sam.jpg"  /></a> <a id="h17" href="http://www.cityu.edu.hk/see/personal/Patrick_Sit.htm"><img id="i17" src="img/news/spotlights-PatrickS.jpg" /></a> <a id="h18" href="http://www.cityu.edu.hk/see/personal/Denis_Yu.htm"><img id="i18" src="img/news/spotlights-Denis.jpg" /></a> </div>
+                </div>
+              </div>
+	          <!-- /Slider -->
+	          <!-- Box -->
+	          <div class="cityu-box">
+	            <div class="cityu-box-header"> Seminars </div>
+	            
+	            
+                    	<div class="cityu-box-item cityu-link"><a href="seminar.htm#sm181019">The Complexity of photochemical smog<br><br>
+                   Professor Mattias Hallquist <br>Full professor in Atmospheric Chemistry, Department of Chemistry and Molecular Biology, University of Gothenburg
+
+
+<p>19 October 2018 (Friday)</p>
+                    </a>		  </div>
+                    
+                    <div class="cityu-box-item cityu-link"><a href="seminar.htm#sm181022">Understanding the Ultimate Toxicant Mixture: the Effects of Hydraulic Fracturing Flowback and Produced Waters on Aquatic Animals<br><br>
+                   Dr. Yuhe HE<br>Postdoctoral Research Fellow, Department of Biological Sciences, University of Alberta, US
+<p>22 October 2018 (Monday)</p>
+                    </a>		  </div>
+	          <div class="cityu-box-item cityu-link"><a href="seminar.htm#sm181025">Silicone Nanofilaments and the DAGS Approach: Turning Natural Products into High-Performance Materials<br><br>
+                   Prof. Dr. Stefan Seeger<br>University of Zurich, Department of Chemistry
+<p>25 October 2018 (Thursday)</p>
+                    </a>		  </div>
+                    
+	            <div class="cityu-box-item cityu-link"><a href="seminar.htm#archive">Archive of Seminars </a></div>
+              </div>
+	          <!-- /Box -->
+	          <!-- Box -->
+	          <div class="cityu-box">
+	            <div class="cityu-box-header"> Find Us on </div>
+	            <div class="cityu-box-item cityu-icons"><a href="http://www.youtube.com/user/CityUSEE" target="_blank"><img src="http://template.cityu.edu.hk/template/img/icons/social/youtube.png" title="YouTube" alt="YouTube" /></a></div>
+	            <div class="cityu-box-item">
+	              <ul class="cityu-showbullet">
+	                <li><a href="contact.htm#map">Map</a></li>
+                  </ul>
+                </div>
+              </div>
+	          <!-- /Box -->
+            </div>
+	        <!-- /Sidebar 2 -->
+	        <!-- Content -->
+	        <div id="cityu-content">
+	          <div class="cityu-content-page">
+	            <!-- News -->
+        <h1><a id="news"></a>News & Recent Achievements</h1>
+        <div id="cityu-content-news">
+          <div class="cityu-news-item" style="border-bottom:none">
+            <div class="cityu-news-excerpt"> Introducing the SEE Trilogy Posters</div>
+          </div>
+          <div class="cityu-news-item" style="border-bottom:none"> <a href="news/news_trilogy.htm" target="_blank"  >
+            <div class="cityu-news-excerpt"> Part I: Be an Energy Engineer, Solve Climate Change</div>
+            <div class="cityu-news-img"><img src="news/news_trilogy/Be an Energy Engineer Solve Climate Change-s.jpg" alt="Introducing the SEE Trilogy Posters – Part I: Be an Energy Engineer, Solve Climate Change"/></div>
+          </a></div>
+          <div class="cityu-news-item"  style="border-bottom:none"> <a href="news/news_ESSW.htm" target="_blank"  >
+            <div class="cityu-news-excerpt"> Part II: Engineering a Smart and Sustainable World </div>
+            <div class="cityu-news-img"><img src="news/news_ESSW/Engineering a Smart and Sustainable World-s.jpg" alt="Introducing the SEE Trilogy Posters – Part II: Engineering a Smart and Sustainable World "/></div>
+          </a></div>
+          <div class="cityu-news-item"> <a href="news/news_trilogy3.htm" target="_blank"  >
+            <div class="cityu-news-excerpt"> Part III: Our Environmental Engineers Think Big </div>
+            <div class="cityu-news-img"><img src="news/news_trilogy/3 Our Environmental Engineers think Big_revised_20180504s.jpg" alt="Introducing the SEE Trilogy Posters – Part III: Our Environmental Engineers Think Big "/></div>
+          </a></div>
+          
+           <div class="cityu-news-item"> <a href="news/news_EPDTalk.htm" target="_blank"  >
+            <div class="cityu-news-excerpt"><span class="cityu-news-date">12.09.2018</span>Mr. Elvis Au (Deputy Director of EPD) delivered a talk on Environmental Challenges and Opportunities in Hong Kong 
+              <ul>
+              </ul>
+            </div>
+            <div class="cityu-news-img"><img src="news/news_EPDTalk/Talk Photo-s.jpg" alt="Mr. Elvis Au (Deputy Director of EPD) delivered a talk on Environmental Challenges and Opportunities in Hong Kong "/></div>
+          </a> </div>
+           
+           <div class="cityu-news-item"> <a href="news/news_pcm.htm" target="_blank"  >
+            <div class="cityu-news-excerpt"><span class="cityu-news-date">12.09.2018</span>Dr. Edwin Tso's paper published on HKIE Transaction and awarded HKIE Best Transactions Paper Prize 2018
+              <ul>
+              </ul>
+            </div>
+            <div class="cityu-news-img"><img src="news/news_pcm/CW-s.jpg" alt="Dr. Edwin TSo's paper published on HKIE Transaction and awarded HKIE Best Transactions Paper Prize 2018"/></div>
+          </a> </div>
+          <div class="cityu-news-item"> <a href="news/news_competition18.htm" target="_blank"  >
+            <div class="cityu-news-excerpt"><span class="cityu-news-date">28.08.2018</span>SEE students awarded Second Prize in 11<sup>th</sup> National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction 2018
+              <ul>
+              </ul>
+            </div>
+            <div class="cityu-news-img"><img src="news/news_competition18/7 competition (2)s.jpg" alt="SEE students awarded Second Prize in 11th National University Student Social Practice and Science Contest on Energy Saving &amp; Emission Reduction 2018"/></div>
+          </a> </div>
+          <div class="cityu-news-item"> <a href="news/news_jc18.htm" target="_blank"  >
+            <div class="cityu-news-excerpt"><span class="cityu-news-date">21.08.2018</span>SEE student awarded  the Hong Kong Jockey Club Scholarship 2018
+              <ul>
+              </ul>
+            </div>
+            <div class="cityu-news-img"></div><img src="news/news_jc18/1s.jpg" alt="SEE student awarded the Hong Kong Jockey Club Scholarship 2018"/>
+          </a> </div>
+          <div class="cityu-news-item"> <a href="news/news_jmc.htm" target="_blank"  >
+            <div class="cityu-news-excerpt"><span class="cityu-news-date">06.08.2018</span>Dr. Sam Hsu's paper is highlighted as a Hot Article in "Journal of Materials Chemistry A"
+              <ul>
+              </ul>
+            </div>
+            <div class="cityu-news-img"><img src="news/news_jmc/Fig2-2s.png" alt="Dr. Sam Hsu's article published on Journal of Materials Chemistry A"/></div>
+          </a> </div>
+          <div class="cityu-news-item"> <a href="news/news_IETprize.htm" target="_blank"  >
+            <div class="cityu-news-excerpt">
+              <p><span class="cityu-news-date">25.05.2018</span>SEE student awarded the Merit Prize of Outstanding Electrical Power and Energy Engineering Student Award 2018                    
+          </div>
+            <div class="cityu-news-img"><img src="news/news_IETprize/IETprize_s.jpg" alt="SEE student awarded the Merit Prize of Outstanding Electrical Power and Energy Engineering Student Award 2018"/></div>
+          </a></div>
+          <div class="cityu-news-item"> <a href="news/new_bioenergy.htm" target="_blank"  >
+            <div class="cityu-news-excerpt">
+              <p><span class="cityu-news-date">21.05.2018</span>Dr. Patrick Lee and Dr. Carol Lin achieved  spectacular results in the Bioenergy and Biorefinery Conference – Southeast  Asia 2018 on May 16-18, 2018                              
+          </div>
+            <div class="cityu-news-img"><img src="news/new_bioenergy/1s.jpg" alt="Dr Patrick Lee and Dr Carol Lin achieved spectacular results in the Bioenergy and Biorefinery Conference – Southeast Asia 2018 on May 16-18, 2018"/></div>
+          </a></div>
+          <div class="cityu-news-item"> <a href="news/news_Shauhrat.htm" target="_blank"  >
+            <div class="cityu-news-excerpt">
+              <p><span class="cityu-news-date">07.05.2018</span>Dr. Shauhrat Chopra's research project published in Nature Nanotechnology                  
+          </div>
+          </a></div>
+          <div class="cityu-news-item">
+            <div class="cityu-news-excerpt"><span class="cityu-news-date">20.04.2018</span><span style="color:#000">Novel bioprocess for recycling textile waste wins gold in Geneva
+              <ul>
+                <li><a href="https://newscentre.cityu.edu.hk/media/news/2018/04/19/novel-bioprocess-recycling-textile-waste-wins-gold-geneva" target="_blank">CityU NewsCentre</a></li>
+                <li><a href="https://youtu.be/2jxKSK95E6M" target="_blank">Video</a></li>
+                <li><a href="https://mp.weixin.qq.com/s/mIjMSCRmeZoUeR_uzp03nA" target="_blank">香港城大研创</a></li>
+                <li> <a href="http://www.cityu.edu.hk/vprt/news/2018/Novel-bioprocess-for-recycling-textile-waste-wins-Gold-Medal-in-the-International-Exhibition-of-Inventions-of-Geneva/" target="_blank">Office of the Vice-President (Research & Technology)</a></li>
+              </ul>
+            </span> </div>
+            <span style="color:#000">
+              <div class="cityu-news-img"><img src="news/img/20180420.jpg" alt="Novel bioprocess for recycling textile waste wins gold in Geneva"/></div>
+            </span></div>
+          <span style="color:#000">
+            <div class="cityu-news-item"> <a href="news/news_Tara.htm" target="_blank"  >
+              <div class="cityu-news-excerpt">
+                <p><span class="cityu-news-date">10.04.2018</span>Dr. Lin Zhang's PhD student published an article on waste management and circular economy in Hong Kong on Tara Expeditions                    
+            </div>
+              </a>
+              <ul>
+                <li><a href="https://oceans.taraexpeditions.org/en/m/environment/mankind-the-ocean-pollution/vie-insulaire-et-economie-circulaire-a-hong-kong/" target="_blank">Tara Expeditions</a></li>
+              </ul>
+            </div>
+            <div id="moretag"  class="unhidden">
+              <div class="cityu-news-item"> <span style="text-align:right"><a style="text-align:right" href="javascript:shownews('morenews','moretag');">Show more...</a></span></div>
+            </div>
+            <div id="morenews" class="hidden">
+            <div class="cityu-news-item">
+              <div class="cityu-news-excerpt"><span class="cityu-news-date">22.03.2018</span>Here's why an energy-sharing economy would be a win-win scenario in Hong Kong
+                <ul>
+                  <li><a href="http://yp.scmp.com/tertiary-education/city-university-of-hong-kong/article/108806/here%E2%80%99s-why-energy-sharing-economy" target="_blank">SCMP Young Post</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="cityu-news-item"> <a href="news/news_GCSO.htm" target="_blank"  >
+              <div class="cityu-news-excerpt">
+                <p><span class="cityu-news-date">14.03.2018</span>Dr. Masaru Yarime Participated in the Global Consortium for Sustainability Outcomes (GCSO) Second Annual Meeting                    
+            </div>
+              <div class="cityu-news-img"><img src="news/news_GCSO/news_GCSOs.jpg" alt="Dr. Masaru Yarime Participated in the Global Consortium for Sustainability Outcomes (GCSO) Second Annual Meeting"/></div>
+            </a></div>
+            
+            <div class="cityu-news-item"> <a href="news/news_Backchat.htm" target="_blank"  >
+              <div class="cityu-news-excerpt">
+                <p><span class="cityu-news-date">08.03.2018</span>Dr. Masaru Yarime spoke on innovation and government policy at RTHK Radio 3 "Backchat"                    
+            </div>
+              <div class="cityu-news-img"><img src="news/img/20180307.jpg" alt="Dr. Masaru Yarime spoke on innovation and government policy at RTHK Radio 3"/></div>
+            </a></div>
+            
+              <div class="cityu-news-item"> <a href="https://www.elsevier.com/physical-sciences/chemistry/new-chemistry-research/plastics-in-the-circular-economy" target="_blank"  >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">21.02.2018</span>Dr. Carol Lin's research in 'Plastics in the circular economy' highlighted in New Chemistry research by Elseviser</div>
+                <div class="cityu-news-img"><img src="news/img/20180221.jpg" alt="Dr. Carol Lin's research in 'Plastics in the circular economy' highlighted in New Chemistry research by Elseviser"/></div>
+              </a></div>
+              <div class="cityu-news-item">
+                <div class="cityu-news-excerpt"><span class="cityu-news-date">09.02.2018</span>Over HK$20 million granted to Air-con Technology Project led by Professor Michael Leung
+                  <ul>
+                    <li><a href="http://newscentre.cityu.edu.hk/media/news/2018/02/09/funding-boost-more-efficient-air-con-technology" target="_blank">CityU NewsCentre</a></li>
+                  </ul>
+                </div>
+                <div class="cityu-news-img"><img src="news/img/20180213.jpg" alt="Over HK$20 million granted to Air-con Technology Project, led by Professor Michael Leung"/></div>
+              </div>
+              <div class="cityu-news-item"> <a href="news/news_Merit.htm" target="_blank"  >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">02.02.2018</span>Dr. Lin Zhang's student awarded Certificate of Merit</div>
+                <div class="cityu-news-img"><img src="news/News_Merit/1s.jpg" alt="Dr. Lin Zhang's student awarded Certificate of Merit"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_ICAEC.htm" target="_blank"  >
+                <div class="cityu-news-excerpt">
+                  <p><span class="cityu-news-date">11.12.2017</span>Best paper on 23<sup>rd</sup> International Clean Air and Environment Conference</p>
+                  <p>&nbsp;</p>
+                </div>
+              </a></div>
+              <div class="cityu-news-item">
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">20.12.2017</span>Dr. Masaru Yarime<a href="news/news_denisyu.htm" target="_blank"  >'</a>s comments on stimulating innovation on smart energy systems quoted in China Daily Asia Weekly
+                  <ul>
+                    <li> <a href="https://www.chinadailyasia.com/articles/242/164/94/1513571805497.html" target="_blank">China Daily Asia Weekly</a></li>
+                  </ul>
+                </div>
+                <div class="cityu-news-img"><img src="news/img/20171220.jpg" alt="On Grid but Outside the Box"/></div>
+              </div>
+              <div class="cityu-news-item"> <a href="news/news_samhsu.htm" target="_blank"  >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">11.12.2017</span>Dr. Sam Hsu's research featured on the front cover of Nature Materials</div>
+                <div class="cityu-news-img"><img src="news/news_samhsu/largecover-2s.png" alt="A general method to decouple the two roles of the insulator by employing localized dielectric breakdown in Nature Materials"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_denisyu.htm" target="_blank"  >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">07.12.2017</span>Dr. Denis Yu's  research work on Na-ion batteries highlighted on the inside back cover of <em>ChemElectroChem</em> on issue 6 in 2017</div>
+                <div class="cityu-news-img"><img src="news/news_denisyu/backcover-s.png" alt="SEE Participation in Celebration of Innovation"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_HKIE.htm" target="_blank"  >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">25.10.2017</span>Best Paper on Materials 2017</div>
+                <div class="cityu-news-img"><img src="news/news_HKIEBP/1s.jpg" alt="Best Paper on Materials 2017"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_Innovation.htm" target="_blank"  >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">25.10.2017</span>SEE Participation in  Celebration of Innovation</div>
+                <div class="cityu-news-img"><img src="news/news_Innovation/IMG_9524s.jpg" alt="SEE Participation in Celebration of Innovation"/></div>
+              </a></div>
+              <div class="cityu-news-item">
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">27.09.2017</span><a href="news/news_pbanks.htm" target="_blank"  >Consumer  Council Report on Power Banks</a>
+                  <ul>
+                    <li> <a href="https://www.am730.com.hk/news/%E6%96%B0%E8%81%9E/%e4%b8%8d%e9%98%bb%e7%87%83%e6%98%93%e6%90%8d%e5%a3%9e-%e4%b9%9d%e6%ac%be%e3%80%8c%e5%b0%bf%e8%a2%8b%e3%80%8d%e5%ae%89%e5%85%a8%e8%82%a5%e4%bd%ac-95687" target="_blank">AM730</a></li>
+                    <li><a href="https://news.mingpao.com/pns/dailynews/web_tc/article/20170915/s00002/1505411776477" target="_blank">Mingpao</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cityu-news-item"> <a href="news/news_HKUSIEC2017.htm" target="_blank"  >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">26.09.2017</span>SEE  undergraduate students awarded the Merit Prize in &quot;Challenge Cup&quot; National  Competition – Hong Kong Regional Final, Hong Kong University Student Innovation  and Entrepreneurship Competition 2017</div>
+                <div class="cityu-news-img"><img src="news/news_HKUSIEC2017/IMG_2217s.jpg" alt="SEE  undergraduate students awarded the Merit Prize in &quot;Challenge Cup&quot; National  Competition – Hong Kong Regional Final, Hong Kong University Student Innovation  and Entrepreneurship Competition 2017"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_airpoll.htm" target="_blank"  >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">14.09.2017</span>Expert writing on Air Pollution</div>
+                <div class="cityu-news-img"><img src="news/news_airpoll/IMG_0352s.jpg" alt="Expert writing on Air Pollution"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="http://www.scmp.com/comment/letters/article/2109363/typhoon-showed-need-hong-kong-have-thorough-contingency-plans" target="_blank"  >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">08.09.2017</span>Typhoon showed need for Hong Kong to have thorough contingency plans &mdash; SCMP</div>
+              </a></div>
+              <div class="cityu-news-item"><a href="news/news_ecar.htm" target="_blank">
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">06.09.2017</span>First Runner-up Prize in the Championship for the International Competition on Second Life for Retired Batteries from Electric Vehicles</div>
+                </a>
+                <div class="cityu-news-img"><a href="news/news_ecar.htm"><img src="news/news_ecar/1s.jpg" alt="Interview with Ta Kung Pao on &quot;Global warming leading to more extreme weather&quot; (in Chinese) "/></a></div>
+              </div>
+              <div class="cityu-news-item"> <a href="http://news.takungpao.com.hk/paper/q/2017/0828/3487377.html" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">30.08.2017</span>Interview with Ta Kung Pao on "Global warming leading to more extreme weather" (in Chinese) </div>
+                <div class="cityu-news-img"><img src="news/img/01.jpg" alt="Interview with Ta Kung Pao on &quot;Global warming leading to more extreme weather&quot; (in Chinese) "/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_ColCAS.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">28.08.2017</span>A New Collaborative Agreement between City University of Hong Kong and Institute of Atmospheric Physics, Chinese Academy of Sciences</div>
+                <div class="cityu-news-img"><img src="news/news_ColCAS/1s.jpg" alt="A New Collaborative Agreement between City University of Hong Kong and Institute of Atmospheric Physics, Chinese Academy of Sciences"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_WSBEIY.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">22.08.2017</span>Student Achievements in World Sustainable Built Environment International Youth Competition</div>
+                <div class="cityu-news-img"><img src="news/news_WSBEIY/IMG_0110s.jpg" alt="Student Achievements in World Sustainable Built Environment International Youth Competition"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_ICOM 2017.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">16.08.2017</span>Congratulations to our PhD student, Mr. GUO  Jiaxin Eric for receiving the Student Poster Award at the 11th International  Congress on Membranes and Membrane Processes (ICOM 2017)</div>
+                <div class="cityu-news-img"><img src="news/news_ICOM 2017/1s.jpg" alt="Congratulations to our PhD student, Mr. GUO Jiaxin Eric for receiving the Student Poster Award at the 11th International Congress on Membranes and Membrane Processes (ICOM 2017)"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_CIWEM.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">12.07.2017</span>Accreditation of MSc Energy and Environment by Chartered Institution of Water and Environmental Management (CIWEM)</div>
+                <div class="cityu-news-img"><img src="news/news_CIWEM/1s.png" alt="Accreditation of MSc Energy and Environment by Chartered Institution of Water and Environmental Management (CIWEM)"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_jin.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">12.06.2017</span>New insights on the selective sequestration of gas molecules appearing in Nature Communications</div>
+                <div class="cityu-news-img"><img src="news/news_jin/TOC for Nature Communications-s.jpg" alt="New insights on the selective sequestration of gas molecules appearing in Nature Communications"/></div>
+              </a></div>
+              <div class="cityu-news-item">
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">12.6.2017</span>Do you think you can escape from PM2.5?
+                  <ul>
+                    <li> <a href="http://www.scmp.com/news/hong-kong/health-environment/article/2097540/exposure-pollution-hong-kong-worst-home-study" target="_blank">South  China Morning Post</a></li>
+                    <li> <a href="https://news.mingpao.com/ins/instantnews/web_tc/article/20170608/s00001/1496912475758" target="_blank">明報</a><a href="https://news.mingpao.com/ins/instantnews/web_tc/article/20170608/s00001/1496912475758"  target="_blank"></a></li>
+                    <li> <a href="https://topick.hket.com/article/1831712/%E7%A9%BA%E6%B0%A3%E5%81%A5%E5%BA%B7%E6%8C%87%E6%95%B8%E4%B8%8D%E5%8F%8D%E6%98%A0%E5%AE%A4%E5%85%A7%E6%83%85%E6%B3%81%E3%80%80%E7%85%AE%E9%A3%9F%E5%90%B8%E7%85%99%E5%A2%9E%E5%8A%A0%E5%AE%A4%E5%85%A7PM2.5" target="_blank">經濟日報</a></li>
+                    <li> <a href="http://orientaldaily.on.cc/cnt/news/20170609/00176_032.html" target="_blank">東方日報</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cityu-news-item"> <a href="news/news_climate.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">12.06.2017</span>Impact of Climate Change on Swiss Alps</div>
+                <div class="cityu-news-img"><img src="news/news_climate/1s.png" alt="SEE student awarded the Hong Kong Jockey Club Scholarship 2017"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/scholarship17.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">05.06.2017</span>SEE student awarded the Hong Kong Jockey Club Scholarship 2017</div>
+                <div class="cityu-news-img"><img src="news/scholarship17/news_Scholarship-s.jpg" alt="SEE student awarded the Hong Kong Jockey Club Scholarship 2017"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="opinion/electricity.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">25.04.2017</span>The cause and consequences of lowering of electricity price in Hong Kong</div>
+                <div class="cityu-news-img"><img src="img/photos/opinion/HKE electricity price reduction-m.jpg" alt="Hong Kong's Desalination, can we afford it?"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="opinion/Desalination.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">05.04.2017</span>Hong Kong's Desalination, can we afford it?</div>
+                <div class="cityu-news-img"><img src="img/photos/opinion/Desalination-s.jpg" alt="Hong Kong's Desalination, can we afford it?"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="opinion/Photovoltaics.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">31.03.2017</span>Can Photovoltaics make a useful contribution to the Energy Mix in Hong Kong?</div>
+                <div class="cityu-news-img"><img src="img/photos/opinion/Photovoltaics-s.jpg" alt="Can Photovoltaics make a useful contribution to the Energy Mix in Hong Kong?"/></div>
+              </a></div>
+              <div class="cityu-news-item">
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">29.3.2017</span>Hong Kong can create its own smog
+                  <ul>
+                    <li><a href="http://www.scmp.com/news/hong-kong/health-environment/article/2076236/hong-kong-can-create-its-own-smog-researchers-say" target="_blank" title="Oriental Daily News">SCMP News</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cityu-news-item"> <a href="opinion/CarbonCapture.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">29.03.2017</span>Carbon Capture and Sequestration: How to remove the barriers?</div>
+                <div class="cityu-news-img"><img src="img/photos/opinion/Carbon Capture and Sequestration-s.jpg" alt="Carbon Capture and Sequestration: How to remove the barriers?"/></div>
+              </a></div>
+              <div class="cityu-news-item">
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">21.03.2017</span><a href="news/TY_haiyan.htm" target="_blank" >Success in the EC/RGC Joint Research Scheme 2017</a>
+                  <ul>
+                    <li><a href="http://wikisites.cityu.edu.hk/sites/newscentre/en/Pages/201706051030.aspx" target="_blank" title="CityU NewsCentre">CityU NewsCentre</a></li>
+                  </ul>
+                </div>
+                <div class="cityu-news-img"><img src="news/TY_haiyan/170605-1_typhoon.jpg" alt="Success in the EC/RGC Joint Research Scheme 2017"/></div>
+              </div>
+              <div class="cityu-news-item"> <a href="news/Coll_VanHove.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">21.03.2017</span>Compact car to save energy, what about a molecular car?</div>
+                <div class="cityu-news-img"><img src="news/Coll_VanHove/DSC01451_s.jpg" alt="Compact car to save energy, what about a molecular car?"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/AMS_meeting.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">17.03.2017</span>Excellent Poster Award at the 97<sup>th</sup> AMS Annual Meeting</div>
+                <div class="cityu-news-img"><img src="news/AMS_meeting/DSC02051s.jpg" alt="Excellent Poster Award at the 97th AMS Annual Meeting"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/Coll_IreneLo.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">07.03.2017</span>Treating wastewater with functional magnetic nanoparticles</div>
+                <div class="cityu-news-img"><img src="news/Coll_IreneLo/IMG_9084_s.jpg" alt="Treating wastewater with functional magnetic nanoparticles"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="news/news_170221.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">21.02.2017</span>Novel device to charge mobile electronics from daily activities</div>
+                <div class="cityu-news-img"><img src="news/news_170221/photo_walid.jpg" alt="Novel device to charge mobile electronics from daily activities"/></div>
+              </a></div>
+              <div class="cityu-news-item"> <a href="opinion/Fossilfuel.htm" target="_blank" >
+                <div class="cityu-news-excerpt"> <span class="cityu-news-date">01.02.2017</span>Opinion column - Fossil fuel, are you a friend or foe?</div>
+                <div class="cityu-news-img"><img src="img/photos/opinion/FossilFuels.jpg" alt="Fossil fuel"/></div>
+              </a></div>
+              <!--end news -->
+              <div class="cityu-news-item"> <span style="text-align:right"><a style="text-align:right" href="news_archive.htm">News Archive</a></span></div>
+            </div>
+          </span></div>
+        <span style="color:#000">
+          <!-- /News -->
+                </span></div>
+            </div>
+	        <span style="color:#000">
+	          <!-- /Content -->
+            </span></div>
+    </div>
+
+<!-- Footer -->
+		<div id="cityu-footer" class="cityu-outer">
+			<div class="cityu-inner">
+
+				<!-- Nav List -->
+				<div id="cityu-footer-nav-list">
+					<ul >
+						<li class="cityu-icon-home"><a  href="index.htm"><div title="Home"></div></a></li>
+						<li><a href="#" class="see-nav">About Us</a>
+							<ul>
+								<li><a href="message.htm">Dean's Welcome Message</a></li>
+<li><a href="advisory.htm">Advisory Committee</a></li>
+<li><a href="vision.htm">Vision &amp; Mission</a> </li>
+
+
+                                
+<!--<li><a href="location.htm">Location</a></li>-->
+								
+							</ul>
+						</li>
+						<li><a href="#" class="see-nav">People</a>
+							<ul>
+								<li><a href="people.htm#Admin" onclick="window.location.href = 'people.htm?r='+(+new Date())+'#Admin';
+">School Administrators</a></li>
+<li><a href="people.htm#Faculty" onclick="window.location.href = 'people.htm?r='+(+new Date())+'#Faculty';
+">Faculty</a></li>
+<!--<li><a href="people.htm#VisitingFaculty" onclick="window.location.href = 'people.htm?r='+(+new Date())+'#VisitingFaculty';
+">Visiting Faculty</a></li>-->
+<li><a href="people.htm#Other" onclick="window.location.href = 'people.htm?r='+(+new Date())+'#Other';">Administrative and Technical Staff</a></li>
+								<li><a href="rs_list.htm">Research Students List</a></li>
+							
+							</ul>
+						</li>
+						<li><a href="acad_prog.htm" class="see-nav">Programmes</a>
+						  
+						</li>
+						<li><a href="research.htm" class="see-nav">Research</a>
+                  
+						  
+</li>
+					  <li><a href="#" class="see-nav">Outreach</a>
+							<ul>
+								<li><a href="exchange.htm" >Student Exchange Programme</a> </li>
+<li><a href="#">Community Engagement</a><ul>
+<li><a href="talks.htm">Expert Talks for Secondary School</a> </li></ul></li>
+								
+<li><a href="news/e-newsletter/SEE Newsletter_Sep 2017.pdf">E-Newsletter</a><ul>
+<li><a href="news/e-newsletter/SEE Newsletter_Sep 2018 Issue.pdf">September 2018 Issue</a> </li>
+<li><a href="news/e-newsletter/SEE Newsletter_April 2018 Issue.pdf">April 2018 Issue</a></li>
+<li><a href="news/e-newsletter/SEE Newsletter_Sep 2017.pdf">September 2017 Issue</a> </li>
+<li><a href="news/e-newsletter/6th issue (August 2016).pdf">August 2016 Issue</a> </li></ul></li>
+                              
+							</ul>
+						</li>
+						<li><a href="#" class="see-nav">Student Life</a>
+						
+							<ul>
+
+
+                            <li><a href="internship&amp;career.htm" >Internships & Careers</a></li>
+<li><a href="scholarships_index.htm" > Scholarships</a></li>
+
+        <li><a href="UG_Attributes.htm">Seven Attributes of SEE Graduates</a> </li>                 	
+<li><a href="study_tours.htm">Study Tours</a> </li>
+								
+								<li><a href="#">Student Competitions</a><ul>
+		    <li><a href="news/news_windenergy.htm">Wind Turbine Competition</a></li>
+		    <li><a href="news/Morgen.htm">Solar Car Competition</a></li>
+		    <li><a href="news/news_solar.htm">Solar Tracking Project</a></li>
+		    </ul>
+								</li>
+								<li><a href="InnoActivities.htm">Student Innovative Activities/Competitions Fund</a></li>
+							</ul>
+</li>
+                        
+  <li class="see-nav"><a href="contact.htm" >Contact Us</a> </li>
+                        </li>
+<li class="see-nav"><a href="jobs.htm">Job Openings</a></li>
+
+					</ul>
+				</div>
+				<!-- /Nav List -->
+
+				<hr />
+
+				<!-- Column -->
+				<div id="cityu-footer-column">
+
+					<!-- Notes -->
+					<div id="cityu-footer-notes">
+
+						<!-- Links -->
+						<div id="cityu-footer-links">
+                        	<a href="http://www.cityu.edu.hk/cityu/geninfo/privacy.htm">Privacy Policy</a>&middot;
+                            <a href="http://www.cityu.edu.hk/cityu/copyright/index.htm#copyright">Copyright</a>&middot;
+                            <a href="http://www.cityu.edu.hk/cityu/disclaimer/index.htm#copyright">Disclaimer</a>	&middot;
+                            ​​​<a href="http://www.cityu.edu.hk/cityu/accessibility/">Accessibility</a>	&middot;
+                        	<a href="contact.htm">Contact Us</a>&middot; 
+                            <a href="http://get.adobe.com/reader/">Download Acrobat Reader</a>
+
+					  </div>
+						<!-- /Links -->
+
+						<!-- Credits -->
+						<div id="cityu-footer-credits">
+							© 2011 City University of Hong Kong. All Rights Reserved.
+						</div>
+						<!-- /Credits -->
+
+					</div>
+					<!-- /Notes -->
+
+					<!-- Icons -->
+					<div id="cityu-footer-icons">
+						<a href="http://www.cityu.edu.hk/"><img src="http://template.cityu.edu.hk/template/img/logos/cityu_footer.png" alt="City University of Hong Kong" /></a>
+					</div>
+					<!-- /Icons -->
+
+				</div>
+				<!-- /Column -->
+
+			</div>
+		</div>
+		<!-- /Footer -->
+<h3 style=" vertical-align: middle">Visitors since Jun 2016: 
+<img src="http://www.cityu.edu.hk/see/counter/hitcounter.aspx" title="website counter" Alt="website counter"   >
+</h3>
+	</body>
+</html>

@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- Title -->
+		<title>Welcome to CLC</title>
+		<!-- /Title -->
+
+		<!-- Meta -->
+		<meta name="author" content="City University of Hong Kong" />
+		<meta name="description" content="City University of Hong Kong, City University of HK, City University HK, CityU Hong Kong, CityU HK, CityUHK, City University, CityU" />
+		<meta name="keywords" content="City University of Hong Kong, City University of HK, City University HK, CityU Hong Kong, CityU HK, CityUHK, City University, CityU" />
+
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<!-- /Meta -->
+
+		<!-- Icon -->
+		<link rel="shortcut icon" href="http://www.cityu.edu.hk/favicon.ico" />
+		<!-- /Icon -->
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="http://template.cityu.edu.hk/template/css/cityu.base.css" />
+		<link rel="stylesheet" type="text/css" href="http://template.cityu.edu.hk/template/css/jquery.ddsmoothmenu.css" />
+		<link rel="stylesheet" type="text/css" href="http://template.cityu.edu.hk/template/css/jquery.nivo.slider.css" />
+		<link rel="stylesheet" type="text/css" href="css/cityu.base.custom.css" />
+		<!-- /CSS -->
+
+		<!-- JS -->
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="js/cityu.base.config.js"></script>
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/cityu.base.js"></script>
+		<!-- /JS -->
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/jquery/ddsmoothmenu/jquery.ddsmoothmenu.js">
+			// Smooth Navigational Menu - (c) Dynamic Drive DHTML code library (www.dynamicdrive.com).
+			// This notice MUST stay intact for legal use.
+			// Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code.
+		</script>
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/jquery/ddsmoothmenu/jquery.ddsmoothmenu.ready.js"></script>
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/jquery/nivo.slider/jquery.nivo.slider.js"></script>
+		<script type="text/javascript" src="http://template.cityu.edu.hk/template/js/jquery/nivo.slider/jquery.nivo.slider.ready.js"></script>
+
+		<script type="text/javascript" src="/caio/city-u/js/jssor.core.js"></script>
+		<script type="text/javascript" src="/caio/city-u/js/jssor.utils.js"></script>
+		<script type="text/javascript" src="/caio/city-u/js/jssor.slider.min.js"></script>
+
+		<!-- /jQuery Plugins -->
+
+<script type="text/javascript">
+<!--
+var rollertimeout = 15;
+$(document).ready(function(){
+	scroll_news();
+});
+function scroll_news(){
+	var firstNode = $('#headlinesss li');
+	firstNode.css("display","none");
+	firstNode.eq(0).fadeOut('slow',function(){
+		$(this).clone().appendTo($(this).parent()).show('slow');
+		$(this).remove();
+	});
+}
+setInterval('scroll_news()',15000);
+//-->
+</script>
+
+		<!-- ADD YOUR JAVASCRIPTS HERE -->
+	</head>
+
+	<body class="cityu-dept cityu-layout-home cityu-bgtheme-00 cityu-navtheme-00">
+
+		<!-- Header -->
+		<div id="cityu-header" class="cityu-outer cityu-bg-clear">
+			<div class="cityu-inner">
+
+				<!-- Global -->
+				<div id="cityu-header-global">
+
+					<!-- CityU Logo -->
+					<div id="cityu-header-cityulogo">
+						<a href="http://www.cityu.edu.hk/"><img src="http://template.cityu.edu.hk/template/img/logos/cityu_deptpage.png" alt="City University of Hong Kong" /></a>
+					</div>
+					<!-- /CityU Logo -->
+
+					<!-- Skip Links -->
+					<div class="cityu-skiplink">
+						<a href="#cityu-nav">Skip to navigation</a>
+					</div>
+					<div class="cityu-skiplink">
+						<a href="#cityu-content">Skip to content</a>
+					</div>
+					<!-- /Skip Links -->
+
+					<!-- Toolbar -->
+					<div id="cityu-header-toolbar">
+
+						<!-- Links -->
+						<div id="cityu-header-links">
+							<a href="http://www6.cityu.edu.hk/caio/city-u/cms/">Staff Login</a>
+						</div>
+						<!-- /Links -->
+
+						<!-- Search -->
+						<div id="cityu-header-search">
+							<form method="get" action="search.asp">
+								<fieldset>
+									<legend class="cityu-hidden">Search</legend>
+									<div class="cityu-search-text-wrapper">
+										<label class="cityu-hidden" for="cityu-search-text">Search Keywords</label>
+										<input id="cityu-search-text" type="text" name="q" placeholder="Search" />
+										<input class="cityu-search-button" type="submit" value="" />
+									</div>
+								</fieldset>
+							</form>
+						</div>
+						<!-- /Search -->
+					</div>
+					<!-- /Toolbar -->
+
+				</div>
+				<!-- /Global -->
+
+				<!-- Local -->
+				<div id="cityu-header-local">
+
+					<!-- Dept Names -->
+					<div id="cityu-header-deptnames">
+						<div id="cityu-header-parentname">&nbsp;</div>
+						<div id="cityu-header-deptname"><a href="">Career and Leadership Centre</a></div>
+					</div>
+					<!-- /Dept Names -->
+
+					<!-- Dept Logos -->
+					<div id="cityu-header-deptlogos">
+						<!--<a href=""><img src="img/city_u.jpg" alt="City University Logo"/></a>-->
+					</div>
+					<!-- /Dept Logos -->
+
+					<!-- Icons -->
+					<div id="cityu-header-icons">&nbsp;</div>
+					<!-- /Icons -->
+					<div class="cityu-clear"></div>
+				</div>
+				<!-- /Local -->
+				<div class="cityu-clear"></div>
+			</div>
+		</div>
+		<!-- /Header -->
+
+		<!-- Nav -->
+		<div id="cityu-nav" class="cityu-outer">
+			<div class="cityu-inner">
+				<div id="cityu-nav-list" class="ddsmoothmenu">
+										<ul>
+						<li class="cityu-icon-home"><a href="index.asp"><div title="Home"></div></a></li>
+						<li><a href="studentyear1planRevised.asp">Student</a>
+							<!--
+							<ul>
+								<li><a href="page.asp?id=2" target="_self">Student Services</a></li>
+								<li><a href="page.asp?id=3" target="_self">Career Consultation</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/ciscws/" target="_self">CIS & CWS</a></li>
+								<li><a href="page.asp?id=4" target="_self">Internship</a></li>
+								<li><a href="../Download/student_intern_guide_2013.pdf" target="_self">Student Internship Guide</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=122" target="_self">Employability Enhancement</a></li>
+								<li><a href="page.asp?id=112" target="_self">Financial Support</a></li>
+								<li><a href="page.asp?id=5" target="_self">Self Assessments</a></li>
+								<li><a href="page.asp?id=6" target="_self">Self Help Tutorials</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/download.asp" target="_self">Download Area</a></li>
+								<li><a href="http://www.cityu.edu.hk/meao/" target="_self">International Students</a></li>
+							</ul>
+							-->
+						</li>
+						<li><a href="#">Employer</a>
+							<ul>
+								<li><a href="page.asp?id=23" target="_self">Our Services</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=24" target="_self">Posting Job Advertisement</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=25" target="_self">Recruitment / Career Talk</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=89" target="_self">Internship</a></li>
+								<li><a href="http://www.cityu.edu.hk/cityu/prgm/index.htm" target="_self">Academic Programme Information</a></li>
+								<li><a href="http://www.cityu.edu.hk/fnf/" target="_self">Facts & Figures</a></li>
+							</ul>
+						</li>
+						<li><a href="careerresearchingyourcareer.asp">Career</a>
+							<!--
+							<ul>
+								<li><a href="page.asp?id=93" target="_self">Hit The Ground Running</a></li>
+								<li><a href="page.asp?id=7" target="_self">Choosing Your Major</a></li>
+								<li><a href="page.asp?id=8" target="_self">Career Planning</a></li>
+								<li><a href="page.asp?id=9" target="_self">Career Types</a></li>
+								<li><a href="page.asp?id=10" target="_self">Career Trends</a></li>
+								<li><a href="page.asp?id=110" target="_self">Career Early Bird</a></li>
+								<li><a href="page.asp?id=11" target="_self">Further Studies</a></li>
+								<li><a href="page.asp?id=12" target="_self">How To Find A Job</a></li>
+								<li><a href="page.asp?id=13" target="_self">Letters And Resumes</a></li>
+								<li><a href="page.asp?id=14" target="_self">Interview Tips</a></li>
+								<li><a href="page.asp?id=15" target="_self">Career Games</a></li>
+								<li><a href="page.asp?id=16" target="_self">Dining Etiquette</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=62" target="_self">Network</a></li>
+								<li><a href="page.asp?id=106" target="_self">Employment and Deception</a></li>
+							</ul>
+							-->
+						</li>
+						<li><a href="#">Industries</a>
+							<ul>
+								<li><a href="page.asp?id=63" target="_self">Advertising</a></li>
+								<li><a href="page.asp?id=64" target="_self">AO & EO</a></li>
+								<li><a href="page.asp?id=65" target="_self">Banking</a></li>
+								<li><a href="page.asp?id=61" target="_self">Big 4</a></li>
+								<li><a href="page.asp?id=66" target="_self">CRE & BLT</a></li>
+								<li><a href="page.asp?id=67" target="_self">Human Resources</a></li>
+								<li><a href="page.asp?id=68" target="_self">Immigration Officers</a></li>
+								<li><a href="page.asp?id=69" target="_self">Market Research</a></li>
+								<li><a href="page.asp?id=70" target="_self">Police Inspector</a></li>
+								<li><a href="page.asp?id=71" target="_self">Public Relations</a></li>
+								<li><a href="page.asp?id=72" target="_self">Teachers</a></li>
+								<li><a href="page.asp?id=74" target="_self">Training & Development</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Job Links</a>
+							<ul>
+								<li><a href="https://www.cityu.edu.hk/cityu/logon/aims.htm" target="_self">JobPlus</a></li>
+								<li><a href="http://www.jijis.org.hk/" target="_self">JIJIS</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/ciscws/" target="_self">CIS & CWS</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=36" target="_self">Others</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Our Team</a>
+							<ul>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=27" target="_self">About Us</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=33" target="_self">Contact Us</a></li>
+								<li><a href="mailto:clc.careercentre@cityu.edu.hk" target="_self">Letters to the Editor</a></li>
+							</ul>
+						</li>
+						<li><a href="http://www6.cityu.edu.hk/caio/city-u/calendar.asp" target="_self">Events Calendar</a></li>
+						<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=37" target="_self">Announcements</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+		<!-- /Nav -->
+
+		<!-- Media -->
+		<div id="cityu-media" class="cityu-outer">
+			<div class="cityu-inner">
+
+				<!-- Slider-->
+				<div id="cityu-media-slider-wrapper" class="theme-default">
+					<div id="cityu_random_links">
+						<img src="uploads/image/2011101813045373499.jpg" alt=""/>
+					</div>
+					<!--<div id="cityu-media-slider" class="nivoSlider">-->
+					<div id="cityu-media-slider">
+						<img src="uploads/image/2011102613281573499.jpg" alt=""/>
+					</div>
+				</div>
+				<!-- /Slider -->
+
+				<!-- News -->
+				
+				<div id="cityu-media-newsss">
+					
+					<div id="headlinesss">
+						<strong style="color:red!important;">Coming Events</strong> (click <a href="calendar.asp">here</a> for details)<br>
+						<ul>
+<li>
+<strong>EMP - MBTI Debriefing Workshop</strong><br>
+Start Date/Time: 2018/10/22 15:00<br>
+End Date/Time: 2018/10/22 17:00<br>
+Venue: <br>
+Target: EMP applicants only
+<br>
+</li>
+<li>
+<strong>E100 - JRE Mock Practice</strong><br>
+Start Date/Time: 2018/10/22 18:30<br>
+End Date/Time: 2018/10/22 21:30<br>
+Venue: <br>
+Target: For E-100 participants only
+<br>
+</li>
+<li>
+<strong>Nan Fung Development Limited</strong><br>
+Start Date/Time: 2018/10/23 15:30<br>
+End Date/Time: 2018/10/23 17:00<br>
+Venue: LT-10, YEUNG<br>
+Target: All final year degree students
+<br>
+</li>
+<li>
+<strong>Briefing Session on Library Tour</strong><br>
+Start Date/Time: 2018/10/23 17:00<br>
+End Date/Time: 2018/10/23 18:00<br>
+Venue: <br>
+Target: For Student Ambassadors only
+<br>
+</li>
+<li>
+<strong>Hong Kong Aircraft Engineering Co Ltd</strong><br>
+Start Date/Time: 2018/10/24 15:30<br>
+End Date/Time: 2018/10/24 17:00<br>
+Venue: LT-10, YEUNG<br>
+Target: All students
+<br>
+</li>
+</ul>
+
+					</div>
+					
+				</div>
+				<!-- /News -->
+
+			</div>
+		</div>
+		<!-- /Media -->
+
+		<!-- Main -->
+		<div id="cityu-main" class="cityu-outer">
+			<div class="cityu-inner">
+				<!-- Sidebar 1 -->
+				<div id="cityu-sidebar-1">
+					<p><a href="/clc/GWAP/2017.pdf" target="_blank"><img src="/clc/GWAP/GWAP2017_left.jpg" alt="gwap" width="200" /></a></p>
+<p><a href="/clc/city_upbeats/newsletter/issue/10/story.aspx?lang=1&amp;story=4" target="_blank"><img src="/clc/city_upbeats/newsletter/clc_banner.jpg" alt="upbeats" width="200" /></a></p>
+<p><a href="/clc/ges/intro/" target="_blank"><img src="/clc/ges/intro/lib/img/banner.png" alt="ges" width="200" /></a></p>
+<p><a href="/clc/sap/web/about.aspx" target="_blank"><img src="/clc/WebBanner/1819/sa_web_Banner.jpg" alt="sap" width="200" /></a></p>
+<p><a href="/clc/career_festival/" target="_blank"><img src="/clc/WebBanner/1819/careerFes_web_banner.jpg" alt="careerfestival" width="200" /></a></p>
+<p><a href="http://www.cityumun.com" target="_blank"><img src="/clc/WebBanner/1819/mun_web_Banner.jpg" alt="MUN" width="200" height="84" /></a></p>
+<p><a href="/clc/bop/registration/" target="_blank"><img src="/clc/bop/registration/banner/2017.jpg" alt="BOP" width="200" height="84" /></a></p>
+<p><a href="/clc/epp/registration/" target="_blank"><img src="/clc/epp/registration/banner/2017.jpg" alt="EPP" width="200" height="84" /></a></p>
+<p><a href="/clc/e100/201819.PDF" target="_blank"><img src="/clc/WebBanner/1819/e100_web_Banner.jpg" alt="E100" width="200" height="84" /></a></p>
+<p><a href="/clc/emp/2018.pdf" target="_blank"><img src="/clc/emp/EMP_banner_2018.jpg" alt="EMP" width="200" /></a></p>
+<p><a href="/caio/city-u/page.asp?id=132" target="_blank"><img src="/clc/WebBanner/1819/clf_web_Banner.jpg" alt="E100" width="200" /></a></p>
+<p><a href="/caio/ciscws/"><img src="/caio/ciscws/img/logos/ciscwslogo.jpg" alt="CIS &amp; CWS" width="200" height="160" /></a></p>
+<p>&nbsp;</p>
+<!-- Box -->
+<div class="cityu-box" style="background-color:#e6f5be;">
+<div class="cityu-box-header">"Job Hunting" Must Know</div>
+<div class="cityu-box-item">
+<ul class="cityu-showbullet">
+<li>A Guide to Job Hunting <a href="http://www.labour.gov.hk/eng/public/eip/JobHunting.pdf">(ENG)</a> / <a href="http://www.labour.gov.hk/tc/public/pdf/eip/JobHunting.pdf">(CHI)</a> </li>
+<li>Practical Tips on Job Huntings and Job Interviews <a href="http://www.labour.gov.hk/eng/public/eip/TipsJobHunt.pdf">(ENG/CHI) </a></li>
+<li>Beware of Employment Traps <a href="http://www.labour.gov.hk/eng/public/eip/BewareJobTrap.pdf">(ENG)</a> / <a href="http://www.labour.gov.hk/tc/public/pdf/eip/BewareEmployTrap.pdf">(CHI)</a> </li>
+<li>A Guide for Students Seeking Summer Jobs <a href="http://www.labour.gov.hk/eng/public/eip/Guide_for_Students_Seeking_Summer_Jobs.pdf">(ENG)</a> / <a href="http://www.labour.gov.hk/tc/public/pdf/eip/Guide_for_Students_Seeking_Summer_Jobs.pdf">(CHI)</a> </li>
+</ul>
+<br />Source: <a href="http://www.labour.gov.hk/tc/public/content2_5.htm">Labour Department</a></div>
+</div>
+<!-- /Box --><!-- Box -->
+<div class="cityu-box">
+<div class="cityu-box-header">Questions Data Bank Available at e-Portal!</div>
+<div class="cityu-box-item">A data bank of past interview questions classified by industries is now available at our <strong><a href="/caio/city-u/download.asp ">Download Area</a> (under the "Student" Page on CLC's website)</strong> exclusively for CityU students&rsquo; reference. Don&rsquo;t hesitate to check it out!</div>
+</div>
+<!--/Box--><!-- /Box -->
+<div class="cityu-box" style="background-color:#e6f5be;">
+<div class="cityu-box-header">Special Announcement<br /><br />News about Minimum Wage Ordinance (MWO)!</div>
+<div style="padding:5px 10px;">On the announcement of the Minimum Wage Ordinance (MWO) with effect from 1 May 2011, the Labour Department (LD) has just published notes on 3 May regarding the details of the exemption arrangement for student employees and employers under the statutory minimum wage (SMW) regime. Please click <a href="http://www.labour.gov.hk/eng/news/pdf/Notes_for_Student_Employees_and_Employers.pdf">here</a> for more details or visit our website. <br /><a href="/caio/city-u/page.asp?id=4">(Student &gt;&gt; Internship)</a> / <a href="/caio/city-u/page.asp?id=89">(Employer &gt;&gt; Internship)</a></div>
+</div>
+<!-- /Box --><div style="width: 190px; padding-bottom: 5px; padding-top: 2px; padding-left: 5px; padding-right: 5px; background-color: #e6f5be;"><span style="color:#4a5f63;font-weight:bold;">General Enquiries</span><br />3442 5591<br /><br /><span style="color:#4a5f63;font-weight:bold;">Email</span><br />clc.careercentre@cityu.edu.hk<br /><span style="font-size:x-small;"><em>(Please provide your company name in the email subject.)</em></span><br /><br /><span style="color:#4a5f63;font-weight:bold;">Address</span><br />R4009, <br />4/F, Bank of China (Hong Kong) Complex,<br />City University of Hong Kong,<br />83 Tat Chee Avenue,<br />Kowloon Hong Kong</div>
+				</div>
+				<!-- Sidebar 1 -->
+				
+				<!-- Sidebar 2 -->
+				<div id="cityu-sidebar-2">
+					<div><p><img src="/caio/city-u/uploads/image/2014090315543373499.jpg" alt="" width="260" /></p>
+</div>
+					
+					<!-- Box -->
+					<div class="cityu-box">
+						<div class="cityu-box-header">Latest News</div>
+<div class="cityu-box-item cityu-link"><a href="/caio/CAP/20181106_NLP_Communication.jpg" target="_Blank">NLP Communication Skills for Job Interviews (06 Nov 2018 - 3:00 p.m. to 5:00 p.m. - Fank Lee Foon Student Career Centre, R4009, BOC (HK) Complex)</a></div>
+<div class="cityu-box-item cityu-link"><a href="/caio/CAP/20181025_WinningCV.jpg" target="_Blank">How to Write a Winning CV and Cover Letter (25 Oct 2018 - 3:15 p.m. to 5:45 p.m. - LT-18, YEUNG) </a></div>
+<div class="cityu-box-item cityu-link"><a href="/caio/CAP/20181019_Sharpen.jpg" target="_Blank">Sharpen Your Interview Skills and Get Hired (19 Oct 2018 - 3:30 p.m. to 5:30 p.m. - Y4302, YEUNG)</a></div>
+<div class="cityu-box-item cityu-link"><a href="/caio/CAP/20181018_HSBC Hong Kong Graduate Recruitment careers session.pdf">Insights into HSBC Global Private Banking (18 Oct 2018 - 6:00 p.m. to 8:30 p.m.)</a></div>
+<div class="cityu-box-item cityu-link"><a href="/caio/ebs/sy/PMP2019.pdf">Police Mentorship Programme (PMP) 2019/20 (Application Deadline: 14 Dec 2018)</a></div>
+<div class="cityu-box-item cityu-link"><a href="/caio/ebs/sy/AUS2019.pdf" target="_Blank">Auxiliary Police (Undergraduate) Scheme (AUS) 2019/20 (Application Deadline: 14 Dec 2018)</a></div>
+<div class="cityu-box-item cityu-link"><a href="http://hk.jobsdb.com/en-hk/pages/%E8%A1%8C%E8%A1%8C%E5%87%BA%E7%8B%80%E5%85%83-%E6%B1%82%E8%81%B7%E9%8C%A6%E5%9B%8A-%E9%9D%A2%E8%A9%A6%E8%B2%BC%E5%A3%AB" target="_Blank">Online job hunting booklet of jobsDB.com is now available</a></div>
+<div class="cityu-box-item cityu-link"><a href="/caio/CAP/Psychology%20Leaflet%202015%20Low.pdf" target="_Blank">School of Psychology, Bangor University is visiting Hong Kong</a></div>
+<div class="cityu-box-item cityu-link"><a href="/caio/ebs/NewMobileApp2013.pdf" target="_Blank">New Mobile App for CIS/CWS &amp; JobPlus</a></div>
+<div class="cityu-box-item cityu-link"><a href="/caio/city-u/calendar.asp?t=0&amp;v=L" target="_Blank">And More...</a></div>
+					</div>
+					<!-- /Box -->
+					
+					<!-- Box -->
+					<div class="cityu-box">
+						<p>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like-box" data-href="https://www.facebook.com/CLCCityU" data-width="240" data-height="400" data-show-faces="false" data-stream="true" data-show-border="true" data-header="true"></div>
+
+</p>
+
+					</div>
+					<!-- /Box -->
+					
+				</div>
+				<!-- /Sidebar 2 -->
+				<!-- Content -->
+				<div id="cityu-content">
+					<div class="cityu-content-page">
+						<div style="text-align:right;">Sunday,
+						21&nbsp;&nbsp;Oct&nbsp;&nbsp;2018</div>
+						<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><span style="font-size:12.0pt;font-family:">The Career and Leadership Centre offers one-to-one career consultation services to students by appointment. Students are welcome to discuss career and further study concerns with our professional Career Advisors who are experienced in guiding graduate recruitment in the current job market. You may seek their advice regarding:</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal">&nbsp;</p>
+<p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt;text-indent:-.25in; line-height:normal;mso-list:l0 level1 lfo1;tab-stops:list .5in">&nbsp;</p>
+<ul>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Resume Writing</span></li>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Job Application Letters</span></li>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Job Interview Skills</span></li>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Mock Interview Practice</span></li>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Assessment Centre</span></li>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Psychometric Tests<br />&nbsp; &nbsp; (Aptitude tests such as verbal, numerical, critical reasoning tests)</span></li>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Personality Tests</span></li>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Further study Advising</span></li>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Academic Exchange</span></li>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Internship &amp; Placement</span></li>
+<li><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: ">&nbsp; &nbsp; &nbsp; &nbsp;</span><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">Job Search Skills</span></li>
+</ul>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:">How to make Appointments</span></span></strong></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:"><br /></span></span></strong></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><span style="font-size:12.0pt;font-family:">Please make your appointment by phone @ 34425591 during Mon-Fri office hours (09:00&nbsp; - 17:30, except Saturday, Sunday and public holidays).</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><span style="font-size:12.0pt;font-family:">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="font-size:12.0pt;font-family:">Remarks:</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="font-size:12.0pt;font-family:"><br /></span></strong></p>
+<ul>
+<li><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">The service is eligible for non-CB students.&nbsp; CB students may seek similar service from CB Career Service.</span></li>
+<li><span style="text-indent: -0.25in; font-size: 12pt; font-family: Arial, sans-serif; color: #202020;">The appointment schedule will be released every Tuesday.&nbsp;&nbsp;Please click <a href="/caio/consultation/">here</a> to check it out.&nbsp;</span></li>
+</ul>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:">Eligibility</span></span></strong></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:"><br /></span></span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:">&middot;&nbsp; &nbsp;Our career consultation services are open for current CityU undergraduate and postgraduate students (non-CB), and our alumni (including CB students) who have graduated not more than&nbsp;<strong><em><span style="text-decoration: underline;">six</span></em></strong>&nbsp;months.</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:"><br /></span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:"><br /></span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:">Preparation for the Consultation</span></span></strong></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:"><br /></span></span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:">&middot;&nbsp; &nbsp;Please prepare well your resume and cover letter (in hard copy) and bring them to the career consultation to maximize your learning. If you have an interview for a job, please bring along the job requirement.</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.5pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:"><br /></span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:">Appointment Policy</span></span></strong></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:"><br /></span></span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.45pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:">&middot;&nbsp; &nbsp;While we encourage your participation, we do not encourage dependency.&nbsp;<strong><span style="text-decoration: underline;">Full-time</span></strong>&nbsp;students may take not more than<strong><em>&nbsp;4 consultation sessions</em></strong>&nbsp;<strong><em>in a semester</em></strong>. If students have special needs, they can apply at the service counter to seek special approval from the Career and Leadership Centre.&nbsp; No more than&nbsp;<strong><em>4 exemption requests</em></strong>&nbsp;for seeking additional consultation sessions will be accommodated per student in one academic year.&nbsp;&nbsp;Fresh graduates may use our career consultation services within six months after their graduation and a maximum of 6 consultation sessions.</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.45pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.45pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:">&middot;&nbsp;&nbsp;&nbsp;<strong><span style="text-decoration: underline;">Part-time or combined mode</span></strong>&nbsp;undergraduate and postgraduate students can now take&nbsp;<span style="text-decoration: underline;">not</span>&nbsp;more than&nbsp;<strong><em>2 consultation sessions in a semester</em></strong>.&nbsp;&nbsp;Please confine your appointment in the morning sessions (9:00 a.m. &ndash; 12:00 noon).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;However, exemption requests cannot be accommodated and their eligibility for making consultation appointments will be expired after graduation.&nbsp;&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.45pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:"><br /></span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.45pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:"><br /></span></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:">Cancellation / No Show Policy</span></span></strong></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:"><br /></span></span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.45pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:">&middot;&nbsp; &nbsp;To encourage student to be a responsible person and to release the booking to other students in need, students should cancel their booking in the Appointment system or by calling us at 3442 5591.</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:17.45pt;margin-bottom:.0001pt;text-indent:-13.5pt;line-height:normal"><span style="font-size:12.0pt;font-family:"><br /></span></p>
+<ul>
+<li>
+<p><span style="font-size:12.0pt;font-family:"><strong><span style="text-decoration: underline;">Cancellation policy:</span></strong>&nbsp;</span><em style="font-size: 12pt; text-indent: -13.5pt;">Cancellation after 12:00 noon with&nbsp;<strong><span style="text-decoration: underline;">1</span></strong>&nbsp;working day prior to your scheduled appointment (excluding weekends and public holidays), you will&nbsp;<strong><span style="text-decoration: underline;">not</span></strong>&nbsp;be eligible for making appointment in the following&nbsp;<strong><span style="text-decoration: underline;">two</span></strong>&nbsp;weeks.</em></p>
+</li>
+</ul>
+<ul>
+<li><em style="color: black; font-family: Arial, sans-serif; font-size: 12pt; text-indent: -13.5pt;">No-show student (who does not show up and without prior cancellation) will not be eligible for making consultation appointment in the following&nbsp;<strong><span style="text-decoration: underline;">three</span></strong>weeks.</em></li>
+<br />
+<li><em style="background-color: transparent; text-indent: -13.5pt; color: black; font-family: Arial, sans-serif; font-size: 12pt;">Students who&nbsp;<strong>arrive more than 20 minutes late</strong>&nbsp;will not be eligible for making consultation appointment in the following&nbsp;<strong><span style="text-decoration: underline;">two</span></strong>&nbsp;weeks.</em></li>
+</ul>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in; margin-left:26.45pt;margin-bottom:.0001pt;text-indent:-22.5pt;line-height:normal"><em><span style="font-size:12.0pt;font-family:">***&nbsp;&nbsp;For students who are not observing the above cancellation policy, their prior secured consultation sessions within the penalty period will be voided.</span></em></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:">Honesty Policy</span></span></strong></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><strong><span style="text-decoration: underline;"><span style="font-size:12.0pt;font-family:"><br /></span></span></strong></p>
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height: normal"><span style="font-size:12.0pt;font-family:">Please understand that we have put in extra care and efforts on offering one-on-one consultation sessions.&nbsp;&nbsp;Do not attempt to get around our policy by faking your identity, number of consultation sessions conducted, your study mode, etc.&nbsp;&nbsp;We have high expectation on our students&rsquo; honesty and integrity.&nbsp;&nbsp;With any violation of this policy, students are subject to the University Student Code of Conduct.&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family: ">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+					</div>
+				</div>
+				<!-- /Content -->
+
+			</div>
+		</div>
+		<!-- /Main -->
+
+		<!-- Footer -->
+		<div id="cityu-footer" class="cityu-outer">
+			<div class="cityu-inner">
+
+				<!-- Nav List -->
+				<div id="cityu-footer-nav-list">
+				  					<ul>
+						<li><a href="#">Student</a>
+							<ul>
+								<li><a href="page.asp?id=2" target="_self">Student Services</a></li>
+								<li><a href="page.asp?id=3" target="_self">Career Consultation</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/ciscws/" target="_self">CIS & CWS</a></li>
+								<li><a href="page.asp?id=4" target="_self">Internship</a></li>
+								<li><a href="../Download/student_intern_guide.pdf" target="_self">Student Internship Guide</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=122" target="_self">Employability Enhancement</a></li>
+								<li><a href="page.asp?id=112" target="_self">Financial Support</a></li>
+								<li><a href="page.asp?id=5" target="_self">Self Assessments</a></li>
+								<li><a href="page.asp?id=6" target="_self">Self Help Tutorials</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/download.asp" target="_self">Download Area</a></li>
+								<li><a href="http://www.cityu.edu.hk/meao/" target="_self">International Students</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Employer</a>
+							<ul>
+								<li><a href="page.asp?id=23" target="_self">Our Services</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=24" target="_self">Posting Job Advertisement</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=25" target="_self">Recruitment / Career Talk</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=89" target="_self">Internship</a></li>
+								<li><a href="http://www.cityu.edu.hk/cityu/prgm/index.htm" target="_self">Academic Programme Information</a></li>
+								<li><a href="http://www.cityu.edu.hk/fnf/" target="_self">Facts & Figures</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Career</a>
+							<ul>
+								<li><a href="page.asp?id=93" target="_self">Hit The Ground Running</a></li>
+								<li><a href="page.asp?id=7" target="_self">Choosing Your Major</a></li>
+								<li><a href="page.asp?id=8" target="_self">Career Planning</a></li>
+								<li><a href="page.asp?id=9" target="_self">Career Types</a></li>
+								<li><a href="page.asp?id=10" target="_self">Career Trends</a></li>
+								<li><a href="page.asp?id=110" target="_self">Career Early Bird</a></li>
+								<li><a href="page.asp?id=11" target="_self">Further Studies</a></li>
+								<li><a href="page.asp?id=12" target="_self">How To Find A Job</a></li>
+								<li><a href="page.asp?id=13" target="_self">Letters And Resumes</a></li>
+								<li><a href="page.asp?id=14" target="_self">Interview Tips</a></li>
+								<li><a href="page.asp?id=15" target="_self">Career Games</a></li>
+								<li><a href="page.asp?id=16" target="_self">Dining Etiquette</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=62" target="_self">Network</a></li>
+								<li><a href="page.asp?id=106" target="_self">Employment and Deception</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Industries</a>
+							<ul>
+								<li><a href="page.asp?id=63" target="_self">Advertising</a></li>
+								<li><a href="page.asp?id=64" target="_self">AO & EO</a></li>
+								<li><a href="page.asp?id=65" target="_self">Banking</a></li>
+								<li><a href="page.asp?id=61" target="_self">Big 4</a></li>
+								<li><a href="page.asp?id=66" target="_self">CRE & BLT</a></li>
+								<li><a href="page.asp?id=67" target="_self">Human Resources</a></li>
+								<li><a href="page.asp?id=68" target="_self">Immigration Officers</a></li>
+								<li><a href="page.asp?id=69" target="_self">Market Research</a></li>
+								<li><a href="page.asp?id=70" target="_self">Police Inspector</a></li>
+								<li><a href="page.asp?id=71" target="_self">Public Relations</a></li>
+								<li><a href="page.asp?id=72" target="_self">Teachers</a></li>
+								<li><a href="page.asp?id=74" target="_self">Training & Development</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Job Links</a>
+							<ul>
+								<li><a href="https://www.cityu.edu.hk/cityu/logon/aims.htm" target="_self">JobPlus</a></li>
+								<li><a href="http://www.jijis.org.hk/" target="_self">JIJIS</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/ciscws/" target="_self">CIS & CWS</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=36" target="_self">Others</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Our Team</a>
+							<ul>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=27" target="_self">About Us</a></li>
+								<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=33" target="_self">Contact Us</a></li>
+								<li><a href="mailto:clc.careercentre@cityu.edu.hk" target="_self">Letters to the Editor</a></li>
+							</ul>
+						</li>
+						<li><a href="http://www6.cityu.edu.hk/caio/city-u/calendar.asp" target="_self">Events Calendar</a></li>
+						<li><a href="http://www6.cityu.edu.hk/caio/city-u/page.asp?id=37" target="_self">Announcements</a></li>
+					</ul>
+
+				</div>
+				<!-- /Nav List -->
+
+				<hr />
+
+				<!-- Column -->
+				<div id="cityu-footer-column">
+
+					<!-- Notes -->
+					<div id="cityu-footer-notes">
+
+						<!-- Links -->
+						<div id="cityu-footer-links">
+							<a href="page.asp?id=87">Privacy Policy</a>
+							&middot; <a href="http://www.cityu.edu.hk/cityu/copyright/index.htm#copyright">Copyright</a>
+							&middot; <a href="page.asp?id=88">Disclaimer</a>
+							&middot; <a href="page.asp?id=33">Contact Us</a>
+							&middot; <a href="http://en.wikipedia.org/wiki/List_of_PDF_software">Get PDF Reader</a>
+						</div>
+						<!-- /Links -->
+
+						<!-- Credits -->
+						<div id="cityu-footer-credits">
+							© 2011 City University of Hong Kong. All Rights Reserved.
+						</div>
+						<!-- /Credits -->
+
+					</div>
+					<!-- /Notes -->
+
+					<!-- Icons -->
+					<div id="cityu-footer-icons">
+						<a href="http://www.cityu.edu.hk/"><img src="http://template.cityu.edu.hk/template/img/logos/cityu_footer.png" alt="City University of Hong Kong" /></a>
+					</div>
+					<!-- /Icons -->
+				</div>
+				<!-- /Column -->
+			</div>
+		</div>
+		<!-- /Footer -->
+	</body>
+</html>

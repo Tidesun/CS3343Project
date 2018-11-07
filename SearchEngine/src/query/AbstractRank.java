@@ -36,16 +36,7 @@ public abstract class AbstractRank implements RankInterface {
 			input.close();
 			in.close();
 
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-			throw e;
-		} catch (IOException e) {
-			e.printStackTrace();
-			throw e;
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			throw e;
-		} catch (ClassCastException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
 		}

@@ -1,0 +1,377 @@
+
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><!-- Title --><title>Majors</title>
+		<!-- /Title -->
+			<!-- Meta -->
+			<meta charset="utf-8" />
+			<meta name="author" content="City University of Hong Kong" />
+			<meta name="description" content="" />
+			<meta name="keywords" content="" />
+			<meta name="robots" content="index, follow" />
+			<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2, user-scalable=yes" />
+			<!-- /Meta -->
+
+			<!-- Meta -->
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+			<!-- /Meta -->
+
+			<!-- Icon -->
+			<link rel="shortcut icon" href="https://www.cityu.edu.hk/favicon.ico" />
+			<!-- /Icon -->
+
+			<!-- CSS -->
+			<link rel="stylesheet" type="text/css" href="https://template.cityu.edu.hk/template/css/cityu.base.css" />
+			<link rel="stylesheet" type="text/css" href="https://template.cityu.edu.hk/template/css/jquery.ddsmoothmenu.css" />
+			<!-- /CSS -->
+		
+			<STYLE>
+			/* City University of Hong Kong */
+			/* Print setting */@media print
+			{
+			.noPrint {display:none}
+			#cityu-content {font-size:100%;}
+			.cityu-inner {width:95%;}
+			}
+
+			/* Layout */
+			.ui-tabs-vertical { width: 55em; }
+			.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+			.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+			.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+			.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
+			.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+
+			body.cityu-dept #cityu-header-global {padding-bottom: 8px;}
+			#cityu-header + #cityu-main #cityu-content .cityu-content-page {padding-top: 40px;}
+			#cityu-footer-column {padding-top: 28px; padding-bottom: 29px;}
+			#cityu-footer-notes {margin-top: 5px;}
+
+			/* Contents */
+			.title {font-size: 200%;}
+			.subTitle {font-size: 175%; font-weight: bold; text-decoration: underline;}
+			.formTitle {font-size: 185%; font-weight: normal !important; color: #aa1454;}
+			.formSubTitle {font-size: 135%; font-weight: normal !important; color: #aa1454;}
+			.formText {font-size: 100%; font-weight: bold;}
+			.formValue {font-size: 100%;}
+			.dotRow {border-style: dotted; border-right-style: none; border-left-style: none}
+			.dotRowBgColor1 {background-color:#e5dfec;}
+			.dotRowBgColor2 {background-color:#dbe5f1}
+			.dotRowLineColor1 {border-color:#8064a2;}
+			.dotRowLineColor2 {border-color:#4f81bd;}
+
+			#cityu-content table[border="0"],
+			#cityu-content table[border="0"] > tbody > tr > th,
+			#cityu-content table[border="0"] > tbody > tr > td,
+			#cityu-content .course-border-none,
+			#cityu-content .course-border-none > tbody > tr > th,
+			#cityu-content .course-border-none > tbody > tr > td {border: 0;}
+			#cityu-content table[border="1"],
+			#cityu-content table[border="1"] > tbody > tr > th,
+			#cityu-content table[border="1"] > tbody > tr > td,
+			#cityu-content .course-border-default,
+			#cityu-content .course-border-default > tbody > tr > th,
+			#cityu-content .course-border-default > tbody > tr > td {border: 1px solid #444;}
+
+			#cityu-content table th {
+			border-bottom: 1px solid #fff;
+			border-right: 1px solid #fff;
+			background-color: #e5dfec;
+			text-align: left;
+			}
+
+			.displayNone {display: none;}
+			.padNone {padding-left: 0px;}
+			.padTitle {padding-left: 5px;}
+			.padContent {padding-left: 5px;}
+			.padLeft {display:block;margin:0px;}
+			.padRight {display:block;float:right;width:50%;margin-left:4px;margin-right:4px;text-align: right;}
+			.padRight2 {display:block;float:right;width:50%;margin-left:4px;margin-right:4px;text-align: right;}
+			.colorTitle {color: #aa1454;}
+			</STYLE>
+
+			<script>
+			var cityuMobileWeb = true; // Enable mobile web {true|false}
+			var cityuMobileTest = false; // Enable mobile web testing in desktop {true|false}
+			var cityuMobileCSSPath = 'css/course.mobile.css'; // File path if you have a customized CSS for mobile web (e.g. 'css/cityu.mobile.custom.css')
+
+			/* City University of Hong Kong */
+
+			/* =========================================== */
+			/* Main */
+			/* =========================================== */
+			</script>
+
+			<!-- JS -->
+			<script type="text/javascript" src="https://template.cityu.edu.hk/template/js/jquery/jquery.min.js"></script>
+			<script type="text/javascript" src="https://template.cityu.edu.hk/template/js/cityu.base.js"></script>
+			<!-- /JS -->
+			
+		</head>
+		<body class="cityu-dept cityu-layout-content">
+		<!-- Header -->
+		<div id="cityu-header" class="cityu-outer cityu-bg-clear">
+			<div class="cityu-inner">
+				<!-- Global -->
+				<div id="cityu-header-global">
+
+					<!-- CityU Logo --><div id="cityu-header-cityulogo"><a href="http://www.cityu.edu.hk/"><img src="https://template.cityu.edu.hk/template/img/logos/cityu_deptpage.png" alt="City University of Hong Kong" /></a></div><!-- /CityU Logo -->
+
+					<!-- Skip Links -->
+					<div class="cityu-skiplink">
+						<a href="#cityu-nav">Skip to navigation</a>
+					</div>
+					<div class="cityu-skiplink">
+						<a href="#cityu-content">Skip to content</a>
+					</div>
+					<!-- /Skip Links -->
+
+					<!-- Toolbar -->
+					<div id="cityu-header-toolbar">
+
+						<!-- Search -->
+						<div id="cityu-header-search">
+							<form method="get" action="https://www6.cityu.edu.hk/cityusearch">
+								<fieldset>
+									<legend class="cityu-hidden">
+										Search
+									</legend>
+									<div class="cityu-search-text-wrapper">
+										<label class="cityu-hidden" for="cityu-search-text">Search Keywords</label>
+										<input id="cityu-search-text" type="text" name="q" placeholder="Search" />
+										<label class="cityu-hidden" for="cityu-search-button">Submit Search</label>
+										<input id="cityu-search-button" class="cityu-search-button" type="submit" value="" />
+									</div>
+								</fieldset>
+							</form>
+						</div>
+						<!-- /Search -->
+
+					</div>
+					<!-- /Toolbar -->
+
+				</div>
+				<!-- /Global -->
+
+			</div>
+		</div>
+	<!-- /Header -->
+
+	<!-- Main Nav -->
+		<div id="cityu-nav" class="cityu-outer">
+			<div class="cityu-inner">
+				<!-- Nav - Dynamic Drive - Smooth Navigational Menu -->
+				<div id="cityu-nav-list" class="ddsmoothmenu" style="display:table-cell; vertical-align:middle"><span style="font-size:20px; color:white;"><b>MAJORS &gt;&gt;&gt; </b></span>		</div>
+				<!-- /Nav - Dynamic Drive - Smooth Navigational Menu -->
+			</div>
+		</div>
+	<!-- Main Nav -->
+
+	<!-- Main Page -->
+		<div id="cityu-main" class="cityu-outer"><div class="cityu-inner">		<!-- Page Nav -->
+				<div id="cityu-sidebar-1">
+					<div id="cityu-sub-nav-list">
+							<div class="cityu-box-item">
+								<ul>
+		
+										<li><a id="prog-main" href="BSS1_ASIS-0.htm">Overview</a></li>
+										<li style="height: 22px; padding-top: 6px;"><b style="padding-left: 10px; padding-top: 6px; padding-right: 6px;">Curriculum&#187;</b></li><li><a id="prog-as1" href="BSS1_ASIS-1.htm">Normative 4-year Degree</a></li><li><a id="prog-as2" href="BSS1_ASIS-2.htm">Advanced Standing I</a></li><li><a href="#Heading" class="active">Advanced Standing II</a>
+										<ul>
+										<li><a href="#GeReq">GE Requirements</a></li>
+										<li><a href="#ColReq">College / School Requirements</a></li>
+										<li><a href="#MajorReq">Major Requirements</a></li></ul>
+										 </li>
+								</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /Page Nav -->
+			<!-- Content -->
+					<div id="cityu-content">			<div class="cityu-content-page"><table width="100%" border="0" cellpadding="2" style="padding-top: 10px" class="padContent"><tr id="gp_header" class="display"><td colspan="2" class="padNone" style="padding-left:0px;"><a id="Heading"></a><Strong><div id="div_prog_title_header" class="formTitle padTitle">Asian and International Studies</div></strong></td></tr><tr><td class="padContent"><table width="90%" border="1" cellpadding="2" style="padding-top: 10px; border-style:dotted; border-right-style: none; border-left-style: none;"><tr class="display"><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;" class="dotRowBgColor2" width="40%"><td align="right" style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;font-size:14" class="dotRowBgColor2"><strong><div class="formText">Advanced Standing II</div></strong></td></tr><tr id="gp_prog_title" class="display"><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;" class="dotRowBgColor2" width="40%"><strong><div class="formText">Major</div></strong></td><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;"><div id="div_prog_title" class="formValue">Asian and International Studies<br>亞洲及國際研究</div></td></tr><tr id="gp_award_title" class="display"><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;" class="dotRowBgColor2" width="30%"><strong><div class="formText">Degree / Award Title</div></strong></td><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;"><div id="div_award_title" class="formValue">Bachelor of Social Sciences in Asian and International Studies<br>社會科學學士(亞洲及國際研究)</div></td></tr><tr id="gp_offering_dept" class="display"><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;" class="dotRowBgColor2"><strong><div class="formText">Offering Academic Unit</div></strong></td><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;"><div id="div_offering_dept" class="formValue">Department of Asian and International Studies</div></td></tr><tr id="gp_npos" class="display"><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;" class="dotRowBgColor2"><strong><div class="formText">Normal Period of Study</div></strong></td><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;"><div id="div_normal_period_of_study" class="formValue">2 years</div></td></tr><tr id="gp_mpos" class="display"><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;" class="dotRowBgColor2"><strong><div class="formText">Maximum Period of Study</div></strong></td><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;"><div id="div_max_period_of_study" class="formValue">5 years</div></td></tr><tr id="gp_cu" class="display"><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;" class="dotRowBgColor2"><strong><div class="formText">Credit Units Required for Graduation</div></strong></td><td style="border-style: dotted; border-right-style: none; border-left-style: none; border-color:#4f81bd;"><div id="div_credit_units_req" class="formValue">60 credit units</div></td></tr></table></td></tr><tr><td><div id="disclaimer"><i>Note: The following curriculum information is subject to periodic review and changes.</i></div></td></tr><tr id="gp_ge_req_header" class="display"><td colspan="2"><br><a id="GeReq"></a><strong><div class="formText padTitle colorTitle" id="div_ge_cu"><p class="padLeft">GE Requirements (12 credit units)<span id="div_ge_cat_term" class="padRight">Catalogue Term : Semester A 2017/18</span></p></div></strong><hr style="height:0px; padding:0px; margin:0px;color:#aa1454;border-top-color:#aa1454"></td></tr><tr id="gp_ge_req_content" class="display"><td colspan="2" class="padNone" style="padding-left:0px;"><div id="div_ge_req" class="formValue padContent"><table border="0" id="reqs3X" style="border-collapse:collapse" width="90%"><tbody class="tbodyX ui-sortable" id="reqs3tbodyX" style=""><tr class="linkRow"><td><br><table width="95%" style="padding: 0px; margin-left: 0pt; border-collapse: collapse;" border="1">
+<tbody>
+<tr>
+<td style="padding: 3px; border: 1px solid #000000; border-image: none;" bgcolor="#e5dfec" colspan="3"> </td>
+<td width="12%" style="padding: 3px; border: 1px solid #000000; border-image: none;" bgcolor="#e5dfec"><strong>Credit Units</strong></td></tr>
+<tr>
+<td width="25%" valign="top" style="padding: 3px; border: 1px solid #000000; border-image: none;"><strong>University Requirements</strong></td>
+<td width="63%" style="padding: 3px; border: 1px solid #000000; border-image: none;" colspan="2"><a href="http://www.english.cityu.edu.hk/GE/" target="_new">Discipline-specific English</a></td>
+<td width="12%" style="padding: 3px; border: 1px solid #000000; border-image: none;">3</td></tr>
+<tr>
+<td width="25%" valign="top" style="padding: 3px; border: 1px solid #000000; border-image: none;"><strong>Distributional Requirements</strong></td>
+<td width="63%" valign="top" style="padding: 3px; border: 1px solid #000000; border-image: none;" colspan="2">Take 1 course from any one of the three distributional areas:<br><br>Area 1: Arts and Humanities<br>Area 2: Study of Societies, Social and Business Organisations<br>Area 3: Science and Technology<br><br>Visit the <a href="http://www6.cityu.edu.hk/ge_info/Search/" target="_new">GE website</a> for more course information.</td>
+<td width="12%" valign="top" style="padding: 3px; border: 1px solid #000000; border-image: none;">3</td></tr>
+<tr>
+<td width="25%" valign="top" style="padding: 3px; border: 1px solid #000000; border-image: none;"><strong>College-specified Courses</strong></td>
+<td width="63%" valign="top" style="padding: 3px; border: 1px solid #000000; border-image: none;" colspan="2">
+<p>Take 2 courses from the following:</p><p><table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tbody>
+<tr>
+<td width="20%"><a href="../course/AIS2032.htm" target="_blank">AIS2032</a></td>
+<td width="80%">Hong Kong: Continuity and Change in a Global City</td></tr>
+<tr>
+<td width="20%"><a href="../course/AIS2200.htm" target="_blank">AIS2200</a></td>
+<td width="80%">Introduction to International Studies Through Film</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH2201.htm" target="_blank">CAH2201</a></td>
+<td width="80%">The Mirror for Today: Introduction to Chinese History</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH2516.htm" target="_blank">CAH2516</a></td>
+<td width="80%">Society, Theatre and Performance</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH2545.htm" target="_blank">CAH2545</a></td>
+<td width="80%">Texts in Chinese Art and Culture</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH2551.htm" target="_blank">CAH2551</a></td>
+<td width="80%">Chinese Art and Political Expression</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH2810.htm" target="_blank">CAH2810</a></td>
+<td width="80%">Ancient Chinese History 1</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH2811.htm" target="_blank">CAH2811</a></td>
+<td width="80%">Ancient Chinese History 2</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH2840.htm" target="_blank">CAH2840</a></td>
+<td width="80%">Modern Chinese History</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH2854.htm" target="_blank">CAH2854</a></td>
+<td width="80%">The City in Chinese History</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH2865.htm" target="_blank">CAH2865</a></td>
+<td width="80%">History of Chinese Art</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH2871.htm" target="_blank">CAH2871</a></td>
+<td width="80%">American History</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH3851.htm" target="_blank">CAH3851</a></td>
+<td width="80%">Chinese Archaeology</td></tr>
+<tr>
+<td width="20%"><a href="../course/CAH3852.htm" target="_blank">CAH3852</a></td>
+<td width="80%">World Archaeological History</td></tr>
+<tr>
+<td width="20%"><a href="../course/COM3107.htm" target="_blank">COM3107</a></td>
+<td width="80%">Fundamentals of Persuasive Communication</td></tr>
+<tr>
+<td width="20%"><a href="../course/COM3408.htm" target="_blank">COM3408</a></td>
+<td width="80%">Integrated Strategic Communication</td></tr>
+<tr>
+<td width="20%"><a href="../course/EN2321.htm" target="_blank">EN2321</a></td>
+<td width="80%">Modern and Contemporary Fiction</td></tr>
+<tr>
+<td width="20%"><a href="../course/EN2801.htm" target="_blank">EN2801</a></td>
+<td width="80%">Popular Culture and Social Life</td></tr>
+<tr>
+<td width="20%"><a href="../course/EN3583.htm" target="_blank">EN3583</a></td>
+<td width="80%">Facebook and Autobiography. How we narrate ourselves on social network sites.</td></tr>
+<tr>
+<td width="20%"><a href="../course/LT2201.htm" target="_blank">LT2201</a></td>
+<td width="80%">Introduction to Linguistics</td></tr>
+<tr>
+<td width="20%"><a href="../course/LT2306.htm" target="_blank">LT2306</a></td>
+<td width="80%">Appreciating Written Texts</td></tr>
+<tr>
+<td width="20%"><a href="../course/LT3234.htm" target="_blank">LT3234</a></td>
+<td width="80%">Language and Cognition</td></tr>
+<tr>
+<td width="20%"><a href="../course/LT3345.htm" target="_blank">LT3345</a></td>
+<td width="80%">Discovering and Managing Terms</td></tr>
+<tr>
+<td width="20%"><a href="../course/POL2106.htm" target="_blank">POL2106</a></td>
+<td width="80%">Government and Economy</td></tr>
+<tr>
+<td width="20%"><a href="../course/POL3113.htm" target="_blank">POL3113</a></td>
+<td width="80%">Issues in Contemporary World Politics</td></tr>
+<tr>
+<td width="20%"><a href="../course/POL3114.htm" target="_blank">POL3114</a></td>
+<td width="80%">Seminars on Hong Kong Government and Politics</td></tr>
+<tr>
+<td width="20%"><a href="../course/POL3120.htm" target="_blank">POL3120</a></td>
+<td width="80%">Politics and Media</td></tr>
+<tr>
+<td width="20%"><a href="../course/POL3207.htm" target="_blank">POL3207</a></td>
+<td width="80%">Health Care Policy and Ethics</td>
+</tr>
+<tr>
+<td width="20%"><a href="../course/POL3233.htm" target="_blank">POL3233</a></td>
+<td width="80%">Managing the Housing System</td>
+</tr>
+<tr>
+<td width="20%"><a href="../course/POL3234.htm" target="_blank">POL3234</a></td>
+<td width="80%">Transport Planning and Management</td>
+</tr>
+<tr>
+<td width="20%"><a href="../course/POL3309.htm" target="_blank">POL3309</a></td>
+<td width="80%">Issues in Public Management</td>
+</tr>
+<tr>
+<td width="20%"><a href="../course/POL3310.htm" target="_blank">POL3310</a></td>
+<td width="80%">Public Management in the Information Age</td>
+</tr>
+<tr>
+<td width="20%"><a href="../course/POL3410.htm" target="_blank">POL3410</a></td>
+<td width="80%">Management Ethics</td>
+</tr>
+<tr>
+<td width="20%"><a href="../course/POL3703.htm" target="_blank">POL3703</a></td>
+<td width="80%">Labour and the State in China</td>
+</tr>
+<tr>
+<td width="20%"><a href="../course/POL3900.htm" target="_blank">POL3900</a></td>
+<td width="80%">Social Innovation and Public Policy</td>
+</tr>
+<tr>
+<td width="20%"><a href="../course/POL3914.htm" target="_blank">POL3914</a></td>
+<td width="80%">The European Union</td>
+</tr>
+<tr>
+<td width="20%"><a href="../course/SS1012.htm" target="_blank">SS1012</a></td>
+<td width="80%">Youth in a Changing Society</td>
+</tr>
+<tr>
+<td width="20%"><a href="../course/SS1611.htm" target="_blank">SS1611</a></td>
+<td width="80%">Movies and Psychology</td>
+</tr>
+</tbody></table></td>
+<td width="12%" valign="top" style="padding: 3px; border: 1px solid #000000; border-image: none;">6</td></tr></tbody></table></td></tr></tbody></table></div></td></tr><tr id="gp_col_req_header" class="display"><td colspan="2"><br><a id="ColReq"></a><strong><div class="formText padTitle colorTitle" id="div_col_cu"><p class="padLeft">College / School Requirements (0 credit units)<span id="div_col_cat_term" class="padRight">Catalogue Term : Semester A 2017/18</span></p></div></strong><hr style="height:0px; padding:0px; margin:0px;color:#aa1454;border-top-color:#aa1454"></td></tr><tr id="gp_col_req_content" class="display"><td colspan="2" class="padNone" style="padding-left:0px;"><div id="div_col_req" class="formValue padContent"><table border="0" id="reqs3X" style="border-collapse:collapse" width="90%"><tbody class="tbodyX ui-sortable" id="reqs3tbodyX" style=""><tr class="linkRow"><td><br>Full exemption from college requirements is given.</td></tr></tbody></table></div></td></tr><tr id="gp_major_req_header" class="display"><td colspan="2"><br><a id="MajorReq"></a><strong><div class="formText padTitle colorTitle" id="div_major_cu">Major Requirements (48 credit units)<span id="div_major_cat_term" class="padRight">Catalogue Term : Semester A 2017/18</span></p></div></strong><hr style="height:0px; padding:0px; margin:0px;color:#aa1454;border-top-color:#aa1454"></td></tr><tr id="gp_major_req_content" class="display"><td colspan="2" class="padNone" style="padding-left:0px;"><div id="div_major_req" class="formValue padContent"><table border="0" id="reqs3X" style="border-collapse:collapse" width="90%"><tbody class="tbodyX ui-sortable" id="reqs3tbodyX" style=""><tr class="linkRow"><td><br><strong>1. Core Courses (39 credit units)</strong></td></tr><tr class="linkRow"><td><table name="xcrses[]" width="95%" border="1" style="border-collapse:collapse"><tbody id="crsestbody" class="a"><tr><th width="20%">Course Code</th><th width="68%">Course Title</th><th width="12%">Credit Units</th></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS2012.htm" target="_blank"><span class="formValue">AIS2012</span></a></td><td width="60%" style="vertical-align:middle;">Social Research Methods</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS2030.htm" target="_blank"><span class="formValue">AIS2030</span></a></td><td width="60%" style="vertical-align:middle;">Traditions of Inquiry in the Social Sciences</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS2040.htm" target="_blank"><span class="formValue">AIS2040</span></a></td><td width="60%" style="vertical-align:middle;">History and Society in Asia</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS2041.htm" target="_blank"><span class="formValue">AIS2041</span></a></td><td width="60%" style="vertical-align:middle;">Political and Social Development in China</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS2073.htm" target="_blank"><span class="formValue">AIS2073</span></a></td><td width="60%" style="vertical-align:middle;">Understanding Culture in Japan and China through Film</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS2914.htm" target="_blank"><span class="formValue">AIS2914</span></a></td><td width="60%" style="vertical-align:middle;">Introduction to Japanese Society</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS3031.htm" target="_blank"><span class="formValue">AIS3031</span></a></td><td width="60%" style="vertical-align:middle;">Political Dynamics in Asia</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS3032.htm" target="_blank"><span class="formValue">AIS3032</span></a></td><td width="60%" style="vertical-align:middle;">State and Economy in Asia</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS3033.htm" target="_blank"><span class="formValue">AIS3033</span></a></td><td width="60%" style="vertical-align:middle;">Culture and Change in Asia</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS3123.htm" target="_blank"><span class="formValue">AIS3123</span></a></td><td width="60%" style="vertical-align:middle;">Theories of Development</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS3126.htm" target="_blank"><span class="formValue">AIS3126</span></a></td><td width="60%" style="vertical-align:middle;">International Political Economy</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS4071.htm" target="_blank"><span class="formValue">AIS4071</span></a></td><td width="60%" style="vertical-align:middle;">Globalisation and the Environment</td><td width="20%" style="vertical-align:middle;">3</td></tr><tr><td width="20%" style="vertical-align:middle;"><a href="../course/AIS4127.htm" target="_blank"><span class="formValue">AIS4127</span></a></td><td width="60%" style="vertical-align:middle;">Poverty and the Politics of Aid</td><td width="20%" style="vertical-align:middle;">3</td></tr></tbody></table></td></tr><tr class="linkRow"><td><br><strong>2. Electives (9 credit units)</strong></td></tr><tr class="linkRow"><td><table name="xcrses[]" width="95%" border="1" style="border-collapse:collapse"><tbody id="crsestbody" class="a"><tr><th width="10%">Course Code</th><th width="40%">Course Title</th><th width="10%">Credit Units</th><th width="40%">Remarks</th></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS2032.htm" target="_blank"><span class="formValue">AIS2032</span></a></td><td width="40%" style="vertical-align:middle;">Hong Kong: Continuity and Change in a Global City</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS2036.htm" target="_blank"><span class="formValue">AIS2036</span></a></td><td width="40%" style="vertical-align:middle;">The Asian Century</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS2200.htm" target="_blank"><span class="formValue">AIS2200</span></a></td><td width="40%" style="vertical-align:middle;">Introduction to International Studies Through Film</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS2918.htm" target="_blank"><span class="formValue">AIS2918</span></a></td><td width="40%" style="vertical-align:middle;">A Portrait of Japan : Experiencing Japanese Culture</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS2958.htm" target="_blank"><span class="formValue">AIS2958</span></a></td><td width="40%" style="vertical-align:middle;">Introduction to Korean Society</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3034.htm" target="_blank"><span class="formValue">AIS3034</span></a></td><td width="40%" style="vertical-align:middle;">Environment and Society in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3041.htm" target="_blank"><span class="formValue">AIS3041</span></a></td><td width="40%" style="vertical-align:middle;">Problem-based Studies of Selected Asian Societies and Regions I</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3042.htm" target="_blank"><span class="formValue">AIS3042</span></a></td><td width="40%" style="vertical-align:middle;">Problem-based Studies of Selected Asian Societies and Regions II</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3043.htm" target="_blank"><span class="formValue">AIS3043</span></a></td><td width="40%" style="vertical-align:middle;">Problem-based Studies of Selected Asian Societies and Regions III</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3046.htm" target="_blank"><span class="formValue">AIS3046</span></a></td><td width="40%" style="vertical-align:middle;">Asian Migration and the Global Diasporas</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3054.htm" target="_blank"><span class="formValue">AIS3054</span></a></td><td width="40%" style="vertical-align:middle;">Corporate Social Responsibility in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3060.htm" target="_blank"><span class="formValue">AIS3060</span></a></td><td width="40%" style="vertical-align:middle;">Special Topics in Asian Studies I</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3061.htm" target="_blank"><span class="formValue">AIS3061</span></a></td><td width="40%" style="vertical-align:middle;">Special Topics in Asian Studies II</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3070.htm" target="_blank"><span class="formValue">AIS3070</span></a></td><td width="40%" style="vertical-align:middle;">Special Topics in Development Studies</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3121.htm" target="_blank"><span class="formValue">AIS3121</span></a></td><td width="40%" style="vertical-align:middle;">Theories of International Relations</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3124.htm" target="_blank"><span class="formValue">AIS3124</span></a></td><td width="40%" style="vertical-align:middle;">Special Topics in International Studies I</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3125.htm" target="_blank"><span class="formValue">AIS3125</span></a></td><td width="40%" style="vertical-align:middle;">Special Topics in International Studies II</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3141.htm" target="_blank"><span class="formValue">AIS3141</span></a></td><td width="40%" style="vertical-align:middle;">Spies, Intelligence and National Security</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3544.htm" target="_blank"><span class="formValue">AIS3544</span></a></td><td width="40%" style="vertical-align:middle;">Comparative Management: China, Japan, and South Korea</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3800.htm" target="_blank"><span class="formValue">AIS3800</span></a></td><td width="40%" style="vertical-align:middle;">Professional Internship</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">AIS3800 Professional Internship and CLA3100 Summer Professional Internship I are mutually exclusive</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810.htm" target="_blank"><span class="formValue">AIS3810</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810J.htm" target="_blank"><span class="formValue">AIS3810J</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Applies only to where the destination is Japan</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810K.htm" target="_blank"><span class="formValue">AIS3810K</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Applies only to where the destination is Korean</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3984.htm" target="_blank"><span class="formValue">AIS3984</span></a></td><td width="40%" style="vertical-align:middle;">Korean Culture</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4025.htm" target="_blank"><span class="formValue">AIS4025</span></a></td><td width="40%" style="vertical-align:middle;">Globalization and Socio-Cultural Changes</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4027.htm" target="_blank"><span class="formValue">AIS4027</span></a></td><td width="40%" style="vertical-align:middle;">Religions and Society in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4028.htm" target="_blank"><span class="formValue">AIS4028</span></a></td><td width="40%" style="vertical-align:middle;">Women and Social Change in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4042.htm" target="_blank"><span class="formValue">AIS4042</span></a></td><td width="40%" style="vertical-align:middle;">Social Movements in an Age of Globalisation</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4045.htm" target="_blank"><span class="formValue">AIS4045</span></a></td><td width="40%" style="vertical-align:middle;">Political Sociology</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4055.htm" target="_blank"><span class="formValue">AIS4055</span></a></td><td width="40%" style="vertical-align:middle;">Youth and Politics in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4060.htm" target="_blank"><span class="formValue">AIS4060</span></a></td><td width="40%" style="vertical-align:middle;">Directed Research Project</td><td width="10%" style="vertical-align:middle;">6</td><td width="40%" style="vertical-align:middle;">AIS4060 carries eligibility requirement of 3.0 CGPA</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4072.htm" target="_blank"><span class="formValue">AIS4072</span></a></td><td width="40%" style="vertical-align:middle;">Contemporary International Politics of the Asia Pacific</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4104.htm" target="_blank"><span class="formValue">AIS4104</span></a></td><td width="40%" style="vertical-align:middle;">China and the Global South</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4122.htm" target="_blank"><span class="formValue">AIS4122</span></a></td><td width="40%" style="vertical-align:middle;">International Organisations</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4123.htm" target="_blank"><span class="formValue">AIS4123</span></a></td><td width="40%" style="vertical-align:middle;">International Security</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4130.htm" target="_blank"><span class="formValue">AIS4130</span></a></td><td width="40%" style="vertical-align:middle;">U.S. Politics and Society</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4132.htm" target="_blank"><span class="formValue">AIS4132</span></a></td><td width="40%" style="vertical-align:middle;">Introduction to India</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4140.htm" target="_blank"><span class="formValue">AIS4140</span></a></td><td width="40%" style="vertical-align:middle;">The State and Development in Northeast Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4201.htm" target="_blank"><span class="formValue">AIS4201</span></a></td><td width="40%" style="vertical-align:middle;">International Relations: Conflict and Cooperation on Environment and Resources Problems</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/CLA3100.htm" target="_blank"><span class="formValue">CLA3100</span></a></td><td width="40%" style="vertical-align:middle;">Professional Internship I</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">AIS3800 Professional Internship and CLA3100 Summer Professional Internship I are mutually exclusive</td></tr></tbody></table></td></tr><tr class="linkRow"><td><br><p align="justify"><strong><span style="text-decoration: underline;">Elective Structure/ Stream<br></span></strong><br>Elective structure is divided into 3 streams. Students need to take <strong>at least 3 courses</strong> in one stream (Asian Studies/ International Studies/ Development Studies) in order to graduate in that stream.  Students can graduate in one stream only.</p></td></tr><tr class="linkRow"><td><br><STRONG><EM>Asian Studies</EM></STRONG></td></tr><tr class="linkRow"><td><table name="xcrses[]" width="95%" border="1" style="border-collapse:collapse"><tbody id="crsestbody" class="a"><tr><th width="10%">Course Code</th><th width="40%">Course Title</th><th width="10%">Credit Units</th><th width="40%">Remarks</th></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS2032.htm" target="_blank"><span class="formValue">AIS2032</span></a></td><td width="40%" style="vertical-align:middle;">Hong Kong: Continuity and Change in a Global City</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS2036.htm" target="_blank"><span class="formValue">AIS2036</span></a></td><td width="40%" style="vertical-align:middle;">The Asian Century</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS2918.htm" target="_blank"><span class="formValue">AIS2918</span></a></td><td width="40%" style="vertical-align:middle;">A Portrait of Japan : Experiencing Japanese Culture</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS2958.htm" target="_blank"><span class="formValue">AIS2958</span></a></td><td width="40%" style="vertical-align:middle;">Introduction to Korean Society</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3034.htm" target="_blank"><span class="formValue">AIS3034</span></a></td><td width="40%" style="vertical-align:middle;">Environment and Society in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3041.htm" target="_blank"><span class="formValue">AIS3041</span></a></td><td width="40%" style="vertical-align:middle;">Problem-based Studies of Selected Asian Societies and Regions I</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3042.htm" target="_blank"><span class="formValue">AIS3042</span></a></td><td width="40%" style="vertical-align:middle;">Problem-based Studies of Selected Asian Societies and Regions II</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3043.htm" target="_blank"><span class="formValue">AIS3043</span></a></td><td width="40%" style="vertical-align:middle;">Problem-based Studies of Selected Asian Societies and Regions III</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3046.htm" target="_blank"><span class="formValue">AIS3046</span></a></td><td width="40%" style="vertical-align:middle;">Asian Migration and the Global Diasporas</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3054.htm" target="_blank"><span class="formValue">AIS3054</span></a></td><td width="40%" style="vertical-align:middle;">Corporate Social Responsibility in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3060.htm" target="_blank"><span class="formValue">AIS3060</span></a></td><td width="40%" style="vertical-align:middle;">Special Topics in Asian Studies I</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3061.htm" target="_blank"><span class="formValue">AIS3061</span></a></td><td width="40%" style="vertical-align:middle;">Special Topics in Asian Studies II</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810.htm" target="_blank"><span class="formValue">AIS3810</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Stream selection is subject to case by case approval by Major Leader and Tour Leader.</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810J.htm" target="_blank"><span class="formValue">AIS3810J</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Stream selection is subject to case by case approval by Major Leader and Tour Leader.</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810K.htm" target="_blank"><span class="formValue">AIS3810K</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Stream selection is subject to case by case approval by Major Leader and Tour Leader.</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3984.htm" target="_blank"><span class="formValue">AIS3984</span></a></td><td width="40%" style="vertical-align:middle;">Korean Culture</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4027.htm" target="_blank"><span class="formValue">AIS4027</span></a></td><td width="40%" style="vertical-align:middle;">Religions and Society in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4028.htm" target="_blank"><span class="formValue">AIS4028</span></a></td><td width="40%" style="vertical-align:middle;">Women and Social Change in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4055.htm" target="_blank"><span class="formValue">AIS4055</span></a></td><td width="40%" style="vertical-align:middle;">Youth and Politics in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr></tbody></table></td></tr><tr class="linkRow"><td><br><STRONG><EM>International Studies</EM></STRONG></td></tr><tr class="linkRow"><td><table name="xcrses[]" width="95%" border="1" style="border-collapse:collapse"><tbody id="crsestbody" class="a"><tr><th width="10%">Course Code</th><th width="40%">Course Title</th><th width="10%">Credit Units</th><th width="40%">Remarks</th></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS2200.htm" target="_blank"><span class="formValue">AIS2200</span></a></td><td width="40%" style="vertical-align:middle;">Introduction to International Studies Through Film</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3046.htm" target="_blank"><span class="formValue">AIS3046</span></a></td><td width="40%" style="vertical-align:middle;">Asian Migration and the Global Diasporas</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3121.htm" target="_blank"><span class="formValue">AIS3121</span></a></td><td width="40%" style="vertical-align:middle;">Theories of International Relations</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3124.htm" target="_blank"><span class="formValue">AIS3124</span></a></td><td width="40%" style="vertical-align:middle;">Special Topics in International Studies I</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3125.htm" target="_blank"><span class="formValue">AIS3125</span></a></td><td width="40%" style="vertical-align:middle;">Special Topics in International Studies II</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3141.htm" target="_blank"><span class="formValue">AIS3141</span></a></td><td width="40%" style="vertical-align:middle;">Spies, Intelligence and National Security</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810.htm" target="_blank"><span class="formValue">AIS3810</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Stream selection is subject to case by case approval by Major Leader and Tour Leader.</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810J.htm" target="_blank"><span class="formValue">AIS3810J</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Stream selection is subject to case by case approval by Major Leader and Tour Leader.</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810K.htm" target="_blank"><span class="formValue">AIS3810K</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Stream selection is subject to case by case approval by Major Leader and Tour Leader.</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4025.htm" target="_blank"><span class="formValue">AIS4025</span></a></td><td width="40%" style="vertical-align:middle;">Globalization and Socio-Cultural Changes</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4042.htm" target="_blank"><span class="formValue">AIS4042</span></a></td><td width="40%" style="vertical-align:middle;">Social Movements in an Age of Globalisation</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4072.htm" target="_blank"><span class="formValue">AIS4072</span></a></td><td width="40%" style="vertical-align:middle;">Contemporary International Politics of the Asia Pacific</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4104.htm" target="_blank"><span class="formValue">AIS4104</span></a></td><td width="40%" style="vertical-align:middle;">China and the Global South</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4122.htm" target="_blank"><span class="formValue">AIS4122</span></a></td><td width="40%" style="vertical-align:middle;">International Organisations</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4123.htm" target="_blank"><span class="formValue">AIS4123</span></a></td><td width="40%" style="vertical-align:middle;">International Security</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4130.htm" target="_blank"><span class="formValue">AIS4130</span></a></td><td width="40%" style="vertical-align:middle;">U.S. Politics and Society</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4132.htm" target="_blank"><span class="formValue">AIS4132</span></a></td><td width="40%" style="vertical-align:middle;">Introduction to India</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4140.htm" target="_blank"><span class="formValue">AIS4140</span></a></td><td width="40%" style="vertical-align:middle;">The State and Development in Northeast Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4201.htm" target="_blank"><span class="formValue">AIS4201</span></a></td><td width="40%" style="vertical-align:middle;">International Relations: Conflict and Cooperation on Environment and Resources Problems</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr></tbody></table></td></tr><tr class="linkRow"><td><br><STRONG><EM>Development Studies</EM></STRONG></td></tr><tr class="linkRow"><td><table name="xcrses[]" width="95%" border="1" style="border-collapse:collapse"><tbody id="crsestbody" class="a"><tr><th width="10%">Course Code</th><th width="40%">Course Title</th><th width="10%">Credit Units</th><th width="40%">Remarks</th></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3034.htm" target="_blank"><span class="formValue">AIS3034</span></a></td><td width="40%" style="vertical-align:middle;">Environment and Society in Asia</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3041.htm" target="_blank"><span class="formValue">AIS3041</span></a></td><td width="40%" style="vertical-align:middle;">Problem-based Studies of Selected Asian Societies and Regions I</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3042.htm" target="_blank"><span class="formValue">AIS3042</span></a></td><td width="40%" style="vertical-align:middle;">Problem-based Studies of Selected Asian Societies and Regions II</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3043.htm" target="_blank"><span class="formValue">AIS3043</span></a></td><td width="40%" style="vertical-align:middle;">Problem-based Studies of Selected Asian Societies and Regions III</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3046.htm" target="_blank"><span class="formValue">AIS3046</span></a></td><td width="40%" style="vertical-align:middle;">Asian Migration and the Global Diasporas</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3070.htm" target="_blank"><span class="formValue">AIS3070</span></a></td><td width="40%" style="vertical-align:middle;">Special Topics in Development Studies</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3544.htm" target="_blank"><span class="formValue">AIS3544</span></a></td><td width="40%" style="vertical-align:middle;">Comparative Management: China, Japan, and South Korea</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810.htm" target="_blank"><span class="formValue">AIS3810</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Stream selection is subject to case by case approval by Major Leader and Tour Leader.</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810J.htm" target="_blank"><span class="formValue">AIS3810J</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Stream selection is subject to case by case approval by Major Leader and Tour Leader.</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS3810K.htm" target="_blank"><span class="formValue">AIS3810K</span></a></td><td width="40%" style="vertical-align:middle;">AIS Study Tour</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;">Stream selection is subject to case by case approval by Major Leader and Tour Leader.</td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4025.htm" target="_blank"><span class="formValue">AIS4025</span></a></td><td width="40%" style="vertical-align:middle;">Globalization and Socio-Cultural Changes</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4042.htm" target="_blank"><span class="formValue">AIS4042</span></a></td><td width="40%" style="vertical-align:middle;">Social Movements in an Age of Globalisation</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4045.htm" target="_blank"><span class="formValue">AIS4045</span></a></td><td width="40%" style="vertical-align:middle;">Political Sociology</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4104.htm" target="_blank"><span class="formValue">AIS4104</span></a></td><td width="40%" style="vertical-align:middle;">China and the Global South</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr><tr><td width="10%" style="vertical-align:middle;"><a href="../course/AIS4132.htm" target="_blank"><span class="formValue">AIS4132</span></a></td><td width="40%" style="vertical-align:middle;">Introduction to India</td><td width="10%" style="vertical-align:middle;">3</td><td width="40%" style="vertical-align:middle;"></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></table>	</div></div>
+			<!-- Content -->
+				</div></div>
+			<!-- /Main Page -->
+		
+			<!-- Footer -->
+			<div id="cityu-footer" class="cityu-outer">
+				<div class="cityu-inner">
+
+					<!-- Column -->
+					<div id="cityu-footer-column">
+
+						<!-- Notes -->
+						<div id="cityu-footer-notes">
+
+							<!-- Links -->
+							<div id="cityu-footer-links">
+								<a href="http://www.cityu.edu.hk/cityu/geninfo/privacy.htm">Privacy Policy</a>
+								&middot;&nbsp;<a href="http://www.cityu.edu.hk/cityu/copyright/index.htm#copyright">Copyright</a>
+								&middot;&nbsp;<a href="http://www.cityu.edu.hk/cityu/disclaimer/index.htm#disclaimer">Disclaimer</a>
+								&middot;&nbsp;<a href="http://www.cityu.edu.hk/cityu/accessibility/">Accessibility</a>
+							</div>
+							<!-- /Links -->
+
+							<!-- Credits -->
+							<div id="cityu-footer-credits">
+								&copy; City University of Hong Kong. All Rights Reserved.
+							</div>
+							<!-- /Credits -->
+
+						</div>
+						<!-- /Notes -->
+
+						<!-- Icons -->
+						<div id="cityu-footer-icons">
+							<a href="http://www.cityu.edu.hk/"><img src="https://template.cityu.edu.hk/template/img/logos/cityu_footer.png" alt="City University of Hong Kong" /></a>
+						</div>
+						<!-- /Icons -->
+
+					</div>
+					<!-- /Column -->
+
+				</div>
+			</div>
+			<!-- /Footer -->
+		</body></html>
