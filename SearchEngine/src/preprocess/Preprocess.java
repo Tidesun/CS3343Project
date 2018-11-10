@@ -15,8 +15,7 @@ public class Preprocess {
 		urlExtractor.generateKeywordStrMap("src/res/html/");
 		
 		/* title extractor module*/
-		StringMapModule titleExtractor=new StringMapModule(new ExtractTitleModule());
-		ForwardIndexModuleInterface forwardTitleMod=new ForwardIndexModule(titleExtractor,"src/res/dataset/titleForwardIndexDataset");
+		StringMapModule titleExtractor=new StringMapModule(new ExtractTitleModule(),"src/res/dataset/titleForwardIndexDataset");
 		try {
 			titleExtractor.generateKeywordStrMap("src/res/html/");
 		}
