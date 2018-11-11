@@ -37,7 +37,8 @@ public class CommonQuery implements QueryInterface {
 	/**
 	 * read forwardIndex and invertedIndex from dataset under resPath directory
 	 * 
-	 * @param resPath
+	 * @param invertPath
+     * @param forwardPath
 	 * @throws ClassNotFoundException 
 	 * @throws IOException 
 	 */
@@ -129,8 +130,21 @@ public class CommonQuery implements QueryInterface {
 		
 		throw new RankMethodNotFoundException();
 	}
+
+	public ArrayList<String> search(String keywords, String rankMethod)
+			throws ClassNotFoundException, IOException {
+	    ArrayList<String> splitkeywords = new ArrayList<String>(Arrays.asList(keywords.split(" ")));
+		if (rankMethod == "tfidf") {
+			return this.search(splitkeywords, rankMethod, this.iPath, this.fPath);
+		} else if (rankMethod == "pagerank") {
+			return this.search(splitkeywords, rankMethod, "src/res/dataset/linkForwardIndexDataset", "src/res/dataset" +
+                    "/linkInvertedIndexDataset");
+		}
+
+		throw new RankMethodNotFoundException();
+	}
 	
-	public ArrayList<String> search(ArrayList<String> keywords) 
+	public ArrayList<String> search(ArrayList<String> keywords)
 			throws ClassNotFoundException, IOException {
 		return this.search(keywords, "pagerank");
 	}

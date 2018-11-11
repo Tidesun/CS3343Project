@@ -52,11 +52,19 @@ public class Main {
 		// search keywords
 		System.out.print("I want search:");
 		String query = sc.nextLine();
+		// search method
+        System.out.println("Please select a ranking method (1 for tf-idf, 2 for pagerank)");
+        String methodabb = sc.nextLine();
+        String method;
+        switch (methodabb) {
+            case "1": method = "tfidf"; break;
+            default: method = "pagerank"; break;
+        }
 		System.out.println("Search result for "+query+":");
 		QueryInterface cq;
 		try {
 			cq=new CommonQuery();
-			ArrayList<String> results=cq.search(query);
+			ArrayList<String> results=cq.search(query, method);
 			int resultShow=(results.size()>10)?10:results.size();
 			printResult(results, resultShow);
 		} catch (Exception e) {
