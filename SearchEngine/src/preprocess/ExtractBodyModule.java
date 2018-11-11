@@ -15,11 +15,11 @@ public class ExtractBodyModule extends ExtractModuleAbstract implements ExtractM
 	*/
 	public String WebPageExtraction(File filename) throws FileNotFoundException {
 		String content=this.getContent(filename);
-		String[] rexs= {"<script[^>]*?>[\\s\\S]*?<\\/script>","<style[^>]*?>[\\s\\\\S]*?<\\/style>","</?[^>]+>","\\p{Punct}"};
+		String[] rexs= {"<script[^>]*?>[\\s\\S]*?<\\/script>","<style[^>]*?>[\\s\\S]*?<\\/style>","</?[^>]+>","\\p{Punct}"};
 		for (int i=0;i<rexs.length;i++) {
 			Pattern p=Pattern.compile(rexs[i],Pattern.CASE_INSENSITIVE); 
 			Matcher m=p.matcher(content); 
-			content=m.replaceAll("");
+			content=m.replaceAll("");			
 		}
 		return content;
 	}

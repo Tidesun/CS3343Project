@@ -53,7 +53,6 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	//==================== Change the origin HashMap to new HashMap ====================
 	public void generateForwardIndexMap(HashMap<String, String> origin_map) throws IOException,NullPointerException{
 		
-		createTheStopwordsList();
 		
 		for (String key : origin_map.keySet()) {
 			String get_url = key;
@@ -75,9 +74,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 		ArrayList<String> kwarr=new ArrayList<String>();
 		for (int i=0;i<kwlist.length;i++) {
 			if (kwlist[i].length()!=0) {
-				if(!stopwords_list.contains(kwlist[i])){
-					kwarr.add(kwlist[i]);
-				}
+				kwarr.add(kwlist[i]);
 			}
 		}
 		return kwarr;

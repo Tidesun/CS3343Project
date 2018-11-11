@@ -1,8 +1,10 @@
 package preprocess;
 
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -31,7 +33,8 @@ public class StringMapModule implements StringMapModuleInterface{
 
 		List<Path> pathList = Files.walk(Paths.get(dirPath)).filter(Files::isRegularFile).collect(Collectors.toList());
 		HashMap<String,String> map = new HashMap<String,String>();
-		for(Path path:pathList){	
+		int count=0;
+		for(Path path:pathList){
 			String url= path.toString();
 			String header= this.extractor.WebPageExtraction(path.toFile());
 			map.put(url.substring(dirPath.length()), header);
