@@ -25,7 +25,7 @@ public class testExtractLinkModule {
         file = new File(temp.getRoot(), "mytestfile.html");
         extractLinkModule = new ExtractLinkModule();
     }
-
+ 
 	@Test
 	public void testUsingTempFolder1() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");

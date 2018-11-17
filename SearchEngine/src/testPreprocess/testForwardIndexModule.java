@@ -65,7 +65,7 @@ public class testForwardIndexModule {
 		field.setAccessible(true);
 		forward.createTheStopwordsList();
 		ArrayList<String> stopwords_list = (ArrayList<String>) field.get(forward);
-		System.out.println(stopwords_list);
+		
 		Scanner sc;
 		sc = new Scanner(sFile);
 		while(sc.hasNextLine()) {
