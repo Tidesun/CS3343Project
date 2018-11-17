@@ -58,21 +58,24 @@ public class testForwardIndexModule {
 		//get control variable
 		File sFile = new File("src/res/stopwords.txt");
 		ArrayList<String> stopwords = new ArrayList<String>();
-		Scanner sc;
-		sc = new Scanner(sFile);
-		while(sc.hasNextLine()) {
-			String nextword = sc.nextLine();
-			stopwords.add(nextword);
-		}
 		
 		//get private variable stopwords_list
 		Class<?> class2 = forward.getClass();
 		Field field = class2.getDeclaredField("stopwords_list");
 		field.setAccessible(true);
 		forward.createTheStopwordsList();
-		ArrayList<String> stopwordslist = (ArrayList<String>) field.get(forward);
+		ArrayList<String> stopwords_list = (ArrayList<String>) field.get(forward);
+		System.out.println(stopwords_list);
+		Scanner sc;
+		sc = new Scanner(sFile);
+		while(sc.hasNextLine()) {
+			String theword = sc.nextLine();
+			stopwords.add(theword);
+		}
+		sc.close();
 		
-		assertEquals(stopwords, stopwordslist);
+		
+		assertEquals(stopwords, stopwords_list);
 	}
 		
 	/*
@@ -407,7 +410,7 @@ public class testForwardIndexModule {
 	}
 	
 	/*
-	 * kwstr=1 T T
+	 * kwstr=1 T
 	 */
 	@Test
 	public void testGetKeywordFromOriginHashMap2() {
@@ -435,7 +438,7 @@ public class testForwardIndexModule {
 	}	
 	
 	/*
-	 * kwstr=1 T F
+	 * kwstr=1 F
 	 */
 	@Test
 	public void testGetKeywordFromOriginHashMap3() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
@@ -465,7 +468,7 @@ public class testForwardIndexModule {
 	 * kwstr=2 T T
 	 */
 	@Test
-	public void testGetKeywordFromOriginHashMap5() {
+	public void testGetKeywordFromOriginHashMap4() {
 	
 		//build environment
 		String url1=new String();
@@ -493,10 +496,10 @@ public class testForwardIndexModule {
 	}
 
 	/*
-	 * kwstr=2 T F
+	 * kwstr=2 F F
 	 */
 	@Test
-	public void testGetKeywordFromOriginHashMap6() {
+	public void testGetKeywordFromOriginHashMap5() {
 	
 		//build environment
 		String url1=new String();
@@ -574,6 +577,7 @@ public class testForwardIndexModule {
 		assertEquals(res,result);
 	}
 	
+	
 	@Test
 	public void testCreateArrayListOfURL() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
 	
@@ -595,5 +599,7 @@ public class testForwardIndexModule {
  
 		assertEquals(res,result);
 	}
+	
+	
 	
 }
