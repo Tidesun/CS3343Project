@@ -48,19 +48,9 @@ public class TestExtractBodyModule {
 		assertEquals(res,result); 
 	}
 	 
+
 	@Test
 	public void testUsingTempFolder3() throws IOException {
-		File createdFile= temp.newFile("mytestfile.html");
-		String content = "<style>This is style.</style>";
-		PrintStream ps = new PrintStream(new FileOutputStream(createdFile));
-		ps.println(content); 
-		String res = "This is style\n"; 
-		String result = extractBodyModule.WebPageExtraction(createdFile);
-		assertEquals(res,result); 
-	}
-	
-	@Test
-	public void testUsingTempFolder4() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
 		String content = "<h1>This is head.</h1>";
 		PrintStream ps = new PrintStream(new FileOutputStream(createdFile));
@@ -71,7 +61,7 @@ public class TestExtractBodyModule {
 	}
 	
 	@Test
-	public void testUsingTempFolder5() throws IOException {
+	public void testUsingTempFolder4() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
 		String content = "<a>This is link.</a>";
 		PrintStream ps = new PrintStream(new FileOutputStream(createdFile));
@@ -82,7 +72,7 @@ public class TestExtractBodyModule {
 	}
 	
 	@Test
-	public void testUsingTempFolder6() throws IOException {
+	public void testUsingTempFolder5() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
 		String content = "<th>This is tablehead.</th>";
 		PrintStream ps = new PrintStream(new FileOutputStream(createdFile));
