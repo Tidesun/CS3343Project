@@ -74,7 +74,9 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 		ArrayList<String> kwarr=new ArrayList<String>();
 		for (int i=0;i<kwlist.length;i++) {
 			if (kwlist[i].length()!=0) {
-				kwarr.add(kwlist[i]);
+				if(!stopwords_list.contains(kwlist[i])){
+				kwarr.add(kwlist[i]);	
+				}
 			}
 		}
 		return kwarr;
