@@ -109,8 +109,9 @@ public class testForwardIndexModule {
 
 	}
 	
+	
 	/*
-	 * 1 vs 0
+	 * 1 vs 1
 	 */
 	@Test
 	public void testGenerateForwardIndexMap2() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, IOException {
@@ -123,13 +124,13 @@ public class testForwardIndexModule {
 			} 
 		}
 		observer = new stubInvertedIndexModuleInterface();
-		
 		//build environment
 		String url1=new String();
 		url1 = "github.com";
 		String keyword1 = new String();
-		keyword1 = "is a ";
- 
+		keyword1 = "github";
+		String keyword2 = new String();
+		keyword2 = "github";
 		
 		//get method result
 		HashMap<String, String> oMap = new HashMap<String,String>();
@@ -142,14 +143,18 @@ public class testForwardIndexModule {
 		 
 		//get control result
 		ArrayList<String> result=new ArrayList<String>();
+		result.add(keyword2);
 		HashMap<String, ArrayList<String>> res = new HashMap<String, ArrayList<String>>(); 
+		res.put(url1, result);
 		
 		assertEquals(res,newhashmap);
 
 	}
+		
+	
 	
 	/*
-	 * 1 vs 1
+	 * more(2) vs more(2)
 	 */
 	@Test
 	public void testGenerateForwardIndexMap3() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, IOException {
@@ -162,132 +167,6 @@ public class testForwardIndexModule {
 			} 
 		}
 		observer = new stubInvertedIndexModuleInterface();
-		//build environment
-		String url1=new String();
-		url1 = "github.com";
-		String keyword1 = new String();
-		keyword1 = "github is a ";
-		String keyword2 = new String();
-		keyword2 = "github";
-		
-		//get method result
-		HashMap<String, String> oMap = new HashMap<String,String>();
-		oMap.put(url1, keyword1);
-		Class<?> class3 = forward.getClass();
-		Field field = class3.getDeclaredField("ForwardIndexMap");
-		field.setAccessible(true);
-		forward.generateForwardIndexMap(oMap);
-		HashMap<String, ArrayList<String>> newhashmap = (HashMap<String, ArrayList<String>>) field.get(forward);
-		 
-		//get control result
-		ArrayList<String> result=new ArrayList<String>();
-		result.add(keyword2);
-		HashMap<String, ArrayList<String>> res = new HashMap<String, ArrayList<String>>(); 
-		res.put(url1, result);
-		
-		assertEquals(res,newhashmap);
-
-	}
-		
-	/*
-	 * 1 vs more(2)
-	 */
-	@Test
-	public void testGenerateForwardIndexMap4() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, IOException {
-		
-		class stubInvertedIndexModuleInterface implements InvertedIndexModuleInterface{
-			public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> ForwardIndexMap) throws IOException, FileNotFoundException{
-			}
-			public HashMap<String,ArrayList<String>> getInvertedIndexMap(){
-				return null;
-			} 
-		}
-		observer = new stubInvertedIndexModuleInterface();
-		//build environment
-		String url1=new String();
-		url1 = "github.com";
-		String keyword1 = new String();
-		keyword1 = "github is a website";
-		String keyword2 = new String();
-		keyword2 = "github";
-		String keyword3 = new String();
-		keyword3 = "website";
-		
-		//get method result
-		HashMap<String, String> oMap = new HashMap<String,String>();
-		oMap.put(url1, keyword1);
-		Class<?> class3 = forward.getClass();
-		Field field = class3.getDeclaredField("ForwardIndexMap");
-		field.setAccessible(true);
-		forward.generateForwardIndexMap(oMap);
-		HashMap<String, ArrayList<String>> newhashmap = (HashMap<String, ArrayList<String>>) field.get(forward);
-		 
-		//get control result
-		ArrayList<String> result=new ArrayList<String>();
-		result.add(keyword2);
-		result.add(keyword3);
-		HashMap<String, ArrayList<String>> res = new HashMap<String, ArrayList<String>>(); 
-		res.put(url1, result);
-		
-		assertEquals(res,newhashmap);
-
-	}
-		
-	/*
-	 * more(2) vs 0
-	 */
-	@Test
-	public void testGenerateForwardIndexMap5() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, IOException {
-		
-		class stubInvertedIndexModuleInterface implements InvertedIndexModuleInterface{
-			public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> ForwardIndexMap) throws IOException, FileNotFoundException{
-			}
-			public HashMap<String,ArrayList<String>> getInvertedIndexMap(){
-				return null;
-			} 
-		}
-		observer = new stubInvertedIndexModuleInterface();
-		//build environment
-		String url1=new String();
-		url1 = "github.com"; 
-		String url2=new String();
-		url2 = "facebook.com"; 
-		String keyword1 = new String();
-		keyword1 = "is a ";
-		String keyword2 = new String();
-		keyword2 = "the";
-		
-		//get method result
-		HashMap<String, String> oMap = new HashMap<String,String>();
-		oMap.put(url1, keyword1);
-		Class<?> class3 = forward.getClass();
-		Field field = class3.getDeclaredField("ForwardIndexMap");
-		field.setAccessible(true);
-		forward.generateForwardIndexMap(oMap);
-		HashMap<String, ArrayList<String>> newhashmap = (HashMap<String, ArrayList<String>>) field.get(forward);
-		 
-		//get control result
-		ArrayList<String> result=new ArrayList<String>();
-		HashMap<String, ArrayList<String>> res = new HashMap<String, ArrayList<String>>(); 
-		
-		assertEquals(res,newhashmap);
-
-	}
-	
-	/*
-	 * more(2) vs 1
-	 */
-	@Test
-	public void testGenerateForwardIndexMap6() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, IOException {
-		
-		class stubInvertedIndexModuleInterface implements InvertedIndexModuleInterface{
-			public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> ForwardIndexMap) throws IOException, FileNotFoundException{
-			}
-			public HashMap<String,ArrayList<String>> getInvertedIndexMap(){
-				return null;
-			} 
-		}
-		observer = new stubInvertedIndexModuleInterface();
 		
 		//build environment
 		String url1=new String();
@@ -295,63 +174,11 @@ public class testForwardIndexModule {
 		String url2=new String();
 		url2 = "facebook.com";
 		String keyword1 = new String();
-		keyword1 = "github is a ";
+		keyword1 = "github website";
 		String keyword2 = new String();
 		keyword2 = "github";
 		String keyword3 = new String();
-		keyword3 = "facebook is a";
-		String keyword4 = new String();
-		keyword4 = "facebook";
-		
-		//get method result
-		HashMap<String, String> oMap = new HashMap<String,String>();
-		oMap.put(url1, keyword1);
-		oMap.put(url2, keyword3);
-		Class<?> class3 = forward.getClass();
-		Field field = class3.getDeclaredField("ForwardIndexMap");
-		field.setAccessible(true);
-		forward.generateForwardIndexMap(oMap);
-		HashMap<String, ArrayList<String>> newhashmap = (HashMap<String, ArrayList<String>>) field.get(forward);
-		 
-		//get control result
-		ArrayList<String> result1=new ArrayList<String>();
-		result1.add(keyword2);
-		ArrayList<String> result2=new ArrayList<String>();
-		result2.add(keyword4);
-		HashMap<String, ArrayList<String>> res = new HashMap<String, ArrayList<String>>(); 
-		res.put(url1, result1);
-		res.put(url2, result2);
-		
-		assertEquals(res,newhashmap);
-
-	}
-	
-	/*
-	 * more(2) vs 2
-	 */
-	@Test
-	public void testGenerateForwardIndexMap7() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, IOException {
-		
-		class stubInvertedIndexModuleInterface implements InvertedIndexModuleInterface{
-			public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> ForwardIndexMap) throws IOException, FileNotFoundException{
-			}
-			public HashMap<String,ArrayList<String>> getInvertedIndexMap(){
-				return null;
-			} 
-		}
-		observer = new stubInvertedIndexModuleInterface();
-		
-		//build environment
-		String url1=new String();
-		url1 = "github.com";
-		String url2=new String();
-		url2 = "facebook.com";
-		String keyword1 = new String();
-		keyword1 = "github is a website";
-		String keyword2 = new String();
-		keyword2 = "github";
-		String keyword3 = new String();
-		keyword3 = "facebook is a website";
+		keyword3 = "facebook website";
 		String keyword4 = new String();
 		keyword4 = "facebook";
 		String keyword5 = new String();
@@ -382,11 +209,11 @@ public class testForwardIndexModule {
 
 	}
 	
-	/*
-	 * kwstr=0
-	 */
+	
+	
+
 	@Test
-	public void testGetKeywordFromOriginHashMap1() {
+	public void testGetKeywordFromOriginHashMap0() {
 	
 		//build environment
 		String url1=new String();
@@ -409,8 +236,37 @@ public class testForwardIndexModule {
 		
 	}
 	
+	
+	
 	/*
-	 * kwstr=1 T
+	 * kwstr=0
+	 */
+	@Test
+	public void testGetKeywordFromOriginHashMap1() {
+	
+		//build environment
+		String url1=new String();
+		url1 = "github.com";
+		String keyword1 = new String();
+		keyword1 = "  ";
+		forward.createArrayListOfURL(url1);
+		forward.addKeywordsToTheHashMap(url1,keyword1);
+		forward.createTheStopwordsList();
+		
+		//get method result
+		String kwstring = new String();
+		kwstring = keyword1;
+		ArrayList<String> kwarr = forward.getKeywordFromOriginHashMap(kwstring);
+		 
+		//get control result
+		ArrayList<String> res=new ArrayList<String>();
+		
+		assertEquals(res,kwarr);
+		
+	}
+	
+	/*
+	 * kwstr=1 T T
 	 */
 	@Test
 	public void testGetKeywordFromOriginHashMap2() {
@@ -438,7 +294,7 @@ public class testForwardIndexModule {
 	}	
 	
 	/*
-	 * kwstr=1 F
+	 * kwstr=1 T F
 	 */
 	@Test
 	public void testGetKeywordFromOriginHashMap3() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
@@ -464,65 +320,7 @@ public class testForwardIndexModule {
 		
 	}
 	
-	/*
-	 * kwstr=2 T T
-	 */
-	@Test
-	public void testGetKeywordFromOriginHashMap4() {
-	
-		//build environment
-		String url1=new String();
-		url1 = "github.com";
-		String keyword1 = new String();
-		keyword1 = "github";
-		String keyword2 = new String();
-		keyword2 = "website";
-		forward.createArrayListOfURL(url1);
-		forward.addKeywordsToTheHashMap(url1,keyword1);
-		forward.createTheStopwordsList();
-		
-		//get method result
-		String kwstring = new String();
-		kwstring = "github website";
-		ArrayList<String> kwarr = forward.getKeywordFromOriginHashMap(kwstring);
-		
-		//get control result
-		ArrayList<String> res=new ArrayList<String>();
-		res.add(keyword1);
-		res.add(keyword2);
-		
-		assertEquals(res,kwarr);
-		
-	}
 
-	/*
-	 * kwstr=2 F F
-	 */
-	@Test
-	public void testGetKeywordFromOriginHashMap5() {
-	
-		//build environment
-		String url1=new String();
-		url1 = "github.com";
-		String keyword1 = new String();
-		keyword1 = "is";
-		String keyword2 = new String();
-		keyword2 = "a";
-		forward.createArrayListOfURL(url1);
-		forward.addKeywordsToTheHashMap(url1,keyword1);
-		forward.createTheStopwordsList();
-		
-		//get method result
-		String kwstring = new String();
-		kwstring = "is a";
-		ArrayList<String> kwarr = forward.getKeywordFromOriginHashMap(kwstring);
-		
-		//get control result
-		ArrayList<String> res=new ArrayList<String>();
-		
-		assertEquals(res,kwarr);
-		
-	}
 	
 	@Test
 	public void testAddKeywordsToTheHashMap1() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
