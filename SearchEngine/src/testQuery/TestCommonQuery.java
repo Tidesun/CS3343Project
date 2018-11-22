@@ -25,22 +25,48 @@ import org.junit.rules.TemporaryFolder;
 
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestCommonQuery.
+ */
 public class TestCommonQuery {
+	
+	/** The common query. */
 	private CommonQuery commonQuery;
 	
+	/** The temp. */
 	@Rule
 	public TemporaryFolder temp= new TemporaryFolder();
+	
+	/** The file 1. */
 	File file1;
+	
+	/** The file 2. */
 	File file2;
 	
+	/**
+	 * Sets the up before class.
+	 *
+	 * @throws Exception the exception
+	 */
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
 
+	/**
+	 * Tear down after class.
+	 *
+	 * @throws Exception the exception
+	 */
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
 	}
 
+	/**
+	 * Sets the up.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Before
 	public void setUp() throws Exception {
 		commonQuery = new CommonQuery();
@@ -48,11 +74,24 @@ public class TestCommonQuery {
 		file2 = new File(temp.getRoot(), "ForwardIndexDataset");
 	}
 
+	/**
+	 * Tear down.
+	 *
+	 * @throws Exception the exception
+	 */
 	@After
 	public void tearDown() throws Exception {
 	}
 	
 	
+	/**
+	 * Test search 01.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws URLNotFoundException the URL not found exception
+	 * @throws URLNotinComparatorException the URL notin comparator exception
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	//test empty dataset
 	@Test
 	public void testSearch_01() throws IOException, URLNotFoundException, URLNotinComparatorException, ClassNotFoundException {
@@ -65,6 +104,12 @@ public class TestCommonQuery {
 	}
 	
 	
+	/**
+	 * Test search 02.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	//common case
 	@Test
 	public void testSearch_02() throws IOException, ClassNotFoundException {
@@ -112,6 +157,12 @@ public class TestCommonQuery {
 		assertEquals(expectedurl, realURLsArrlst);
 	}
 	
+	/**
+	 * Test search 03.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	//Test capitalization for the first keyword
 	@Test
 	public void testSearch_03() throws IOException, ClassNotFoundException {
@@ -161,6 +212,12 @@ public class TestCommonQuery {
 		assertEquals(expectedurl, realURLsArrlst);
 	}
 	
+	/**
+	 * Test search 04.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	//test ranked urls with single keyword
 	@Test
 	public void testSearch_04() throws IOException, ClassNotFoundException {
@@ -215,6 +272,12 @@ public class TestCommonQuery {
 			assertEquals(expectedURLs, realURLsArrlst);
 	}
 	
+	/**
+	 * Test search 05.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	//test ranked urls with multiple keywords
 	@Test
 	public void testSearch_05() throws IOException, ClassNotFoundException {
@@ -298,6 +361,17 @@ public class TestCommonQuery {
 			assertEquals(expectedURLs, realURLsArrlst);
 	}
 	
+	/**
+	 * Test search 06.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	//test querySingleKeyword method
 	@Test
 	public void testSearch_06() throws IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
@@ -344,6 +418,17 @@ public class TestCommonQuery {
 		assertEquals(exp_res, res);
 	}
 	
+	/**
+	 * Test search 07.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	//test search method - tfidf
 	@Test
 	public void testSearch_07() throws IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
@@ -391,6 +476,17 @@ public class TestCommonQuery {
 		assertEquals(exp_res, res);
 	}
 	
+	/**
+	 * Test search 08.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	//test search method - page rank
 	@Test
 	public void testSearch_08() throws IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
@@ -438,6 +534,17 @@ public class TestCommonQuery {
 		assertEquals(exp_res, res);
 	}
 	
+	/**
+	 * Test search 09.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	//test search method - search(ArrayList<String> keywords, String rankMethod) 
 	@Test
 	public void testSearch_09() throws IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
@@ -485,6 +592,17 @@ public class TestCommonQuery {
 		assertEquals(exp_res, res);
 	}
 	
+	/**
+	 * Test search 12.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	//test search method - search(String keywords, String rankMethod)
 	@Test
 	public void testSearch_12() throws IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
@@ -529,6 +647,17 @@ public class TestCommonQuery {
 		assertEquals(exp_res, res);
 	}
 	
+	/**
+	 * Test search 13.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	//test search method - search(ArrayList<String> keywords)
 	@Test
 	public void testSearch_13() throws IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
@@ -576,6 +705,17 @@ public class TestCommonQuery {
 		assertEquals(exp_res, res);
 	}
 	
+	/**
+	 * Test search 14.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	//test search method - search(String keywords)
 	@Test
 	public void testSearch_14() throws IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{

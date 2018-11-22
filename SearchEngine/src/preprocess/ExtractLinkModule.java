@@ -5,7 +5,21 @@ import java.io.FileNotFoundException;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ExtractLinkModule.
+ */
 public class ExtractLinkModule extends ExtractModuleAbstract implements ExtractModuleInterface{
+	
+	/*
+	* Title: WebPageExtraction
+	* Description: 
+	* @param filename
+	* @return
+	* @throws FileNotFoundException 
+	* @see preprocess.ExtractModuleInterface#WebPageExtraction(java.io.File) 
+	*/
+	
 	public String WebPageExtraction(File filename) throws FileNotFoundException {
 		String content=this.getContent(filename);
 		Pattern pattern = Pattern.compile("<a.*href=[\"']?([\\w\\W]*?)[\"']", Pattern.CASE_INSENSITIVE);

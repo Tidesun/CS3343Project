@@ -27,21 +27,37 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import query.PageRank;
 import query.TFIDFRank;
+// TODO: Auto-generated Javadoc
 /** 
-* @ClassName: TestPageRank 
-* @Description: TODO 
+* test page rank class.
+* 
 */
 public class TestPageRank {
+	
+	/** The temp. */
 	@Rule
 	public TemporaryFolder temp= new TemporaryFolder();
+	
+	/** The file 1. */
 	File file1;
+	
+	/** The file 2. */
 	File file2;
 	
+	/**
+	 * Sets the up.
+	 */
 	@Before
 	public void setUp(){
 		 file1 = new File(temp.getRoot(), "InvertedIndexDataset");
 		 file2 = new File(temp.getRoot(), "ForwardIndexDataset");
 	}
+	
+	/**
+	 * Default index.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Before
 	public void defaultIndex() throws IOException {
 		HashMap<String, ArrayList<String>> invertedIndex=new HashMap<String, ArrayList<String>>();
@@ -78,6 +94,14 @@ public class TestPageRank {
 		oos2.writeObject(forwardIndex);					
 		oos2.close();
 	}
+	
+	/**
+	 * Test weigh 1.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	@Test
 	public void testWeigh1() throws FileNotFoundException, IOException, ClassNotFoundException {
 		HashMap<String, ArrayList<String>> invertedIndex=new HashMap<String, ArrayList<String>>();
@@ -126,6 +150,14 @@ public class TestPageRank {
 		assertEquals(0.0,res,0);
 			
 	}
+	
+	/**
+	 * Test weigh 2.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	@Test
 	public void testWeigh2() throws FileNotFoundException, IOException, ClassNotFoundException {
 		HashMap<String, ArrayList<String>> invertedIndex=new HashMap<String, ArrayList<String>>();
@@ -172,6 +204,14 @@ public class TestPageRank {
 		assertEquals(true,res);
 			
 	}
+	
+	/**
+	 * Test weigh 3.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	@Test
 	public void testWeigh3() throws FileNotFoundException, IOException, ClassNotFoundException {
 		HashMap<String, ArrayList<String>> invertedIndex=new HashMap<String, ArrayList<String>>();
@@ -218,6 +258,20 @@ public class TestPageRank {
 		assertEquals(0.0,res,0);
 			
 	}
+	
+	/**
+	 * Testcal outgoing 1.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws InstantiationException the instantiation exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 */
 	@Test
 	public void testcalOutgoing1() throws FileNotFoundException, ClassNotFoundException, IOException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 
@@ -250,6 +304,20 @@ public class TestPageRank {
 		assertEquals(0.0,res,0);
 			
 	}
+	
+	/**
+	 * Testdeal with dangling 1.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws InstantiationException the instantiation exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 */
 	@Test
 	public void testdealWithDangling1() throws FileNotFoundException, ClassNotFoundException, IOException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 
@@ -282,6 +350,20 @@ public class TestPageRank {
 		assertEquals(link[0][1],0.0,0);
 			
 	}
+	
+	/**
+	 * Testdeal with dangling 2.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws InstantiationException the instantiation exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 */
 	@Test
 	public void testdealWithDangling2() throws FileNotFoundException, ClassNotFoundException, IOException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 
@@ -312,6 +394,20 @@ public class TestPageRank {
 		assertEquals(link[0][0],0.0,0);
 			
 	}
+	
+	/**
+	 * Test generate page rank.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws InstantiationException the instantiation exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 */
 	@Test
 	public void testGeneratePageRank() throws FileNotFoundException, ClassNotFoundException, IOException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 

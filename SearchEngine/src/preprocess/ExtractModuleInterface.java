@@ -3,21 +3,20 @@ package preprocess;
 import java.io.File;
 import java.io.FileNotFoundException;
 
+// TODO: Auto-generated Javadoc
 /** 
-* @ClassName: ExtractModuleInterface 
-* @Description: TODO 
+* Interface for web page extractor
+* 
 */
 public interface ExtractModuleInterface {
 	
-	/** 
-	* @Title: WebPageExtraction 
-	* @Description: TODO
-	* @param @param filename
-	* @param @return
-	* @param @throws FileNotFoundException 
-	* @return String
-	* @throws 
-	*/
+	/**
+	 *  
+	 * abstract method for extracting content from web page.
+	 * @param filename the filename
+	 * @return String
+	 * @throws FileNotFoundException the file not found exception 
+	 */
 	public abstract String WebPageExtraction(File filename) throws FileNotFoundException;
 
 }

@@ -1,2 +1,6 @@
 /res/
+/preprocess/
+/query/
 /testPreprocess/
+/testQuery/
+/util/

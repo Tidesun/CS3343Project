@@ -13,19 +13,36 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class testExtractLinkModule.
+ */
 public class testExtractLinkModule {
 
+	/** The temp. */
 	@Rule
 	public TemporaryFolder temp= new TemporaryFolder();
+	
+	/** The file. */
 	File file;
+	
+	/** The extract link module. */
 	ExtractLinkModule extractLinkModule;
    
+    /**
+     * Sets the up.
+     */
     @Before
     public void setUp(){
         file = new File(temp.getRoot(), "mytestfile.html");
         extractLinkModule = new ExtractLinkModule();
     }
  
+	/**
+	 * Test using temp folder 1.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder1() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
@@ -45,6 +62,11 @@ public class testExtractLinkModule {
 	}
 	
 
+	/**
+	 * Test using temp folder 2.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder2() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
@@ -62,6 +84,11 @@ public class testExtractLinkModule {
 	}
 
 		
+	/**
+	 * Test using temp folder 3.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder3() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
@@ -80,6 +107,11 @@ public class testExtractLinkModule {
 	}
 	
 
+	/**
+	 * Test using temp folder 4.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder4() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
@@ -98,6 +130,11 @@ public class testExtractLinkModule {
 	}
 		
 
+	/**
+	 * Test using temp folder 5.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder5() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
@@ -117,6 +154,11 @@ public class testExtractLinkModule {
 	}
 	
 
+	/**
+	 * Test using temp folder 6.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder6() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
@@ -135,6 +177,11 @@ public class testExtractLinkModule {
 	}
 	
 
+	/**
+	 * Test using temp folder 7.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder7() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");

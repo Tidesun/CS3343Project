@@ -1,6 +1,17 @@
 package preprocess;
 import java.io.IOException;
+// TODO: Auto-generated Javadoc
+
+/**
+ * The Class Preprocess.
+ */
 public class Preprocess {
+	
+	/**
+	 * Generate preprocess.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	public static void generatePreprocess() throws IOException {
 		/* body element keywords extractor module*/
 		StringMapModule bodyExtractor=new StringMapModule(new ExtractBodyModule());

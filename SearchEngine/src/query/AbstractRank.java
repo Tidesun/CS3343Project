@@ -10,14 +10,26 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AbstractRank.
+ */
 public abstract class AbstractRank implements RankInterface {
+	
+	/** The inverted index. */
 	protected HashMap<String, ArrayList<String>> invertedIndex;
+	
+	/** The forward index. */
 	protected HashMap<String, ArrayList<String>> forwardIndex;
 	
 	/**
-	 * constructor for AbstractRank
-	 * @param invertedIndex 
-	 * @param forwardIndex
+	 * Instantiates a new abstract rank.
+	 *
+	 * @param invertedPath the inverted path
+	 * @param forwardPath the forward path
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
 	 */
 	AbstractRank(String invertedPath, String forwardPath) 
 			throws FileNotFoundException, IOException, ClassNotFoundException {
@@ -42,12 +54,18 @@ public abstract class AbstractRank implements RankInterface {
 		}
 	}
 	
-	/**
-	 * rank the given urls list with weight method
-	 * @param  urls
-	 * @param  keywords
-	 * @throws URLNotinComparatorException
-	 */
+
+	/*
+	* Title: rank
+	* Description: rank the given urls list with weight method
+	* @param urls
+	* @param keywords
+	* @return
+	* @throws URLNotinComparatorException
+	* @throws URLNotFoundException 
+	* @see query.RankInterface#rank(java.util.ArrayList, java.util.ArrayList) 
+	*/
+	
 	public ArrayList<String> rank (ArrayList<String> urls, ArrayList<String> keywords) 
 			throws URLNotinComparatorException, URLNotFoundException {
 		
@@ -88,6 +106,15 @@ public abstract class AbstractRank implements RankInterface {
 		
 		return urls;
 	}
+	
+	/*
+	* Title: weigh
+	* Description: 
+	* @param url
+	* @param keywords
+	* @return 
+	* @see query.RankInterface#weigh(java.lang.String, java.util.ArrayList) 
+	*/
 	
 	public abstract double weigh(String url, ArrayList<String> keywords);
 }

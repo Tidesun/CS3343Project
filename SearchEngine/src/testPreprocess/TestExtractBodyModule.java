@@ -13,19 +13,36 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestExtractBodyModule.
+ */
 public class TestExtractBodyModule {
 
+	/** The temp. */
 	@Rule
 	public TemporaryFolder temp= new TemporaryFolder();
+	
+	/** The file. */
 	File file;
+	
+	/** The extract body module. */
 	ExtractBodyModule extractBodyModule;
 
+    /**
+     * Sets the up.
+     */
     @Before
     public void setUp(){
         file = new File(temp.getRoot(), "mytestfile.html");
         extractBodyModule = new ExtractBodyModule();
     }
     
+	/**
+	 * Test using temp folder 1.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder1() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
@@ -37,6 +54,11 @@ public class TestExtractBodyModule {
 		assertEquals(res,result); 
 	}
 	
+	/**
+	 * Test using temp folder 2.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder2() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
@@ -49,6 +71,11 @@ public class TestExtractBodyModule {
 	}
 	 
 
+	/**
+	 * Test using temp folder 3.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder3() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
@@ -60,6 +87,11 @@ public class TestExtractBodyModule {
 		assertEquals(res,result); 
 	}
 	
+	/**
+	 * Test using temp folder 4.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder4() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");
@@ -71,6 +103,11 @@ public class TestExtractBodyModule {
 		assertEquals(res,result); 
 	}
 	
+	/**
+	 * Test using temp folder 5.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	public void testUsingTempFolder5() throws IOException {
 		File createdFile= temp.newFile("mytestfile.html");

@@ -14,35 +14,47 @@ import java.util.Set;
 
 import util.*;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PageRank.
+ */
 public class PageRank extends AbstractRank {
-	// weight for each url in union(invertedIndex, forwardIndex)
-	// url : weight of the url
+
+	/** weight for each url in union(invertedIndex, forwardIndex). */
 	private HashMap<String, Double> weights = new HashMap<>();
 	
 	/**
-	 * PageRank constructor with custom path to inverted and forward index
-	 * @param invertedPath
-	 * @param forwardPath
-	 * @throws FileNotFoundException
-	 * @throws ClassNotFoundException
-	 * @throws IOException
+	 * PageRank constructor with custom path to inverted and forward index.
+	 *
+	 * @param invertedPath the inverted path
+	 * @param forwardPath the forward path
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public PageRank(String invertedPath, String forwardPath) throws FileNotFoundException, ClassNotFoundException, IOException {
 		super(invertedPath, forwardPath);
 	}
 	
 	/**
-	 * PageRank constructor with default path to inverted and forward index
-	 * @throws FileNotFoundException
-	 * @throws ClassNotFoundException
-	 * @throws IOException
+	 * PageRank constructor with default path to inverted and forward index.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public PageRank() throws FileNotFoundException, ClassNotFoundException, IOException {
 		super("src/res/dataset/linkInvertedIndexDataset", "src/res/dataset/linkForwardIndexDataset");
 	}
 	
 	/**
-	 * get the weight of a url from the generated weight HashMap
+	 * get the weight of a url from the generated weight HashMap.
+	 *
+	 * @param url the url
+	 * @param keywords the keywords
+	 * @return the double
+	 * @throws MatrixMultiplyException the matrix multiply exception
+	 * @throws MatrixSubException the matrix sub exception
 	 */
 	public double weigh(String url, ArrayList<String> keywords) 
 			throws MatrixMultiplyException, MatrixSubException {
@@ -56,15 +68,16 @@ public class PageRank extends AbstractRank {
 	}
 	
 	/**
-	 * provide a way to update the weight of a url
-	 * @param weights
+	 * provide a way to update the weight of a url.
+	 *
+	 * @param weights the weights
 	 */
 	public void updateWeights(HashMap<String, Double> weights) {
 		this.weights = weights;
 	}
 	
 	/**
-     * cal outgoing factor of each web page (directed)
+	 * cal outgoing factor of each web page (directed)
 	 * e.g.
 	 * 	[[0, 0, 1/2],
 	 *   [1, 0, 1/2],
@@ -75,8 +88,10 @@ public class PageRank extends AbstractRank {
 	 *             node2 -> node0, node1
 	 *             
 	 * we don't take loop (connect a vertex in itself) into consideration in this implementation 
-	 * @param webpages
-	 * @param url2index
+	 *
+	 * @param webpages the webpages
+	 * @param url2index the url 2 index
+	 * @return the double[][]
 	 */
 	private double[][] calOutgoing(Set<String> webpages, HashMap<String, Integer> url2index){
 		int numURL = webpages.size();
@@ -101,10 +116,11 @@ public class PageRank extends AbstractRank {
 	
 	/**
 	 * deal with dangling nodes (nodes with no outgoing link)
-	 * the outgoing factor of dangling nodes will be set as 1/(numURL-1) to evenly spread its importance
-	 * @param webpages
-	 * @param url2index
-	 * @param link
+	 * the outgoing factor of dangling nodes will be set as 1/(numURL-1) to evenly spread its importance.
+	 *
+	 * @param webpages the webpages
+	 * @param url2index the url 2 index
+	 * @param link the link
 	 */
 	private void dealWithDangling(Set<String> webpages, HashMap<String, Integer> url2index, double[][] link) {
 		int numURL = webpages.size();
@@ -129,11 +145,11 @@ public class PageRank extends AbstractRank {
 	
 	
 	/**
-	 * generate the pagerank hashmap and store it for later use
-	 * 
+	 * generate the pagerank hashmap and store it for later use.
+	 *
 	 * @param maxIter           : the max times of iteration
 	 * @param tol               : the target diff between two consecutive iteration
-	 * @param dampingFactor     : ensure the basic weight in each iteration 
+	 * @param dampingFactor     : ensure the basic weight in each iteration
 	 * @throws MatrixMultiplyException : cannot do multiplication because of the shape of matrices
 	 * @throws MatrixSubException      : the shape of matrices are diff in subtraction
 	 */
@@ -217,9 +233,10 @@ public class PageRank extends AbstractRank {
 	}
 	
 	/**
-	 * generate PageRank with default parameters (max iterations, max error, damping factor)
-	 * @throws MatrixMultiplyException
-	 * @throws MatrixSubException
+	 * generate PageRank with default parameters (max iterations, max error, damping factor).
+	 *
+	 * @throws MatrixMultiplyException the matrix multiply exception
+	 * @throws MatrixSubException the matrix sub exception
 	 */
 	private void generatePageRank() throws MatrixMultiplyException, MatrixSubException {
 		// TODO: modify the parameters according to testing result

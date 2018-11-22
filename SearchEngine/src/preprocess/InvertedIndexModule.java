@@ -5,22 +5,46 @@ import java.util.Map;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+// TODO: Auto-generated Javadoc
+
+/**
+ * The Class InvertedIndexModule.
+ */
 public class InvertedIndexModule implements InvertedIndexModuleInterface{
 	
+	/** The forward index module. */
 	//Reference the ForwardIndexModule via interface
 	private ForwardIndexModuleInterface forwardIndexModule;
 	
+	/** The Inverted index map. */
 	//Store the HashMap mapping from keyword to URL lists
 	private HashMap<String,ArrayList<String>> InvertedIndexMap;
 	
+	/** The save path. */
 	//file path to save the map
 	private String savePath;
+	
+	/**
+	 * Instantiates a new inverted index module.
+	 *
+	 * @param forwardIndexModule the forward index module
+	 * @param savePath the save path
+	 */
 	//Constructor
 	public InvertedIndexModule(ForwardIndexModuleInterface forwardIndexModule,String savePath) {
 		this.forwardIndexModule=forwardIndexModule;
 		this.forwardIndexModule.subscribe(this);
 		this.savePath=savePath;
 	}
+	
+	/*
+	* Title: generateInvertedIndexMap
+	* Description: 
+	* @param forwardIndexMap
+	* @throws IOException 
+	* @see preprocess.InvertedIndexModuleInterface#generateInvertedIndexMap(java.util.HashMap) 
+	*/
+	
 	//Generate the InvertedIndexMap
 	public void generateInvertedIndexMap(HashMap<String,ArrayList<String>> forwardIndexMap) throws IOException{
 		
@@ -48,11 +72,25 @@ public class InvertedIndexModule implements InvertedIndexModuleInterface{
 		}
 		this.writeToFile();
 	}
+	
+	/**
+	 * Write to file.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	private void writeToFile() throws IOException {		
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(this.savePath));					
 		oos.writeObject(this.getInvertedIndexMap());					
 		oos.close();
 	}
+	
+	/*
+	* Title: getInvertedIndexMap
+	* Description: 
+	* @return 
+	* @see preprocess.InvertedIndexModuleInterface#getInvertedIndexMap() 
+	*/
+	
 	//Get the InvertedIndexMap
 	public HashMap<String,ArrayList<String>> getInvertedIndexMap(){
 		return InvertedIndexMap;

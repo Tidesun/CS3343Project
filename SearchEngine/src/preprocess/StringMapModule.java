@@ -12,22 +12,62 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class StringMapModule.
+ */
 public class StringMapModule implements StringMapModuleInterface{
+	
+	/** The extractor. */
 	private ExtractModuleInterface extractor;
+	
+	/** The observer. */
 	private ForwardIndexModuleInterface observer;
+	
+	/** The save path. */
 	private String savePath;
+	
+	/**
+	 * Instantiates a new string map module.
+	 *
+	 * @param extractor the extractor
+	 * @param savePath the save path
+	 */
 	public StringMapModule(ExtractModuleInterface extractor,String savePath){
 		this.extractor=extractor;
 		this.savePath=savePath;
 		this.observer=null;
 	}
+	
+	/**
+	 * Instantiates a new string map module.
+	 *
+	 * @param extractor the extractor
+	 */
 	public StringMapModule(ExtractModuleInterface extractor){
 		this(extractor,"src/res/dataset/titleForwardIndexDataset");
 	}
 	
+	/*
+	* Title: subscribe
+	* Description: 
+	* @param observer 
+	* @see preprocess.StringMapModuleInterface#subscribe(preprocess.ForwardIndexModuleInterface) 
+	*/
+	
 	public void subscribe(ForwardIndexModuleInterface observer) {
 		this.observer=observer;
 	}
+	
+	/*
+	* Title: generateKeywordStrMap
+	* Description: 
+	* @param dirPath
+	* @throws IOException
+	* @throws NullPointerException 
+	* @see preprocess.StringMapModuleInterface#generateKeywordStrMap(java.lang.String) 
+	*/
+	
 	public void generateKeywordStrMap(String dirPath) throws IOException,NullPointerException{
 		
 

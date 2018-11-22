@@ -4,16 +4,19 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ExtractModuleAbstract.
+ */
 public class ExtractModuleAbstract {
-	/** 
-	* @Title: getContent 
-	* @Description: TODO
-	* @param @param filename
-	* @param @return
-	* @param @throws FileNotFoundException 
-	* @return String
-	* @throws 
-	*/
+	
+	/**
+	 *  
+	 *
+	 * @param filename the filename
+	 * @return String
+	 * @throws FileNotFoundException the file not found exception
+	 */
 	protected String getContent(File filename) throws FileNotFoundException {
 		Scanner sc =new Scanner(filename);
 		String content="";

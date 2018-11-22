@@ -5,7 +5,19 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import preprocess.Preprocess;
+// TODO: Auto-generated Javadoc
+
+/**
+ * The Class Main.
+ */
 public class Main {
+    
+    /**
+     * Approve.
+     *
+     * @param res the res
+     * @return true, if successful
+     */
     public static boolean approve(String res) {
         ArrayList<String> approval = new ArrayList<String>(){{
            add("y");
@@ -17,6 +29,12 @@ public class Main {
         return approval.contains(res);
     }
 
+    /**
+     * Prints the result.
+     *
+     * @param results the results
+     * @param resultShow the result show
+     */
     private static void printResult(ArrayList<String> results, int resultShow) {
         HashMap<String, String> titleIndex = new HashMap<>();
         // open the title dataset to read title of url
@@ -40,6 +58,13 @@ public class Main {
             System.out.println();
         }
     }
+	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	public static void main(String[] args) throws IOException {
         // update web pages
 		Scanner sc = new Scanner(System.in);

@@ -14,15 +14,31 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestInvertedIndexModule.
+ */
 public class TestInvertedIndexModule {
 	
+	/** The temp. */
 	@Rule
 	public TemporaryFolder temp= new TemporaryFolder();
+	
+	/** The file 1. */
 	File file1;
+	
+	/** The file 2. */
 	File file2;
+	
+	/** The forward. */
 	HashMap<String, ArrayList<String>> forward;
+	
+	/** The inverted. */
 	InvertedIndexModuleInterface inverted;
 	
+	/**
+	 * Sets the up.
+	 */
 	@Before
 	public void setUp() {
 		file1 = new File(temp.getRoot(), "InvertedIndexDataset");
@@ -35,6 +51,11 @@ public class TestInvertedIndexModule {
 		inverted=new InvertedIndexModule(forwardLinkMod,path2);
 	}
 	
+	/**
+	 * Test generate inverted index map 1.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	// new empty hashmap
 	@Test
 	public void testGenerateInvertedIndexMap1() throws IOException {
@@ -42,6 +63,11 @@ public class TestInvertedIndexModule {
 		assertEquals(new HashMap<String, ArrayList<String>>(), inverted.getInvertedIndexMap());
 	}
 	
+	/**
+	 * Test generate inverted index map 2.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	// normal hashmap with content
 	@Test
 	public void testGenerateInvertedIndexMap2() throws IOException {
@@ -57,6 +83,11 @@ public class TestInvertedIndexModule {
 		assertEquals(res, inverted.getInvertedIndexMap());
 	}
 	
+	/**
+	 * Test generate inverted index map 3.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	// normal hashmap with content
 	@Test
 	public void testGenerateInvertedIndexMap3() throws IOException {
@@ -79,6 +110,11 @@ public class TestInvertedIndexModule {
 	 
 	
 	
+	/**
+	 * Test generate inverted index map 4.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	// normal hashmap with content
 	@Test
 	public void testGenerateInvertedIndexMap4() throws IOException {

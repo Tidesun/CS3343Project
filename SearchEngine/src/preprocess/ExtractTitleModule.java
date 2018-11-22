@@ -3,9 +3,10 @@ package preprocess;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.regex.*;
+// TODO: Auto-generated Javadoc
 /** 
-* @ClassName: ExtractHeaderModule 
-* @Description: TODO 
+* Extract web page title from HTML file
+* 
 */
 public class ExtractTitleModule extends ExtractModuleAbstract implements ExtractModuleInterface  {
 	

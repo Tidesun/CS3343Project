@@ -15,20 +15,43 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.Comparator;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TFIDFRank.
+ */
 public class TFIDFRank extends AbstractRank {
 	
+	/**
+	 * Instantiates a new TFIDF rank.
+	 *
+	 * @param invertedPath the inverted path
+	 * @param forwardPath the forward path
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	public TFIDFRank(String invertedPath, String forwardPath) throws FileNotFoundException, ClassNotFoundException, IOException {
 		super(invertedPath, forwardPath);
 	}
 	
+	/**
+	 * Instantiates a new TFIDF rank.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	public TFIDFRank() throws FileNotFoundException, ClassNotFoundException, IOException {
 		super("src/res/dataset/InvertedIndexDataset", "src/res/dataset/ForwardIndexDataset");
 	}
 	
 	/**
-	 * cal the weight of one url given a list of keywords
-	 * @param url        
+	 * cal the weight of one url given a list of keywords.
+	 *
+	 * @param url the url
 	 * @param keywords   a list of keywords that will be used to measure the weight
+	 * @return the double
+	 * @throws URLNotFoundException the URL not found exception
 	 */
 	public double weigh (String url, ArrayList<String> keywords) throws URLNotFoundException {
 		// make sure the keywords are in the url
@@ -59,8 +82,9 @@ public class TFIDFRank extends AbstractRank {
 	}
 	
 	/**
-	 * cal the idf weight of each keyword in the keywords list
-	 * @param  keywords
+	 * cal the idf weight of each keyword in the keywords list.
+	 *
+	 * @param keywords the keywords
 	 * @return map the keywords to its idf weight in current dataset
 	 */
 	private HashMap<String, Double> idfWeigh (ArrayList<String> keywords) {
@@ -83,11 +107,14 @@ public class TFIDFRank extends AbstractRank {
 		return idf;
 	}
 	
-	/** 
-	 * cal the tf weight of each keyword in url 
-	 * @param  url
-	 * @param  keywords
-	 * @return map the keyword to its tf weight in the url  
+	/**
+	 *  
+	 * cal the tf weight of each keyword in url .
+	 *
+	 * @param url the url
+	 * @param keywords the keywords
+	 * @return map the keyword to its tf weight in the url
+	 * @throws URLNotFoundException the URL not found exception
 	 */
 	private HashMap<String, Double> tfWeigh (String url, ArrayList<String> keywords) throws URLNotFoundException {
 		ArrayList<String> keywordsInURL = forwardIndex.get(url);

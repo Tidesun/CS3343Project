@@ -18,15 +18,35 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class testForwardIndexModule.
+ */
 public class testForwardIndexModule {
 	
+	/** The keyword map. */
 	StringMapModuleInterface keywordMap;
+	
+	/** The forward. */
 	ForwardIndexModule forward;
+	
+	/** The observer. */
 	InvertedIndexModuleInterface observer;
+	
+	/** The extractor. */
 	ExtractModuleInterface extractor;
+	
+	/** The save path. */
 	String savePath;
+	
+	/** The temp. */
 	TemporaryFolder temp;
 	
+	/**
+	 * Sets the up.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Before 
 	public void setUp() throws IOException { 
 		temp = new TemporaryFolder();
@@ -36,9 +56,22 @@ public class testForwardIndexModule {
 		observer = new InvertedIndexModule(forward,savePath); 
 	}
 	
+	/**
+	 * Tear down.
+	 *
+	 * @throws Exception the exception
+	 */
 	@After
 	public void tearDown() throws Exception { }
 	
+	/**
+	 * Test secribe.
+	 *
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 */
 	@Test
 	public void testSecribe() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 		
@@ -52,6 +85,11 @@ public class testForwardIndexModule {
 		assertEquals(observer,observer1);
 	}
 	
+	/**
+	 * Test create the stopwords list.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Test
 	public void testCreateTheStopwordsList() throws Exception{
 		
@@ -78,6 +116,15 @@ public class testForwardIndexModule {
 		assertEquals(stopwords, stopwords_list);
 	}
 		
+	/**
+	 * Test generate forward index map 1.
+	 *
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	/*
 	 * 0 vs 0
 	 */
@@ -110,6 +157,15 @@ public class testForwardIndexModule {
 	}
 	
 	
+	/**
+	 * Test generate forward index map 2.
+	 *
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	/*
 	 * 1 vs 1
 	 */
@@ -153,6 +209,15 @@ public class testForwardIndexModule {
 		
 	
 	
+	/**
+	 * Test generate forward index map 3.
+	 *
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	/*
 	 * more(2) vs more(2)
 	 */
@@ -212,6 +277,9 @@ public class testForwardIndexModule {
 	
 	
 
+	/**
+	 * Test get keyword from origin hash map 0.
+	 */
 	@Test
 	public void testGetKeywordFromOriginHashMap0() {
 	
@@ -238,6 +306,9 @@ public class testForwardIndexModule {
 	
 	
 	
+	/**
+	 * Test get keyword from origin hash map 1.
+	 */
 	/*
 	 * kwstr=0
 	 */
@@ -265,6 +336,9 @@ public class testForwardIndexModule {
 		
 	}
 	
+	/**
+	 * Test get keyword from origin hash map 2.
+	 */
 	/*
 	 * kwstr=1 T T
 	 */
@@ -293,6 +367,14 @@ public class testForwardIndexModule {
 		
 	}	
 	
+	/**
+	 * Test get keyword from origin hash map 3.
+	 *
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 */
 	/*
 	 * kwstr=1 T F
 	 */
@@ -322,6 +404,14 @@ public class testForwardIndexModule {
 	
 
 	
+	/**
+	 * Test add keywords to the hash map 1.
+	 *
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 */
 	@Test
 	public void testAddKeywordsToTheHashMap1() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 				
@@ -349,6 +439,14 @@ public class testForwardIndexModule {
 		assertEquals(res,result);
 	}
 	
+	/**
+	 * Test add keywords to the hash map 2.
+	 *
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 */
 	@Test
 	public void testAddKeywordsToTheHashMap2() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 				
@@ -376,6 +474,14 @@ public class testForwardIndexModule {
 	}
 	
 	
+	/**
+	 * Test create array list of URL.
+	 *
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 */
 	@Test
 	public void testCreateArrayListOfURL() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
 	

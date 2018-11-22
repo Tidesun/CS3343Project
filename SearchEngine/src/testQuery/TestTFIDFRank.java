@@ -21,19 +21,38 @@ import org.junit.rules.TemporaryFolder;
 import query.TFIDFRank;
 import query.URLNotFoundException;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestTFIDFRank.
+ */
 public class TestTFIDFRank {
 	
+	/** The temp. */
 	@Rule
 	public TemporaryFolder temp= new TemporaryFolder();
+	
+	/** The file 1. */
 	File file1;
+	
+	/** The file 2. */
 	File file2;
 	
+	/**
+	 * Sets the up.
+	 */
 	@Before
 	public void setUp(){
 		 file1 = new File(temp.getRoot(), "InvertedIndexDataset");
 		 file2 = new File(temp.getRoot(), "ForwardIndexDataset");
 	}
 	
+	/**
+	 * Test weigh 1.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@Test
 	/* Normal case test TFIDF weigh */
 	public void testWeigh1() throws FileNotFoundException, ClassNotFoundException, IOException {
@@ -82,6 +101,13 @@ public class TestTFIDFRank {
 		assertEquals(0.0,res,0);
 	} 
 
+	/**
+	 * Test weigh 2.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	@Test
 	/*  Normal case test TFIDF rank  */
 	public void testWeigh2() throws FileNotFoundException, IOException, ClassNotFoundException {
@@ -130,6 +156,13 @@ public class TestTFIDFRank {
 		assertEquals("google.com",res.get(0));
 	}
 	
+	/**
+	 * Test weigh 3.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	@Test(expected= NullPointerException.class) 
 	/* If keyword not exist*/
 	public void testWeigh3() throws FileNotFoundException, IOException, ClassNotFoundException {
@@ -178,6 +211,13 @@ public class TestTFIDFRank {
 		mock.weigh("google.com", mockTestKeywords);
 	}
 	
+	/**
+	 * Test weigh 4.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 */
 	@Test(expected= URLNotFoundException.class) 
 	/* If url not exist*/
 	public void testWeigh4() throws FileNotFoundException, IOException, ClassNotFoundException {
@@ -226,6 +266,18 @@ public class TestTFIDFRank {
 		assertNull(mock.weigh("github.com", mockTestKeywords));
 	}
 
+	/**
+	 * Test weigh 5.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	@Test
 	/* test idfweigh */
 	public void testWeigh5() throws FileNotFoundException, IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
@@ -280,6 +332,18 @@ public class TestTFIDFRank {
 		assertEquals(exp_res, res);
 	}
 	
+	/**
+	 * Test weigh 6.
+	 *
+	 * @throws FileNotFoundException the file not found exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ClassNotFoundException the class not found exception
+	 * @throws NoSuchMethodException the no such method exception
+	 * @throws SecurityException the security exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws InvocationTargetException the invocation target exception
+	 */
 	@Test
 	/* test tfweigh */
 	public void testWeigh6() throws FileNotFoundException, IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
