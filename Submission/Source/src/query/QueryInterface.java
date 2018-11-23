@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Interface QueryInterface.
+ * Interface of query module.
  */
 public interface QueryInterface {
 	

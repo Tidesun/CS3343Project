@@ -94,7 +94,7 @@ public class testForwardIndexModule {
 	public void testCreateTheStopwordsList() throws Exception{
 		
 		//get control variable
-		File sFile = new File("src/res/stopwords.txt");
+		File sFile = new File("res/stopwords.txt");
 		ArrayList<String> stopwords = new ArrayList<String>();
 		
 		//get private variable stopwords_list

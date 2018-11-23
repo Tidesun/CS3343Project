@@ -2,7 +2,7 @@ package util;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class MatrixSubException.
+ * Matrix SubException.
  */
 public class MatrixSubException extends RuntimeException {
 	

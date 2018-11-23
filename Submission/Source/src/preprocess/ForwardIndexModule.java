@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class ForwardIndexModule.
+ * Generate map from web page to keywords.
  */
 public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	
@@ -25,7 +25,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	private InvertedIndexModuleInterface observer;
 	
 	/** The swl file. */
-	private static File swlFile = new File("src/res/stopwords.txt");
+	private static File swlFile = new File("res/stopwords.txt");
 	
 	/** The stopwords list. */
 	private ArrayList<String> stopwords_list = new ArrayList<String>();
@@ -124,7 +124,7 @@ public class ForwardIndexModule implements ForwardIndexModuleInterface{
 	* @throws 
 	*/
 	public ArrayList<String> getKeywordFromOriginHashMap(String kwstr){ 
-		String[] kwlist = kwstr.toLowerCase().split(" ");
+		String[] kwlist = kwstr.toLowerCase().split("\\s|\\t|\\n|\\r|\\b");
 		ArrayList<String> kwarr=new ArrayList<String>();
 		for (int i=0;i<kwlist.length;i++) {
 			if (kwlist[i].length()!=0) {

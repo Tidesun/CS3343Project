@@ -10,7 +10,8 @@ package query;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class URLNotinComparatorException.
+ * Before ranking the url, we have to pass the url - weight map to comparator, if the url is not in the map, this exception will
+ * be thrown.
  */
 public class URLNotinComparatorException extends RuntimeException {
 

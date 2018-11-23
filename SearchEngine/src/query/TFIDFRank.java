@@ -17,7 +17,7 @@ import java.util.Comparator;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class TFIDFRank.
+ * TFIDF rank algorithm implementation.
  */
 public class TFIDFRank extends AbstractRank {
 	
@@ -42,7 +42,7 @@ public class TFIDFRank extends AbstractRank {
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public TFIDFRank() throws FileNotFoundException, ClassNotFoundException, IOException {
-		super("src/res/dataset/InvertedIndexDataset", "src/res/dataset/ForwardIndexDataset");
+		super("res/dataset/InvertedIndexDataset", "res/dataset/ForwardIndexDataset");
 	}
 	
 	/**

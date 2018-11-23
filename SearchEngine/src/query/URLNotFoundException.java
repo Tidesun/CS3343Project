@@ -9,7 +9,7 @@ package query;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class URLNotFoundException.
+ * URL is not in forward index map exception
  */
 public class URLNotFoundException extends RuntimeException {
 

@@ -30,7 +30,7 @@ public class TestStringMapModule {
 	@Test(expected=NullPointerException.class)
 	public void testGenerateKeywordStrMapException() {
 		try {
-			stringmap.generateKeywordStrMap("src/res/html/");
+			stringmap.generateKeywordStrMap("res/html/");
 		} catch (IOException e) {
 			System.out.println("WARNING: IOException when testing StringMapModule.generateKeyworkMap");
 			e.printStackTrace();

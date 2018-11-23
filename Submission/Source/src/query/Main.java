@@ -8,7 +8,7 @@ import preprocess.Preprocess;
 // TODO: Auto-generated Javadoc
 
 /**
- * The Class Main.
+ * Main entrance of program.
  */
 public class Main {
     
@@ -40,7 +40,7 @@ public class Main {
         // open the title dataset to read title of url
         try {
             // read inverted index
-            FileInputStream in = new FileInputStream(new File("src/res/dataset/titleForwardIndexDataset"));
+            FileInputStream in = new FileInputStream(new File("res/dataset/titleForwardIndexDataset"));
             ObjectInputStream input = new ObjectInputStream(in);
             titleIndex = (HashMap<String, String>) input.readObject();
             input.close();
@@ -70,6 +70,8 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Do you add new webpages?");
 		if (approve(sc.nextLine())) {
+			System.out.println("What website you want to search?");
+			Preprocess.setDomain(sc.nextLine());
 			Preprocess.generatePreprocess();
 			System.out.println("New webpages added.");
 		}

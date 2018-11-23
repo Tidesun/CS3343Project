@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class StringMapModule.
+ * Extract web page content from file.
  */
 public class StringMapModule implements StringMapModuleInterface{
 	
@@ -45,7 +45,7 @@ public class StringMapModule implements StringMapModuleInterface{
 	 * @param extractor the extractor
 	 */
 	public StringMapModule(ExtractModuleInterface extractor){
-		this(extractor,"src/res/dataset/titleForwardIndexDataset");
+		this(extractor,"res/dataset/titleForwardIndexDataset");
 	}
 	
 	/*
@@ -73,11 +73,10 @@ public class StringMapModule implements StringMapModuleInterface{
 
 		List<Path> pathList = Files.walk(Paths.get(dirPath)).filter(Files::isRegularFile).collect(Collectors.toList());
 		HashMap<String,String> map = new HashMap<String,String>();
-		int count=0;
 		for(Path path:pathList){
 			String url= path.toString();
-			String header= this.extractor.WebPageExtraction(path.toFile());
-			map.put(url.substring(dirPath.length()), header);
+			String content= this.extractor.WebPageExtraction(path.toFile());
+			map.put(url.substring(dirPath.length()), content);
 		}
 		if (this.observer==null) {
 			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(this.savePath));

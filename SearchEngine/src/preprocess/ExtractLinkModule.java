@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class ExtractLinkModule.
+ * Extract link from web page.
  */
 public class ExtractLinkModule extends ExtractModuleAbstract implements ExtractModuleInterface{
 	
@@ -29,7 +29,7 @@ public class ExtractLinkModule extends ExtractModuleAbstract implements ExtractM
 		while (matcher.find()) {
 			String the_str = matcher.group(1);			
 			String last_part = the_str.substring(the_str.lastIndexOf("/")+1);		
-			if(the_str.contains("cs.cityu.edu.hk") && the_str.contains("http") && last_part.matches("[^@<>]*$") && (last_part.contains(".htm") || !last_part.contains("."))) {
+			if(the_str.contains(Preprocess.domain) && the_str.contains("http") && last_part.matches("[^@<>]*$") && (last_part.contains(".htm") || !last_part.contains("."))) {
 				if(last_part.contains("#")) {
 					link_str += the_str.substring(the_str.indexOf("://")+3, the_str.lastIndexOf("#"))+ " ";
 				}else {

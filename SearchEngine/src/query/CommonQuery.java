@@ -1,10 +1,3 @@
-/**
- * implements the search interface, this program gets a list of keywords and 
- * returns the related URLs with ranking
- * 
- * @author: ZHAO Zinan
- * @since: 30-Sep-2018
- */
 
 package query;
 
@@ -17,7 +10,13 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-
+/**
+ * implements the search interface, this program gets a list of keywords and 
+ * returns the related URLs with ranking
+ * 
+ * @author: ZHAO Zinan
+ * @since: 30-Sep-2018
+ */
 public class CommonQuery implements QueryInterface {
 	private HashMap<String, ArrayList<String>> forwardIndex;
 	private HashMap<String, ArrayList<String>> invertedIndex;
@@ -26,12 +25,12 @@ public class CommonQuery implements QueryInterface {
 	private String fPath;
 
 	/**
-	 * use the default path (src/res/) as the dataset path to init the instance
+	 * use the default path (res/) as the dataset path to init the instance
 	 * @throws IOException 
 	 * @throws ClassNotFoundException 
 	 */
 	public CommonQuery() throws ClassNotFoundException, IOException {
-		this("src/res/dataset/InvertedIndexDataset", "src/res/dataset/ForwardIndexDataset");
+		this("res/dataset/InvertedIndexDataset", "res/dataset/ForwardIndexDataset");
 	}
 
 	/**
@@ -125,7 +124,7 @@ public class CommonQuery implements QueryInterface {
 		if (rankMethod == "tfidf") {
 			return this.search(keywords, rankMethod, this.iPath, this.fPath);
 		} else if (rankMethod == "pagerank") {
-			return this.search(keywords, rankMethod, "src/res/dataset/linkForwardIndexDataset", "src/res/dataset/linkInvertedIndexDataset");
+			return this.search(keywords, rankMethod, "res/dataset/linkForwardIndexDataset", "res/dataset/linkInvertedIndexDataset");
 		}
 		
 		throw new RankMethodNotFoundException();
@@ -137,7 +136,7 @@ public class CommonQuery implements QueryInterface {
 		if (rankMethod == "tfidf") {
 			return this.search(splitkeywords, rankMethod, this.iPath, this.fPath);
 		} else if (rankMethod == "pagerank") {
-			return this.search(splitkeywords, rankMethod, "src/res/dataset/linkForwardIndexDataset", "src/res/dataset" +
+			return this.search(splitkeywords, rankMethod, "res/dataset/linkForwardIndexDataset", "res/dataset" +
                     "/linkInvertedIndexDataset");
 		}
 

@@ -1,11 +1,10 @@
-// Warning: space consumption
 package util;
 
 import java.util.Arrays;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class Matrix.
+ * Helper class: Matrix.
  */
 public class Matrix {
 	

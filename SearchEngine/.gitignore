@@ -23,5 +23,5 @@
 hs_err_pid*
 
 .vscode/*
-src/res/html/
-src/res/dataset/
+res/html/
+res/dataset/

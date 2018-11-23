@@ -4,7 +4,7 @@ import java.io.IOException;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Interface StringMapModuleInterface.
+ * StringMapModule Interface.
  */
 public interface StringMapModuleInterface {
 	

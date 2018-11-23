@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Interface RankInterface.
+ * Interface of ranking algorithm.
  */
 public interface RankInterface {
 	

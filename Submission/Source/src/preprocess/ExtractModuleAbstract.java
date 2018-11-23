@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class ExtractModuleAbstract.
+ * Abstract class for extractor.
  */
 public class ExtractModuleAbstract {
 	

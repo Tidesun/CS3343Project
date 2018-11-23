@@ -2,7 +2,7 @@ package util;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class MatrixMultiplyException.
+ * MatrixMultiply Exception.
  */
 public class MatrixMultiplyException extends RuntimeException {
 	

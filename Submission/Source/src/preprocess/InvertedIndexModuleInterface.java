@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Interface InvertedIndexModuleInterface.
+ * InvertedIndexModule Interface.
  */
 public interface InvertedIndexModuleInterface {
 	

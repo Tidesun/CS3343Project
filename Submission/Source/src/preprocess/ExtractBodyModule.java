@@ -7,7 +7,7 @@ import java.util.regex.*;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class ExtractBodyModule.
+ * Extract web page body content and remove script and style.
  */
 public class ExtractBodyModule extends ExtractModuleAbstract implements ExtractModuleInterface {
 	
@@ -26,7 +26,7 @@ public class ExtractBodyModule extends ExtractModuleAbstract implements ExtractM
 		for (int i=0;i<rexs.length;i++) {
 			Pattern p=Pattern.compile(rexs[i],Pattern.CASE_INSENSITIVE); 
 			Matcher m=p.matcher(content); 
-			content=m.replaceAll("");			
+			content=m.replaceAll(" ");			
 		}
 		return content;
 	}

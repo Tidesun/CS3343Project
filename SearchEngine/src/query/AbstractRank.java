@@ -12,7 +12,7 @@ import java.util.HashMap;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class AbstractRank.
+ * Abstract class for general ranking algorithm.
  */
 public abstract class AbstractRank implements RankInterface {
 	

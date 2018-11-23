@@ -16,7 +16,7 @@ import util.*;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class PageRank.
+ * use pagerank to rank the urls in searching result
  */
 public class PageRank extends AbstractRank {
 
@@ -44,7 +44,7 @@ public class PageRank extends AbstractRank {
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public PageRank() throws FileNotFoundException, ClassNotFoundException, IOException {
-		super("src/res/dataset/linkInvertedIndexDataset", "src/res/dataset/linkForwardIndexDataset");
+		super("res/dataset/linkInvertedIndexDataset", "res/dataset/linkForwardIndexDataset");
 	}
 	
 	/**

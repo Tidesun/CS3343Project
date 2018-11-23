@@ -8,7 +8,7 @@ import java.io.ObjectOutputStream;
 // TODO: Auto-generated Javadoc
 
 /**
- * The Class InvertedIndexModule.
+ * Generate map from keyword to webpages.
  */
 public class InvertedIndexModule implements InvertedIndexModuleInterface{
 	

@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Interface ForwardIndexModuleInterface.
+ * ForwardIndexModule interface.
  */
 public interface ForwardIndexModuleInterface {
 	
