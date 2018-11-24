@@ -37,6 +37,6 @@ public class ExtractLinkModule extends ExtractModuleAbstract implements ExtractM
 				}
 			}
 		}
-		return link_str;
+		return link_str.trim();
 	}
 }

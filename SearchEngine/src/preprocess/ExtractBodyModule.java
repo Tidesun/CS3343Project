@@ -28,6 +28,6 @@ public class ExtractBodyModule extends ExtractModuleAbstract implements ExtractM
 			Matcher m=p.matcher(content); 
 			content=m.replaceAll(" ");			
 		}
-		return content;
+		return content.trim();
 	}
 }

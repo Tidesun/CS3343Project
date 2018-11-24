@@ -163,7 +163,7 @@ public class TestTFIDFRank {
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 * @throws ClassNotFoundException the class not found exception
 	 */
-	@Test(expected= NullPointerException.class) 
+	@Test 
 	/* If keyword not exist*/
 	public void testWeigh3() throws FileNotFoundException, IOException, ClassNotFoundException {
 		HashMap<String, ArrayList<String>> invertedIndex=new HashMap<String, ArrayList<String>>();
@@ -208,7 +208,8 @@ public class TestTFIDFRank {
 		ArrayList<String> mockTestKeywords=new ArrayList<String>();
 		mockTestKeywords=mockKeywords;
 		mockTestKeywords.add("github");
-		mock.weigh("google.com", mockTestKeywords);
+		double weigh = mock.weigh("google.com", mockTestKeywords);
+		assertEquals(weigh, 0.0, 0.001);
 	}
 	
 	/**

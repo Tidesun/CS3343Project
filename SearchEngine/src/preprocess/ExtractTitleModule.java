@@ -26,7 +26,7 @@ public class ExtractTitleModule extends ExtractModuleAbstract implements Extract
 		Matcher matcher = pattern.matcher(content);
 		if (matcher.find()) {
 			String the_str = matcher.group(1);
-			return the_str;
+			return the_str.trim();
 		}
 		else 
 			return null;

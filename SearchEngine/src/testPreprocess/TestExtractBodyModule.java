@@ -48,8 +48,8 @@ public class TestExtractBodyModule {
 		File createdFile= temp.newFile("mytestfile.html");
 		String content = "<title>This is title.</title>";
 		PrintStream ps = new PrintStream(new FileOutputStream(createdFile));
-		ps.println(content); 
-		String res = "This is title\n"; 
+		ps.print(content); 
+		String res = "This is title"; 
 		String result = extractBodyModule.WebPageExtraction(createdFile);
 		assertEquals(res,result); 
 	}
@@ -65,7 +65,7 @@ public class TestExtractBodyModule {
 		String content = "<p>This is paragraph.</p>";
 		PrintStream ps = new PrintStream(new FileOutputStream(createdFile));
 		ps.println(content); 
-		String res = "This is paragraph\n"; 
+		String res = "This is paragraph"; 
 		String result = extractBodyModule.WebPageExtraction(createdFile);
 		assertEquals(res,result); 
 	}
@@ -82,7 +82,7 @@ public class TestExtractBodyModule {
 		String content = "<h1>This is head.</h1>";
 		PrintStream ps = new PrintStream(new FileOutputStream(createdFile));
 		ps.println(content); 
-		String res = "This is head\n"; 
+		String res = "This is head"; 
 		String result = extractBodyModule.WebPageExtraction(createdFile);
 		assertEquals(res,result); 
 	}
@@ -98,7 +98,7 @@ public class TestExtractBodyModule {
 		String content = "<a>This is link.</a>";
 		PrintStream ps = new PrintStream(new FileOutputStream(createdFile));
 		ps.println(content); 
-		String res = "This is link\n"; 
+		String res = "This is link"; 
 		String result = extractBodyModule.WebPageExtraction(createdFile);
 		assertEquals(res,result); 
 	}
@@ -114,7 +114,7 @@ public class TestExtractBodyModule {
 		String content = "<th>This is tablehead.</th>";
 		PrintStream ps = new PrintStream(new FileOutputStream(createdFile));
 		ps.println(content); 
-		String res = "This is tablehead\n"; 
+		String res = "This is tablehead"; 
 		String result = extractBodyModule.WebPageExtraction(createdFile);
 		assertEquals(res,result); 
 	}
