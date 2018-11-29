@@ -68,10 +68,11 @@ public class Main {
 	public static void main(String[] args) throws IOException {
         // update web pages
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Do you add new webpages?");
+		do {
+		System.out.print("Do you add new webpages?");
 		if (approve(sc.nextLine())) {
-			System.out.println("What website you want to search?");
-			Preprocess.setDomain(sc.nextLine());
+			//System.out.println("What website you want to search?");
+			Preprocess.setDomain("cs.cityu.edu.hk");
 			Preprocess.generatePreprocess();
 			System.out.println("New webpages added.");
 		}
@@ -80,8 +81,8 @@ public class Main {
 		System.out.print("I want search:");
 		String query = sc.nextLine();
 		// search method
-        System.out.println("Please select a ranking method (1 for tf-idf, 2 for pagerank)");
-        String methodabb = sc.nextLine();
+        System.out.print("Please select a ranking method (1 for tf-idf, 2 for pagerank)");
+        String methodabb= sc.nextLine();
         String method;
         switch (methodabb) {
             case "1": method = "tfidf"; break;
@@ -97,7 +98,8 @@ public class Main {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		System.out.print("Do you want to search another keyword?");
+		}while(!sc.nextLine().equals("no"));
 		sc.close();
 	}
 }
